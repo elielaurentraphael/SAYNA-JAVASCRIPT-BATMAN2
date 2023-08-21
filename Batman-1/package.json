@@ -1,0 +1,19 @@
+{
+  "name": "sayna-htmlcss-batman1",
+  "version": "1.0.0",
+  "description": "compilation du fichier sass en fichier css",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elielaurentraphael/SAYNA-HTMLCSS-BATMAN1.git"
+  },
+  "author": "elielaurentraphael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elielaurentraphael/SAYNA-HTMLCSS-BATMAN1/issues"
+  },
+  "homepage": "https://github.com/elielaurentraphael/SAYNA-HTMLCSS-BATMAN1#readme"
+}

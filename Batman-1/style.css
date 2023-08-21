@@ -1,0 +1,643 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
+/* VERSION DESKTOP  &  MOBILE */
+/* css général */
+body {
+  width: 80vw;
+  margin: 0 auto;
+  font-family: "Space Grotesk";
+  color: #ffffff;
+}
+
+h1,
+nav,
+button {
+  font-family: "Rajdhani";
+}
+
+.header,
+section {
+  width: 68.6vw;
+  border-left: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  border-right: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  margin: 0 auto;
+}
+
+.button {
+  text-align: center;
+}
+
+button {
+  letter-spacing: 0.1vw;
+  font-size: 0.95vw;
+  color: #ffffff;
+  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
+  border: none;
+  margin: 0;
+  padding: 1.25vw 0;
+  width: 14vw;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(315deg, #890008, #eddebf);
+}
+
+.intro,
+.heading,
+.button,
+.animation,
+.justice,
+.contact,
+.justiceImage {
+  position: relative;
+  animation: fadeIn 4s;
+  animation-delay: 2s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+/* --header-- */
+header,
+.header {
+  height: 50.0555554096vw;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(./Assets/illustrations/Bathome1.png);
+  background-size: 100%;
+}
+header .header nav {
+  font-weight: bold;
+  letter-spacing: 0.1vw;
+  font-size: 1.5vw;
+  height: 11.4vw;
+  border-bottom: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 3.3vw 5vw;
+}
+header .header nav .logohome {
+  width: 6.69986vw;
+  height: 2.2702vw;
+  background-image: url(./Assets/logos/logohome.png);
+  background-size: 100%;
+  cursor: pointer;
+}
+header .header nav .logohome:hover {
+  background-image: url(./Assets/logos/logohoma.png);
+}
+header .header nav a {
+  display: block;
+  color: #ffffff;
+}
+header .header .intro {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.23vw;
+  padding-top: 11.2vw;
+}
+header .header .heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.55vw;
+  font-weight: bold;
+  padding-top: 1vw;
+}
+header .header .button button {
+  margin: 2.5vw 1vw;
+}
+header .header .social {
+  display: inline-block;
+  position: fixed;
+  top: 19.3vw;
+  right: 12.2vw;
+  z-index: 1; /* amelioration de l'effet hover */
+}
+header .header .social div {
+  cursor: pointer;
+  margin: 1.8vw auto;
+}
+header .header .social .logo {
+  width: 5.6vw;
+  height: 3.23vw;
+}
+header .header .social .logo#flecheHaut {
+  background-image: url(./Assets/logos/logo_bat_flèche.png);
+  background-size: 100%;
+}
+header .header .social .logo#flecheHaut:hover {
+  background-image: url(./Assets/logos/logo_bat_flèche_a.png);
+}
+header .header .social .logo#flecheBas {
+  background-image: url(./Assets/logos/logo_bat_flèche_2.png);
+  background-size: 100%;
+}
+header .header .social .logo#flecheBas:hover {
+  background-image: url(./Assets/logos/logo_bat_flèche_2_a.png);
+}
+header .header .social .icon {
+  width: 1.3vw;
+  height: 1.3vw;
+}
+header .header .social .icon#fb {
+  background-image: url(./Assets/logos/icon_facebook.png);
+  background-size: 100%;
+}
+header .header .social .icon#fb:hover {
+  background-image: url(./Assets/logos/icon_facebook_a.png);
+}
+header .header .social .icon#ig {
+  background-image: url(./Assets/logos/icon_ig.png);
+  background-size: 100%;
+}
+header .header .social .icon#ig:hover {
+  background-image: url(./Assets/logos/icon_igcopie.png);
+}
+header .header .social .icon#tw {
+  background-image: url(./Assets/logos/icon_tw.png);
+  background-size: 100%;
+}
+header .header .social .icon#tw:hover {
+  background-image: url(./Assets/logos/icon_tw_a.png);
+}
+
+/* --main-- */
+main {
+  background-color: #000000;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.8vw;
+  letter-spacing: 0.1vw;
+  margin: 0;
+  padding-left: 4.5vw;
+  padding-top: 5vw;
+  padding-bottom: 1.4939vw;
+}
+
+section > .animation > p {
+  width: 55vw;
+  font-size: 1.23vw;
+  color: #ffffff;
+  padding-left: 4.5vw;
+  margin-bottom: 5vw;
+  text-align: justify;
+}
+section > .animation > p span {
+  letter-spacing: 0.055vw;
+}
+
+section > div > .images { /* on met div au lieu de .animation pour avoir le minimum de specificity */
+  display: flex;
+  justify-content: space-evenly;
+}
+section > div > .images .description {
+  width: 17vw;
+  font-family: "Rajdhani";
+  transition: transform 400ms;
+  -webkit-transition: transform 400ms;
+  -moz-transition: transform 400ms;
+  -ms-transition: transform 400ms;
+  -o-transition: transform 400ms;
+}
+section > div > .images .description img {
+  display: block;
+  width: 100%;
+}
+section > div > .images .description > p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.15vw;
+  font-weight: 500;
+  margin: 1.2vw 0;
+}
+section > div > .images .description:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* section batman au cinéma */
+section.batmanAuCinema .flecheDown {
+  display: block;
+  margin: auto;
+  width: 4vw;
+}
+
+/* section némésis */
+section.nemesis {
+  position: relative;
+}
+section.nemesis h1 {
+  padding-top: 6.7vw;
+}
+section.nemesis .bathome13 {
+  width: 8vw;
+  position: absolute;
+  top: 2.5vw;
+  left: 9.5vw;
+}
+section.nemesis .bathome12 {
+  width: 22.5vw;
+  position: absolute;
+  top: 49.7vw;
+  right: -5.7vw;
+}
+
+/* section alliés */
+/* section justice league */
+section .justice {
+  width: 53vw;
+  margin: auto;
+  padding-bottom: 4.75vw;
+}
+section .justice h1 {
+  padding-left: 0;
+  padding-top: 6.6vw;
+  padding-bottom: 1.7vw;
+}
+section .justice p {
+  font-size: 1.23vw;
+  color: #ffffff;
+  margin: 0;
+  text-align: justify;
+}
+
+/* class justiceImage */
+main > img.justiceImage {
+  display: block;
+  width: 100%;
+}
+
+/* section multimédia */
+.multimedia .media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 4.5vw;
+}
+.multimedia .media .fleche img {
+  width: 2.3vw;
+}
+.multimedia .media .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(315deg, rgba(25, 88, 125, 0.3725490196) 16%, rgba(237, 222, 191, 0.3725490196) 96%);
+  border-top-right-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  color: #eddebf;
+}
+.multimedia .media .card .card-image {
+  display: block;
+  width: 8.5vw;
+}
+.multimedia .media .card .card-text {
+  height: 100%;
+  padding: 0 0.8vw;
+}
+.multimedia .media .card .card-text .p1 {
+  font-size: 0.65vw;
+  letter-spacing: 0.1vw;
+}
+.multimedia .media .card .card-text .p2 {
+  font-size: 1vw;
+  font-family: "Rajdhani";
+  margin: 0;
+}
+.multimedia .media .card .card-text .p3 {
+  font-size: 0.7vw;
+}
+.multimedia .media .card .card-text .p3 span {
+  color: #ffff00;
+}
+.multimedia .media .card .card-text .text {
+  font-size: 0.65vw;
+}
+.multimedia .bandeAnnonce {
+  padding: 4.5vw 4.5vw 9vw 4.5vw;
+  position: relative;
+}
+.multimedia .bandeAnnonce img {
+  display: block;
+}
+.multimedia .bandeAnnonce .bathome-ba2 {
+  width: 100%;
+}
+.multimedia .bandeAnnonce .player {
+  position: absolute;
+  width: 11%;
+  top: 37.5%;
+  left: 44.3%;
+}
+.multimedia .bandeAnnonce .player:hover {
+  filter: drop-shadow(0 0 2vw rgba(255, 255, 255, 0.3098039216));
+  -webkit-filter: drop-shadow(0 0 2vw rgba(255, 255, 255, 0.3098039216));
+}
+
+/* class contact */
+.contact {
+  background-image: linear-gradient(315deg, rgba(25, 88, 125, 0.3725490196) 16%, rgba(237, 222, 191, 0.3725490196) 96%);
+}
+.contact h1 {
+  margin: 0;
+  padding: 3vw;
+  text-align: center;
+  font-size: 1.7vw;
+}
+.contact form {
+  width: 50%;
+  margin: auto;
+}
+.contact form .label-email label {
+  font-size: 1.2vw;
+}
+.contact form .email input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1vw solid gray;
+  margin-top: 1.5vw;
+  margin-bottom: 2.6vw;
+  font-family: inherit;
+  font-size: 0.85vw;
+  letter-spacing: 0.02vw;
+  word-spacing: 0.04vw;
+  font-weight: lighter;
+  color: gray;
+}
+.contact form .label-checkbox {
+  margin-bottom: 1.5vw;
+}
+.contact form .label-checkbox label {
+  font-size: 1.2vw;
+}
+.contact form .checkbox p {
+  font-size: 0.85vw;
+  letter-spacing: 0.02vw;
+  word-spacing: 0.04vw;
+  font-weight: lighter;
+  color: gray;
+}
+.contact form .checkbox > p {
+  margin-bottom: 0;
+}
+.contact form .checkbox .pa {
+  display: flex;
+  align-items: center;
+}
+.contact form .checkbox .pa input {
+  width: 1.2vw;
+  height: 1.2vw;
+  display: block;
+  margin-left: 0.6vw;
+  color: #19587d;
+}
+.contact form .frequence select {
+  width: 100%;
+  margin-top: 0.6vw;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1vw solid gray;
+  font-family: "Space Grotesk";
+  font-size: 0.85vw;
+  letter-spacing: 0.02vw;
+  word-spacing: 0.04vw;
+  font-weight: lighter;
+  color: gray;
+}
+.contact form .frequence select option {
+  background: linear-gradient(315deg, rgba(25, 88, 125, 0.3725490196) 16%, rgba(237, 222, 191, 0.3725490196) 96%);
+}
+.contact form .input-type-button .input-disabled input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1vw solid #ffffff;
+  margin-top: 1.5vw;
+  font-family: "Space Grotesk";
+  font-size: 0.85vw;
+  letter-spacing: 0.02vw;
+  word-spacing: 0.04vw;
+  font-weight: lighter;
+  color: #ffffff;
+}
+.contact form .input-type-button .button input {
+  background-color: transparent;
+  border: none;
+  padding: 0.5vw 1.5vw;
+  margin: 1.5vw 0.85vw;
+  font-family: "Space Grotesk";
+  font-size: 0.65vw;
+  letter-spacing: 0.01vw;
+  color: #ffffff;
+  cursor: pointer;
+}
+.contact form .input-type-button .button input:hover {
+  background: linear-gradient(315deg, #890008, #eddebf);
+}
+.contact form .input-type-button .button .gradient {
+  border-style: solid;
+  border-width: 0.1vw;
+  border-image: linear-gradient(135deg, rgb(163, 152, 147), rgb(35, 129, 141)) 1;
+}
+.contact form .message .message-label label {
+  font-size: 1.2vw;
+}
+.contact form .message .message-input input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1vw solid gray;
+  margin-top: 1.5vw;
+  margin-bottom: 2.6vw;
+  font-family: inherit;
+  font-size: 0.85vw;
+  letter-spacing: 0.02vw;
+  word-spacing: 0.04vw;
+  font-weight: lighter;
+  color: gray;
+}
+.contact form .confirmer {
+  padding-bottom: 3vw;
+}
+
+/* --footer-- */
+footer {
+  background-color: #000000;
+}
+
+/* section footer */
+.footer .a {
+  padding: 9.5vw;
+}
+.footer .a .b img {
+  width: 5.5vw;
+}
+.footer .a .replique {
+  text-align: center;
+}
+.footer .a .replique .c {
+  font-size: 0.9vw;
+  letter-spacing: 0.03vw;
+  line-height: 0.5vw;
+}
+.footer .a .replique .d {
+  font-size: 0.7vw;
+  letter-spacing: 0.03vw;
+  line-height: 0.5vw;
+  color: rgb(175, 170, 170);
+  padding-top: 0.3vw;
+}
+.footer .a .replique .e {
+  font-size: 0.7vw;
+  letter-spacing: 0.03vw;
+  line-height: 0.5vw;
+  color: #19587d;
+  padding-top: 0.3vw;
+}
+.footer .a .f {
+  float: right;
+  position: relative;
+  top: -3vw;
+}
+.footer .a .f img {
+  width: 5.5vw;
+}
+.footer .g {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2.6vw;
+  padding-bottom: 1.4vw;
+}
+.footer .g img {
+  width: 1.5vw;
+  display: block;
+}
+.footer .g p {
+  font-size: 0.6vw;
+  padding-left: 0.6vw;
+}
+.footer .footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8vw;
+}
+.footer .footer-social .sayna {
+  width: 2.3vw;
+  height: 2.56vw;
+  margin-right: 0.6vw;
+  background-image: url(./Assets/logos/logo_sayna_white.png);
+  background-size: 100%;
+}
+.footer .footer-social .sayna:hover {
+  background-image: url(./Assets/logos/logo_sayna_yellow.png);
+}
+.footer .footer-social .x {
+  width: 1vw;
+  height: 1vw;
+  margin-right: 1vw;
+  background-image: url(./Assets/logos/icon_x.png);
+  background-size: 100%;
+}
+.footer .footer-social .x:hover {
+  background-image: url(./Assets/logos/icon_x_a.png);
+}
+.footer .footer-social .dc {
+  width: 2.8vw;
+  height: 2.8vw;
+  margin-right: 0.5vw;
+  background-image: url(./Assets/logos/icon_DC.png);
+  background-size: 100%;
+}
+.footer .footer-social .dc:hover {
+  background-image: url(./Assets/logos/icon_DC_a.png);
+}
+.footer .footer-social .icon {
+  width: 1.3vw;
+  height: 1.3vw;
+  margin-left: 1.8vw;
+}
+.footer .footer-social .icon.fb {
+  background-image: url(./Assets/logos/icon_facebook.png);
+  background-size: 100%;
+}
+.footer .footer-social .icon.fb:hover {
+  background-image: url(./Assets/logos/icon_facebook_a.png);
+}
+.footer .footer-social .icon.ig {
+  background-image: url(./Assets/logos/icon_ig.png);
+  background-size: 100%;
+}
+.footer .footer-social .icon.ig:hover {
+  background-image: url(./Assets/logos/icon_igcopie.png);
+}
+.footer .footer-social .icon.tw {
+  background-image: url(./Assets/logos/icon_tw.png);
+  background-size: 100%;
+}
+.footer .footer-social .icon.tw:hover {
+  background-image: url(./Assets/logos/icon_tw_a.png);
+}
+
+/*# sourceMappingURL=style.css.map */
