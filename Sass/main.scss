@@ -1,6 +1,10 @@
 @import "./utils/variables";
 
-@import "./pages/index";
+@import "./pages/home";
 @import "./pages/game";
 
-@import "./layouts/footer";
+@import "./layouts/nav";
+@import "./layouts/social-lateral";
+@import "./layouts/foot-footer";
+
+@import "./components/flecheDown";

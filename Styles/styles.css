@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
 /* VERSION DESKTOP  &  MOBILE */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
 body {
   width: 80vw;
   margin: 0 auto;
@@ -42,7 +43,7 @@ button:hover {
 }
 
 .intro,
-.heading,
+.heading-home,
 .button,
 .animation,
 .justice,
@@ -119,39 +120,13 @@ header {
   background-size: 100%;
   background-color: #980008;
 }
-header .header nav {
-  font-weight: bold;
-  letter-spacing: 0.1vw;
-  font-size: 1.5vw;
-  height: 11.4vw;
-  border-bottom: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 3.3vw 5vw;
-}
-header .header nav .logohome {
-  width: 6.69986vw;
-  height: 2.2702vw;
-  background-image: url("/Assets/logos/logohome.png");
-  background-size: 100%;
-  cursor: pointer;
-}
-header .header nav .logohome:hover {
-  background-image: url("/Assets/logos/logohoma.png");
-}
-header .header nav a {
-  display: block;
-  color: #ffffff;
-}
 header .header .intro {
   color: #ffffff;
   text-align: center;
   font-size: 1.23vw;
   padding-top: 11.2vw;
 }
-header .header .heading {
+header .header .heading-home {
   color: #ffffff;
   text-align: center;
   font-size: 1.55vw;
@@ -160,60 +135,6 @@ header .header .heading {
 }
 header .header .button button {
   margin: 2.5vw 1vw;
-}
-header .header .social {
-  display: inline-block;
-  position: fixed;
-  top: 19.3vw;
-  right: 12.2vw;
-  z-index: 1; /* amelioration de l'effet hover */
-}
-header .header .social div {
-  cursor: pointer;
-  margin: 1.8vw auto;
-}
-header .header .social .logo {
-  width: 5.6vw;
-  height: 3.23vw;
-}
-header .header .social .logo#flecheHaut {
-  background-image: url("/Assets/logos/logo_bat_flèche.png");
-  background-size: 100%;
-}
-header .header .social .logo#flecheHaut:hover {
-  background-image: url("/Assets/logos/logo_bat_flèche_a.png");
-}
-header .header .social .logo#flecheBas {
-  background-image: url("/Assets/logos/logo_bat_flèche_2.png");
-  background-size: 100%;
-}
-header .header .social .logo#flecheBas:hover {
-  background-image: url("/Assets/logos/logo_bat_flèche_2_a.png");
-}
-header .header .social .icon {
-  width: 1.3vw;
-  height: 1.3vw;
-}
-header .header .social .icon#fb {
-  background-image: url("/Assets/logos/icon_facebook.png");
-  background-size: 100%;
-}
-header .header .social .icon#fb:hover {
-  background-image: url("/Assets/logos/icon_facebook_a.png");
-}
-header .header .social .icon#ig {
-  background-image: url("/Assets/logos/icon_ig.png");
-  background-size: 100%;
-}
-header .header .social .icon#ig:hover {
-  background-image: url("/Assets/logos/icon_igcopie.png");
-}
-header .header .social .icon#tw {
-  background-image: url("/Assets/logos/icon_tw.png");
-  background-size: 100%;
-}
-header .header .social .icon#tw:hover {
-  background-image: url("/Assets/logos/icon_tw_a.png");
 }
 
 /* --main-- */
@@ -243,7 +164,8 @@ section > .animation > p span {
   letter-spacing: 0.055vw;
 }
 
-section > div > .images { /* on met div au lieu de .animation pour avoir le minimum de specificity */
+section > div > .images {
+  /* on met div au lieu de .animation pour avoir le minimum de specificity */
   display: flex;
   justify-content: space-evenly;
 }
@@ -276,12 +198,15 @@ section > div > .images .description:hover {
 }
 
 /* section batman au cinéma */
-section.batmanAuCinema .flecheDown {
-  display: block;
-  margin: auto;
-  width: 4vw;
-}
-
+/*section {
+	&.batmanAuCinema {
+		.flecheDown {
+			display: block;
+			margin: auto;
+			width: 4vw;
+		}
+	}
+}*/
 /* section némésis */
 section.nemesis {
   position: relative;
@@ -525,6 +450,7 @@ footer {
   background-color: #000000;
 }
 
+/* section footer */
 .footer .a {
   padding: 9.5vw;
 }
@@ -561,82 +487,408 @@ footer {
 .footer .a .f img {
   width: 5.5vw;
 }
-.footer .g {
+
+/* VERSION DESKTOP  &  MOBILE */
+body {
+  width: 80vw;
+  margin: 0 auto;
+  font-family: "Space Grotesk";
+  color: #ffffff;
+}
+
+h1,
+nav,
+button {
+  font-family: "Rajdhani";
+}
+
+.header,
+section {
+  width: 68.6vw;
+  border-left: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  border-right: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  margin: 0 auto;
+}
+
+.button {
+  text-align: center;
+}
+
+button {
+  letter-spacing: 0.1vw;
+  font-size: 0.95vw;
+  color: #ffffff;
+  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
+  border: none;
+  margin: 0;
+  padding: 1.25vw 0;
+  width: 14vw;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(315deg, #890008, #eddebf);
+}
+
+.heading-game,
+.button {
+  position: relative;
+  animation: fadeIn 4s;
+  animation-delay: 2s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    left: -70vw;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+/* --header-- */
+.headergame {
+  height: 47.619047619vw;
+  margin: 0 auto;
+}
+
+.headergame {
+  background-image: url("/Assets/Illustrations/Batgame_1.png");
+  background-size: 100%;
+  background-color: #980008;
+}
+
+.headergame nav {
+  border-bottom: none;
+}
+
+.header .heading-game {
+  color: #ffffff;
+  font-size: 2.55vw;
+  font-weight: bold;
+  padding-top: 7vw;
+  padding-left: 4vw;
+}
+
+/* --main-- */
+section {
+  background-color: #000000;
+}
+
+.down {
+  padding-top: 3.5vw;
+  padding-bottom: 5.2vw;
+}
+
+.numero {
+  width: 10vw;
+  padding: 4vw 2vw 6vw 2vw;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2vw;
+  /*border: 1px solid rgb(243, 241, 250);*/
+}
+
+.question {
+  height: 3vw;
+  padding-left: 24.9vw;
+}
+
+.wrap {
+  display: flex;
+  /*background-color: white;*/
+}
+
+.image {
+  width: 24.9vw;
+  text-align: center;
+  /*border: 1px solid rgb(49, 12, 185);*/
+}
+
+.response {
+  /*width: 30.2vw;*/
+  padding-right: 13.5vw;
+  /*border: 1px solid rgb(185, 12, 12);*/
+}
+
+.response div:nth-child(3) {
+  margin-bottom: 9.8vw;
+}
+
+.res {
+  width: 30.4vw;
+  height: 2.6vw;
+  margin: 0.5vw auto;
+  background-color: #c4c4c4;
+}
+
+.next {
+  width: 19.5vw;
+  height: 3.5vw;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #c4c4c4;
+}
+
+.startQuiz img {
+  display: block;
+  width: 77%;
+  margin: auto;
+  margin-top: 0.6vw;
+  margin-bottom: 6.2vw;
+}
+
+.start {
+  padding: 1.5vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.boktra {
+  display: block;
+}
+
+.bouton {
+  position: fixed;
+  left: 3vw;
+  top: 30%;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.8vw;
+  letter-spacing: 0.1vw;
+  margin: 0;
+  padding-left: 4.5vw;
+  padding-top: 5vw;
+  padding-bottom: 1.4939vw;
+}
+
+/* --footer-- */
+footer {
+  background-color: #000000;
+}
+
+/* section footer */
+.footGame .g {
+  padding-top: 10.5vw;
+}
+
+nav {
+  font-weight: bold;
+  letter-spacing: 0.1vw;
+  font-size: 1.5vw;
+  height: 11.4vw;
+  border-bottom: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 3.3vw 5vw;
+}
+nav .logohome {
+  width: 6.69986vw;
+  height: 2.2702vw;
+  background-image: url("/Assets/logos/logohome.png");
+  background-size: 100%;
+  cursor: pointer;
+}
+nav .logohome:hover {
+  background-image: url("/Assets/logos/logohoma.png");
+}
+nav a {
+  display: block;
+  color: #ffffff;
+}
+
+.social-lateral {
+  display: inline-block;
+  position: fixed;
+  top: 19.3vw;
+  /*right: 12.2vw;*/
+  right: 12.2vw;
+  z-index: 1; /* amelioration de l'effet hover */
+}
+.social-lateral div {
+  cursor: pointer;
+  margin: 1.8vw auto;
+}
+.social-lateral .logo {
+  width: 5.6vw;
+  height: 3.23vw;
+}
+.social-lateral .logo#flecheHaut {
+  background-image: url("/Assets/logos/logo_bat_flèche.png");
+  background-size: 100%;
+}
+.social-lateral .logo#flecheHaut:hover {
+  background-image: url("/Assets/logos/logo_bat_flèche_a.png");
+}
+.social-lateral .logo#flecheBas {
+  background-image: url("/Assets/logos/logo_bat_flèche_2.png");
+  background-size: 100%;
+}
+.social-lateral .logo#flecheBas:hover {
+  background-image: url("/Assets/logos/logo_bat_flèche_2_a.png");
+}
+.social-lateral .icon {
+  width: 1.3vw;
+  height: 1.3vw;
+}
+.social-lateral .icon#fb {
+  background-image: url("/Assets/logos/icon_facebook.png");
+  background-size: 100%;
+}
+.social-lateral .icon#fb:hover {
+  background-image: url("/Assets/logos/icon_facebook_a.png");
+}
+.social-lateral .icon#ig {
+  background-image: url("/Assets/logos/icon_ig.png");
+  background-size: 100%;
+}
+.social-lateral .icon#ig:hover {
+  background-image: url("/Assets/logos/icon_igcopie.png");
+}
+.social-lateral .icon#tw {
+  background-image: url("/Assets/logos/icon_tw.png");
+  background-size: 100%;
+}
+.social-lateral .icon#tw:hover {
+  background-image: url("/Assets/logos/icon_tw_a.png");
+}
+
+.g {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 2.6vw;
   padding-bottom: 1.4vw;
+  /*border: 1px solid white;*/
 }
-.footer .g img {
+.g img {
   width: 1.5vw;
   display: block;
 }
-.footer .g p {
+.g p {
   font-size: 0.6vw;
   padding-left: 0.6vw;
 }
-.footer .footer-social {
+
+.footer-social {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 8vw;
+  /*border: 1px solid rgb(224, 15, 15);*/
 }
-.footer .footer-social .sayna {
+.footer-social .sayna {
   width: 2.3vw;
   height: 2.56vw;
   margin-right: 0.6vw;
   background-image: url("/Assets/logos/logo_sayna_white.png");
   background-size: 100%;
 }
-.footer .footer-social .sayna:hover {
+.footer-social .sayna:hover {
   background-image: url("/Assets/logos/logo_sayna_yellow.png");
 }
-.footer .footer-social .x {
+.footer-social .x {
   width: 1vw;
   height: 1vw;
   margin-right: 1vw;
   background-image: url("/Assets/logos/icon_x.png");
   background-size: 100%;
 }
-.footer .footer-social .x:hover {
+.footer-social .x:hover {
   background-image: url("/Assets/logos/icon_x_a.png");
 }
-.footer .footer-social .dc {
+.footer-social .dc {
   width: 2.8vw;
   height: 2.8vw;
   margin-right: 0.5vw;
   background-image: url("/Assets/logos/icon_DC.png");
   background-size: 100%;
 }
-.footer .footer-social .dc:hover {
+.footer-social .dc:hover {
   background-image: url("/Assets/logos/icon_DC_a.png");
 }
-.footer .footer-social .icon {
+.footer-social .icon {
   width: 1.3vw;
   height: 1.3vw;
   margin-left: 1.8vw;
 }
-.footer .footer-social .icon.fb {
+.footer-social .icon.fb {
   background-image: url("/Assets/logos/icon_facebook.png");
   background-size: 100%;
 }
-.footer .footer-social .icon.fb:hover {
+.footer-social .icon.fb:hover {
   background-image: url("/Assets/logos/icon_facebook_a.png");
 }
-.footer .footer-social .icon.ig {
+.footer-social .icon.ig {
   background-image: url("/Assets/logos/icon_ig.png");
   background-size: 100%;
 }
-.footer .footer-social .icon.ig:hover {
+.footer-social .icon.ig:hover {
   background-image: url("/Assets/logos/icon_igcopie.png");
 }
-.footer .footer-social .icon.tw {
+.footer-social .icon.tw {
   background-image: url("/Assets/logos/icon_tw.png");
   background-size: 100%;
 }
-.footer .footer-social .icon.tw:hover {
+.footer-social .icon.tw:hover {
   background-image: url("/Assets/logos/icon_tw_a.png");
+}
+
+.flecheDown {
+  display: block;
+  margin: auto;
+  width: 4vw;
 }
 
 /*# sourceMappingURL=styles.css.map */

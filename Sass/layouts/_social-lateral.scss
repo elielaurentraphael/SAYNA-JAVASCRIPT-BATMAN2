@@ -1,0 +1,55 @@
+.social-lateral {
+	display: inline-block;
+	position: fixed;
+	top: 19.3vw;
+	/*right: 12.2vw;*/
+	right: 12.2vw;
+	z-index: 1; /* amelioration de l'effet hover */
+	div {
+		cursor: pointer;
+		margin: 1.8vw auto;
+	}
+	.logo {
+		width: 5.6vw;
+		height: 3.23vw;
+		&#flecheHaut {
+			background-image: url("/Assets/logos/logo_bat_flèche.png");
+			background-size: 100%;
+			&:hover {
+				background-image: url("/Assets/logos/logo_bat_flèche_a.png");
+			}
+		}
+		&#flecheBas {
+			background-image: url("/Assets/logos/logo_bat_flèche_2.png");
+			background-size: 100%;
+			&:hover {
+				background-image: url("/Assets/logos/logo_bat_flèche_2_a.png");
+			}
+		}
+	}
+	.icon {
+		width: 1.3vw;
+		height: 1.3vw;
+		&#fb {
+			background-image: url("/Assets/logos/icon_facebook.png");
+			background-size: 100%;
+			&:hover {
+				background-image: url("/Assets/logos/icon_facebook_a.png");
+			}
+		}
+		&#ig {
+			background-image: url("/Assets/logos/icon_ig.png");
+			background-size: 100%;
+			&:hover {
+				background-image: url("/Assets/logos/icon_igcopie.png");
+			}
+		}
+		&#tw {
+			background-image: url("/Assets/logos/icon_tw.png");
+			background-size: 100%;
+			&:hover {
+				background-image: url("/Assets/logos/icon_tw_a.png");
+			}
+		}
+	}
+}

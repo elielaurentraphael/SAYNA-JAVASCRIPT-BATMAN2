@@ -1,77 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game</title>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
-    <link rel="stylesheet" href="./Styles/styles" />
-    <script src="/Docs-dev/jquery-3.7.0.js" defer></script>
-    <script src="/Js/game.js" defer></script>
-  </head>
-  <body>
-    <footer>
-      <!-- section footer -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>game</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="./Styles/styles.css" />
+		<script src="/Docs-dev/jquery-3.7.0.js" defer></script>
+		<script src="/Js/game.js" defer></script>
+	</head>
+	<body>
+		<!-- VERSION DESKTOP -->
 
-      <section class="footer">
-        <div class="animation">
-          <div class="a">
-            <div class="b">
-              <img
-                src="./Assets/logos/icon_guillemets_1.png"
-                alt="guillemets_1"
-              />
-            </div>
-            <div class="replique">
-              <div class="c">
-                <p>La seule façon raisonnable de vivre en ce bas monde,</p>
-                <p>c'est en dehors des règles.</p>
-              </div>
-              <div class="d">
-                <p>The Dark Knight : Le Chevalier Noir -</p>
-                <p>- Le Joker à Batman (2008)</p>
-              </div>
-              <div class="e">
-                <p>
-                  o o o o
-                  <span>
-                    <svg width=".35vw" height=".35vw">
-                      <circle
-                        fill="#19587d"
-                        cx=".175vw"
-                        cy=".175vw"
-                        r=".175vw"
-                      />
-                    </svg>
-                  </span>
-                  o o o o
-                </p>
-              </div>
-            </div>
-            <div class="f">
-              <img
-                src="./Assets/logos/icon_guillemets_2.png"
-                alt="guillemets_2"
-              />
-            </div>
-          </div>
-          <div class="g">
-            <img src="./Assets/logos/icon_WB.png" alt="icon_WB" />
-            <p>
-              Ce projet respecte l’univers cinématographique des films Batman
-              récents. Version Nolan & Snyder & Reeves
-            </p>
-          </div>
-          <div class="footer-social">
-            <div class="sayna"></div>
-            <div class="x"></div>
-            <div class="dc"></div>
-            <div class="icon fb"></div>
-            <div class="icon ig"></div>
-            <div class="icon tw"></div>
-          </div>
-        </div>
-      </section>
-    </footer>
-  </body>
+		<!-- header -->
+
+		<header class="headergame">
+			<div class="header" id="header">
+				<nav>
+					<div class="logohome"></div>
+					<a href="./index.html">HOME</a>
+					<a href="#">GAME</a>
+				</nav>
+				<div class="heading-game">LET'S PLAY A<br />LITTLE GAME...</div>
+				<div class="social-lateral">
+					<a href="#header">
+						<div class="logo" id="flecheHaut"></div>
+					</a>
+					<div class="icon" id="fb"></div>
+					<div class="icon" id="ig"></div>
+					<div class="icon" id="tw"></div>
+					<a href="#contact">
+						<div class="logo" id="flecheBas"></div>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- main -->
+
+		<main>
+			<section>
+				<div class="bouton">
+					<button class="btn1 boktra" style="color: white">btn1</button>
+					<button class="btn2 boktra" style="color: white">btn2</button>
+					<button class="btn3 boktra" style="color: white">btn3</button>
+					<button class="btn4 boktra" style="color: white">btn4</button>
+				</div>
+
+				<img
+					class="flecheDown down"
+					src="./Assets/logos/flèche_down_header.png"
+					alt="flèche down"
+				/>
+				<!-- <div class="quiz" style="border: 5px solid green"> -->
+				<div class="quiz">
+					<div class="numero">1/15</div>
+					<div class="question">question</div>
+					<div class="wrap">
+						<div class="image">
+							<!-- <img src="./Assets/Illustrations/Batgame_15.png" alt="Batgame_15" /> -->
+						</div>
+						<div class="response">
+							<div class="res">réponse n°1</div>
+							<div class="res">réponse n°2</div>
+							<div class="res">réponse n°3</div>
+						</div>
+					</div>
+				</div>
+				<div class="startQuiz">
+					<div class="start">connaissez vous bien le chevalier noir ?</div>
+					<div>
+						<img
+							src="./Assets/Illustrations/Batgame_2.png"
+							alt="Batgame_2.png"
+						/>
+					</div>
+				</div>
+				<div class="next">Qestion suivante</div>
+			</section>
+		</main>
+
+		<!-- footer -->
+
+		<footer>
+			<!-- section footer -->
+
+			<section class="footer">
+				<div class="animation footGame">
+					<!--
+					<div class="a">
+						<div class="b">
+							<img
+								src="./Assets/logos/icon_guillemets_1.png"
+								alt="guillemets_1"
+							/>
+						</div>
+						<div class="replique">
+							<div class="c">
+								<p>La seule façon raisonnable de vivre en ce bas monde,</p>
+								<p>c'est en dehors des règles.</p>
+							</div>
+							<div class="d">
+								<p>The Dark Knight : Le Chevalier Noir -</p>
+								<p>- Le Joker à Batman (2008)</p>
+							</div>
+							<div class="e">
+								<p>
+									o o o o
+									<span>
+										<svg width=".35vw" height=".35vw">
+											<circle
+												fill="#19587d"
+												cx=".175vw"
+												cy=".175vw"
+												r=".175vw"
+											/>
+										</svg>
+									</span>
+									o o o o
+								</p>
+							</div>
+						</div>
+						<div class="f">
+							<img
+								src="./Assets/logos/icon_guillemets_2.png"
+								alt="guillemets_2"
+							/>
+						</div>
+					</div>
+          -->
+					<div class="g">
+						<img src="./Assets/logos/icon_WB.png" alt="icon_WB" />
+						<p>
+							Ce projet respecte l’univers cinématographique des films Batman
+							récents. Version Nolan & Snyder & Reeves
+						</p>
+					</div>
+					<div class="footer-social">
+						<div class="sayna"></div>
+						<div class="x"></div>
+						<div class="dc"></div>
+						<div class="icon fb"></div>
+						<div class="icon ig"></div>
+						<div class="icon tw"></div>
+					</div>
+				</div>
+			</section>
+		</footer>
+	</body>
 </html>
