@@ -115,6 +115,11 @@ header,
   margin: 0 auto;
 }
 
+#home {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 header {
   background-image: url("/Assets/Illustrations-1/Bathome1.png");
   background-size: 100%;
@@ -520,6 +525,10 @@ button:hover {
   background: linear-gradient(315deg, #890008, #eddebf);
 }
 
+.flecheDown.down,
+.startQuiz,
+.next,
+.quiz,
 .heading-game,
 .button {
   position: relative;
@@ -597,6 +606,11 @@ button:hover {
   border-bottom: none;
 }
 
+#game {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .header .heading-game {
   color: #ffffff;
   font-size: 2.55vw;
@@ -613,6 +627,10 @@ section {
 .down {
   padding-top: 3.5vw;
   padding-bottom: 5.2vw;
+}
+
+.quiz {
+  display: none;
 }
 
 .numero {
@@ -649,13 +667,36 @@ section {
 .res {
   width: 30.4vw;
   height: 2.6vw;
-  margin: 0.5vw auto;
-  background-color: #c4c4c4;
+  margin: 0.7vw auto;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3098039216);
+}
+.res input {
+  width: 1.6vw;
+  height: 1.6vw;
+  margin-left: 0.3vw;
+  display: block;
+}
+.res label {
+  font-size: 1.2vw;
+  color: #ffffff;
+  margin-left: 0.65vw;
+  display: flex;
+  align-items: center;
 }
 
 .next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.95vw;
+  font-weight: lighter;
+  color: #ffffff;
+  letter-spacing: 0.1vw;
   width: 19.5vw;
-  height: 3.5vw;
+  height: 3.7vw;
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;
@@ -675,16 +716,6 @@ section {
   text-align: center;
   font-weight: bold;
   font-size: 2vw;
-}
-
-.boktra {
-  display: block;
-}
-
-.bouton {
-  position: fixed;
-  left: 3vw;
-  top: 30%;
 }
 
 h1 {

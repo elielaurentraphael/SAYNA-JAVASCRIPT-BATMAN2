@@ -41,7 +41,10 @@ button {
 		background: $background-button-hover;
 	}
 }
-
+.flecheDown.down,
+.startQuiz,
+.next,
+.quiz,
 .heading-game,
 .button {
 	position: relative;
@@ -120,6 +123,11 @@ button {
 	border-bottom: none;
 }
 
+#game {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .header {
 	.heading-game {
 		color: $text-color;
@@ -139,6 +147,10 @@ section {
 .down {
 	padding-top: 3.5vw;
 	padding-bottom: 5.2vw;
+}
+
+.quiz {
+	display: none;
 }
 
 .numero {
@@ -175,13 +187,36 @@ section {
 .res {
 	width: 30.4vw;
 	height: 2.6vw;
-	margin: 0.5vw auto;
-	background-color: $grey-bat;
+	margin: 0.7vw auto;
+	display: flex;
+	align-items: center;
+	background-color: $drop-shadow-color;
+	input {
+		width: 1.6vw;
+		height: 1.6vw;
+		margin-left: 0.3vw;
+		display: block;
+	}
+	label {
+		font-size: 1.2vw;
+		color: $text-color;
+		margin-left: 0.65vw;
+		display: flex;
+		align-items: center;
+	}
 }
 
 .next {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 0.95vw;
+	font-weight: lighter;
+	color: $text-color;
+	letter-spacing: 0.1vw;
 	width: 19.5vw;
-	height: 3.5vw;
+	height: 3.7vw;
 	margin: 0 auto;
 	text-align: center;
 	background-color: $grey-bat;
@@ -201,15 +236,6 @@ section {
 	text-align: center;
 	font-weight: bold;
 	font-size: 2vw;
-}
-
-.boktra {
-	display: block;
-}
-.bouton {
-	position: fixed;
-	left: 3vw;
-	top: 30%;
 }
 
 h1 {
