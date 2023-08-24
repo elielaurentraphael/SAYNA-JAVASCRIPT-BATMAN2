@@ -1,19 +1,19 @@
 {
-  "name": "sayna-javascript-batman2",
-  "version": "1.0.0",
-  "description": "Ce projet fait parti du programme de formation \"frontend\" de \"SAYNA ACADEMY\".\r Je suis un apprenant de \"SAYNA\" depuis le mois de Janvier 2022.\r Au début, j'étais absolument nul (niveau zéro absolu) en informatique.\r J'ai déjà 63 ans, mes devoirs envers ma progéniture ne me permettent pas de prendre la retraite, c'est pourquoi j'ai décidé de suivre les diverses formations proposées par \"SAYNA\" afin que je puisse encore travailler malgré mon âge.\r D'ailleurs, \"coder\", c'est un \"imense plaisir !\"",
-  "main": "index.js",
-  "scripts": {
-    "sass": "sass --watch ./Sass/main.scss:./Styles/styles.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2.git"
-  },
-  "author": "elielaurentraphael",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2/issues"
-  },
-  "homepage": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2#readme"
+	"name": "sayna-javascript-batman2",
+	"version": "1.0.0",
+	"description": "Ce projet fait parti du programme de formation \"frontend\" de \"SAYNA ACADEMY\".\r Je suis un apprenant de \"SAYNA\" depuis le mois de Janvier 2022.\r Au début, j'étais absolument nul (niveau zéro absolu) en informatique.\r J'ai déjà 63 ans, mes devoirs envers ma progéniture ne me permettent pas de prendre la retraite, c'est pourquoi j'ai décidé de suivre les diverses formations proposées par \"SAYNA\" afin que je puisse encore travailler malgré mon âge.\r D'ailleurs, \"coder\", c'est un \"immense plaisir !\"",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass --watch ./Sass/main.scss:./Styles/styles.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2.git"
+	},
+	"author": "elielaurentraphael",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2/issues"
+	},
+	"homepage": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2#readme"
 }

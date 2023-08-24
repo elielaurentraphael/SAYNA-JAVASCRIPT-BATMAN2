@@ -198,15 +198,6 @@ section > div > .images .description:hover {
 }
 
 /* section batman au cinéma */
-/*section {
-	&.batmanAuCinema {
-		.flecheDown {
-			display: block;
-			margin: auto;
-			width: 4vw;
-		}
-	}
-}*/
 /* section némésis */
 section.nemesis {
   position: relative;
@@ -631,7 +622,6 @@ section {
   text-align: center;
   font-weight: 900;
   font-size: 2vw;
-  /*border: 1px solid rgb(243, 241, 250);*/
 }
 
 .question {
@@ -641,19 +631,15 @@ section {
 
 .wrap {
   display: flex;
-  /*background-color: white;*/
 }
 
 .image {
   width: 24.9vw;
   text-align: center;
-  /*border: 1px solid rgb(49, 12, 185);*/
 }
 
 .response {
-  /*width: 30.2vw;*/
   padding-right: 13.5vw;
-  /*border: 1px solid rgb(185, 12, 12);*/
 }
 
 .response div:nth-child(3) {
@@ -722,7 +708,7 @@ footer {
 }
 
 nav {
-  font-weight: bold;
+  /*font-weight: bold;*/
   letter-spacing: 0.1vw;
   font-size: 1.5vw;
   height: 11.4vw;
@@ -743,16 +729,24 @@ nav .logohome {
 nav .logohome:hover {
   background-image: url("/Assets/logos/logohoma.png");
 }
-nav a {
+nav .link {
+  display: flex;
+}
+nav .link a {
   display: block;
   color: #ffffff;
+  text-decoration: none;
+  padding: 0 1vw;
+}
+nav .link a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .social-lateral {
   display: inline-block;
   position: fixed;
   top: 19.3vw;
-  /*right: 12.2vw;*/
   right: 12.2vw;
   z-index: 1; /* amelioration de l'effet hover */
 }
@@ -810,7 +804,6 @@ nav a {
   justify-content: center;
   padding-top: 2.6vw;
   padding-bottom: 1.4vw;
-  /*border: 1px solid white;*/
 }
 .g img {
   width: 1.5vw;
@@ -826,7 +819,6 @@ nav a {
   align-items: center;
   justify-content: center;
   padding-bottom: 8vw;
-  /*border: 1px solid rgb(224, 15, 15);*/
 }
 .footer-social .sayna {
   width: 2.3vw;

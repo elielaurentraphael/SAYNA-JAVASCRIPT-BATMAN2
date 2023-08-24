@@ -148,7 +148,6 @@ section {
 	text-align: center;
 	font-weight: 900;
 	font-size: 2vw;
-	/*border: 1px solid rgb(243, 241, 250);*/
 }
 
 .question {
@@ -158,20 +157,15 @@ section {
 
 .wrap {
 	display: flex;
-	/*background-color: white;*/
 }
 
 .image {
 	width: 24.9vw;
 	text-align: center;
-	/*border: 1px solid rgb(49, 12, 185);*/
 }
 
 .response {
-	/*width: 30.2vw;*/
 	padding-right: 13.5vw;
-
-	/*border: 1px solid rgb(185, 12, 12);*/
 }
 
 .response div:nth-child(3) {

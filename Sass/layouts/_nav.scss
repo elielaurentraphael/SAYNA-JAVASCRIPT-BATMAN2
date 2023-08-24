@@ -1,5 +1,5 @@
 nav {
-	font-weight: bold;
+	/*font-weight: bold;*/
 	letter-spacing: 0.1vw;
 	font-size: 1.5vw;
 	height: 11.4vw;
@@ -19,8 +19,17 @@ nav {
 			background-image: url("/Assets/logos/logohoma.png");
 		}
 	}
-	a {
-		display: block;
-		color: $text-color;
+	.link {
+		display: flex;
+		a {
+			display: block;
+			color: $text-color;
+			text-decoration: none;
+			padding: 0 1vw;
+			&:hover {
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
 	}
 }
