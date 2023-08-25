@@ -1,52 +1,24 @@
-/*
-$(".btn1").click(function () {
-	console.log("OK !");
-	$(".quiz").hide();
-});
-
-$(".btn2").click(function () {
-	console.log("OK !");
-	$(".quiz").show();
-});
-
-$(".btn3").click(function () {
-	console.log("OK !");
-	$(".startQuiz").hide();
-	$(".flecheDown.down").hide();
-});
-
-$(".btn4").click(function () {
-	console.log("OK !");
-	$(".startQuiz").show();
-	$(".flecheDown.down").show();
-});
-
-$(document).ready(function () {
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		$(".social-lateral").css("top", scroll + "px");
-		console.log(scroll);
+function quiz(x) {
+	$.ajax({
+		url: "https://batman-api.sayna.space/questions",
+		datatype: "json",
+		success: function (questions) {
+			let y = parseInt(x);
+			$(".numero").text(y + 1 + "/" + 12);
+			$(".question").text(questions[x]["question"]);
+			$(".res:first-child label").text(questions[x]["response"][0]["text"]);
+			$(".res:nth-child(2) label").text(questions[x]["response"][1]["text"]);
+			$(".res:last-child label").text(questions[x]["response"][2]["text"]);
+		},
+		error: function () {
+			console.log("Défaut de connexion !");
+		},
 	});
-});
+}
 
-$(document).ready(function () {
-	// vos scripts
-});
-*/
-
-/*setTimeout(
-	$(document).ready(function () {
-		let scroll = $(window).scrollTop();
-		$(".social-lateral").css("top", 0 + "px");
-	}),
-	1000
-);
-window.onscroll = function (event) {
-	console.log(event);
-};
-*/
 $(".next").click(function () {
 	$(".startQuiz, .flecheDown.down").fadeOut();
 	$(".quiz").fadeIn();
 	$(".next").text("question suivante");
+	quiz(8);
 });

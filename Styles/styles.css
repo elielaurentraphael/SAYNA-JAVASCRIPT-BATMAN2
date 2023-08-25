@@ -645,6 +645,8 @@ section {
 .question {
   height: 3vw;
   padding-left: 24.9vw;
+  font-size: 1.3vw;
+  font-weight: bolder;
 }
 
 .wrap {
