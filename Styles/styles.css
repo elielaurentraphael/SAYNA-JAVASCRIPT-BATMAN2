@@ -702,6 +702,7 @@ section {
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;
+  cursor: pointer;
 }
 
 .startQuiz img {
