@@ -1,0 +1,22 @@
+header {
+	background-size: 100%;
+	background-color: $red-batman1;
+	.header {
+		margin: 0 auto;
+		.intro {
+			color: $text-color;
+			text-align: center;
+			font-size: 1.23vw;
+			padding-top: 11.2vw;
+		}
+		.heading {
+			color: $text-color;
+			font-weight: bold;
+		}
+		.button {
+			button {
+				margin: 2.5vw 1vw;
+			}
+		}
+	}
+}

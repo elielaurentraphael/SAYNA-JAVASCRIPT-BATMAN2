@@ -22,30 +22,30 @@
 		width: 2.3vw;
 		height: 2.56vw;
 		margin-right: 0.6vw;
-		background-image: url("/Assets/logos/logo_sayna_white.png");
+		background-image: url("../Assets/logos/logo_sayna_white.png");
 		background-size: 100%;
 		&:hover {
-			background-image: url("/Assets/logos/logo_sayna_yellow.png");
+			background-image: url("../Assets/logos/logo_sayna_yellow.png");
 		}
 	}
 	.x {
 		width: 1vw;
 		height: 1vw;
 		margin-right: 1vw;
-		background-image: url("/Assets/logos/icon_x.png");
+		background-image: url("../Assets/logos/icon_x.png");
 		background-size: 100%;
 		&:hover {
-			background-image: url("/Assets/logos/icon_x_a.png");
+			background-image: url("../Assets/logos/icon_x_a.png");
 		}
 	}
 	.dc {
 		width: 2.8vw;
 		height: 2.8vw;
 		margin-right: 0.5vw;
-		background-image: url("/Assets/logos/icon_DC.png");
+		background-image: url("../Assets/logos/icon_DC.png");
 		background-size: 100%;
 		&:hover {
-			background-image: url("/Assets/logos/icon_DC_a.png");
+			background-image: url("../Assets/logos/icon_DC_a.png");
 		}
 	}
 	.icon {
@@ -53,24 +53,24 @@
 		height: 1.3vw;
 		margin-left: 1.8vw;
 		&.fb {
-			background-image: url("/Assets/logos/icon_facebook.png");
+			background-image: url("../Assets/logos/icon_facebook.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("/Assets/logos/icon_facebook_a.png");
+				background-image: url("../Assets/logos/icon_facebook_a.png");
 			}
 		}
 		&.ig {
-			background-image: url("/Assets/logos/icon_ig.png");
+			background-image: url("../Assets/logos/icon_ig.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("/Assets/logos/icon_igcopie.png");
+				background-image: url("../Assets/logos/icon_igcopie.png");
 			}
 		}
 		&.tw {
-			background-image: url("/Assets/logos/icon_tw.png");
+			background-image: url("../Assets/logos/icon_tw.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("/Assets/logos/icon_tw_a.png");
+				background-image: url("../Assets/logos/icon_tw_a.png");
 			}
 		}
 	}

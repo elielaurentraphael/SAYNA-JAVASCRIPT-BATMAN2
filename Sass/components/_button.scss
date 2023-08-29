@@ -1,0 +1,18 @@
+.button {
+	text-align: center;
+}
+
+button {
+	letter-spacing: 0.1vw;
+	font-size: 0.95vw;
+	color: $text-color;
+	background: $background-button;
+	border: none;
+	margin: 0;
+	padding: 1.25vw 0;
+	width: 14vw;
+	cursor: pointer;
+	&:hover {
+		background: $background-button-hover;
+	}
+}

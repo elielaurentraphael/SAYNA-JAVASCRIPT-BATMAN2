@@ -1,54 +1,18 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
-/* VERSION DESKTOP  &  MOBILE */
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
-body {
-  width: 80vw;
-  margin: 0 auto;
-  font-family: "Space Grotesk";
-  color: #ffffff;
-}
-
-h1,
-nav,
-button {
-  font-family: "Rajdhani";
-}
-
-.header,
-section {
-  width: 68.6vw;
-  border-left: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
-  border-right: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
-  margin: 0 auto;
-}
-
-.button {
-  text-align: center;
-}
-
-button {
-  letter-spacing: 0.1vw;
-  font-size: 0.95vw;
-  color: #ffffff;
-  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
-  border: none;
-  margin: 0;
-  padding: 1.25vw 0;
-  width: 14vw;
-  cursor: pointer;
-}
-button:hover {
-  background: linear-gradient(315deg, #890008, #eddebf);
-}
-
 .intro,
-.heading-home,
-.button,
+.home,
 .animation,
 .justice,
 .contact,
-.justiceImage {
+.justiceImage,
+.flecheDown.down,
+.startQuiz,
+.next,
+.quiz,
+.game,
+.button {
   position: relative;
   animation: fadeIn 4s;
   animation-delay: 2s;
@@ -108,45 +72,80 @@ button:hover {
     opacity: 1;
   }
 }
-/* --header-- */
-header,
-.header {
-  height: 50.0555554096vw;
+body {
+  width: 80vw;
+  margin: 0 auto;
+  font-family: "Space Grotesk";
+  color: #ffffff;
+}
+
+h1,
+nav,
+button {
+  font-family: "Rajdhani";
+}
+
+.header,
+section {
+  width: 68.6vw;
+  border-left: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+  border-right: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
   margin: 0 auto;
 }
 
-#home {
+.button {
+  text-align: center;
+}
+
+button {
+  letter-spacing: 0.1vw;
+  font-size: 0.95vw;
+  color: #ffffff;
+  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
+  border: none;
+  margin: 0;
+  padding: 1.25vw 0;
+  width: 14vw;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(315deg, #890008, #eddebf);
+}
+
+.flecheDown {
+  display: block;
+  margin: auto;
+  width: 4vw;
+}
+
+/* VERSION DESKTOP  &  MOBILE */
+/* --header-- */
+.backgroundHome {
+  background-image: url("../Assets/Illustrations-1/Bathome1.png");
+}
+.backgroundHome .heightHeaderHome {
+  height: 50.0555554096vw;
+}
+.backgroundHome .heightHeaderHome nav {
+  border-bottom: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
+}
+.backgroundHome .heightHeaderHome nav #home {
   font-weight: bold;
   text-decoration: underline;
 }
-
-header {
-  background-image: url("/Assets/Illustrations-1/Bathome1.png");
-  background-size: 100%;
-  background-color: #980008;
-}
-header .header .intro {
+.backgroundHome .heightHeaderHome .intro {
   color: #ffffff;
   text-align: center;
   font-size: 1.23vw;
   padding-top: 11.2vw;
 }
-header .header .heading-home {
-  color: #ffffff;
+.backgroundHome .heightHeaderHome .home {
   text-align: center;
   font-size: 1.55vw;
-  font-weight: bold;
   padding-top: 1vw;
-}
-header .header .button button {
-  margin: 2.5vw 1vw;
 }
 
 /* --main-- */
-main {
-  background-color: #000000;
-}
-
 h1 {
   color: #ffffff;
   font-size: 1.8vw;
@@ -202,63 +201,64 @@ section > div > .images .description:hover {
   -o-transform: scale(1.1);
 }
 
-/* section batman au cinéma */
-/* section némésis */
-section.nemesis {
+main {
+  background-color: #000000;
+  /* section batman au cinéma */
+  /* section némésis */
+  /* section alliés */
+  /* section justice league */
+  /* class justiceImage */
+  /* section multimédia */
+  /* class contact */
+}
+main section.nemesis {
   position: relative;
 }
-section.nemesis h1 {
+main section.nemesis h1 {
   padding-top: 6.7vw;
 }
-section.nemesis .bathome13 {
+main section.nemesis .bathome13 {
   width: 8vw;
   position: absolute;
   top: 2.5vw;
   left: 9.5vw;
 }
-section.nemesis .bathome12 {
+main section.nemesis .bathome12 {
   width: 22.5vw;
   position: absolute;
   top: 49.7vw;
   right: -5.7vw;
 }
-
-/* section alliés */
-/* section justice league */
-section .justice {
+main section .justice {
   width: 53vw;
   margin: auto;
   padding-bottom: 4.75vw;
 }
-section .justice h1 {
+main section .justice h1 {
   padding-left: 0;
   padding-top: 6.6vw;
   padding-bottom: 1.7vw;
 }
-section .justice p {
+main section .justice p {
   font-size: 1.23vw;
   color: #ffffff;
   margin: 0;
   text-align: justify;
 }
-
-/* class justiceImage */
-main > img.justiceImage {
+main img.justiceImage {
   display: block;
   width: 100%;
 }
-
-/* section multimédia */
-.multimedia .media {
+main .multimedia .media {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2vw 4.5vw;
 }
-.multimedia .media .fleche img {
+main .multimedia .media .fleche img {
   width: 2.3vw;
 }
-.multimedia .media .card {
+main .multimedia .media .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,71 +267,69 @@ main > img.justiceImage {
   border-bottom-right-radius: 0.5vw;
   color: #eddebf;
 }
-.multimedia .media .card .card-image {
+main .multimedia .media .card .card-image {
   display: block;
   width: 8.5vw;
 }
-.multimedia .media .card .card-text {
+main .multimedia .media .card .card-text {
   height: 100%;
   padding: 0 0.8vw;
 }
-.multimedia .media .card .card-text .p1 {
+main .multimedia .media .card .card-text .p1 {
   font-size: 0.65vw;
   letter-spacing: 0.1vw;
 }
-.multimedia .media .card .card-text .p2 {
+main .multimedia .media .card .card-text .p2 {
   font-size: 1vw;
   font-family: "Rajdhani";
   margin: 0;
 }
-.multimedia .media .card .card-text .p3 {
+main .multimedia .media .card .card-text .p3 {
   font-size: 0.7vw;
 }
-.multimedia .media .card .card-text .p3 span {
+main .multimedia .media .card .card-text .p3 span {
   color: #ffff00;
 }
-.multimedia .media .card .card-text .text {
+main .multimedia .media .card .card-text .text {
   font-size: 0.65vw;
 }
-.multimedia .bandeAnnonce {
+main .multimedia .bandeAnnonce {
   padding: 4.5vw 4.5vw 9vw 4.5vw;
   position: relative;
 }
-.multimedia .bandeAnnonce img {
+main .multimedia .bandeAnnonce img {
   display: block;
 }
-.multimedia .bandeAnnonce .bathome-ba2 {
+main .multimedia .bandeAnnonce .bathome-ba2 {
   width: 100%;
 }
-.multimedia .bandeAnnonce .player {
+main .multimedia .bandeAnnonce .player {
   position: absolute;
   width: 11%;
   top: 37.5%;
   left: 44.3%;
 }
-.multimedia .bandeAnnonce .player:hover {
+main .multimedia .bandeAnnonce .player:hover {
   filter: drop-shadow(0 0 2vw rgba(255, 255, 255, 0.3098039216));
   -webkit-filter: drop-shadow(0 0 2vw rgba(255, 255, 255, 0.3098039216));
 }
-
-/* class contact */
-.contact {
+main .contact {
   background-image: linear-gradient(315deg, rgba(25, 88, 125, 0.3725490196) 16%, rgba(237, 222, 191, 0.3725490196) 96%);
 }
-.contact h1 {
+main .contact h1 {
   margin: 0;
   padding: 3vw;
   text-align: center;
   font-size: 1.7vw;
 }
-.contact form {
+main .contact form {
   width: 50%;
   margin: auto;
 }
-.contact form .label-email label {
+main .contact form .label-email label {
   font-size: 1.2vw;
 }
-.contact form .email input {
+main .contact form .email input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -345,34 +343,34 @@ main > img.justiceImage {
   font-weight: lighter;
   color: gray;
 }
-.contact form .label-checkbox {
+main .contact form .label-checkbox {
   margin-bottom: 1.5vw;
 }
-.contact form .label-checkbox label {
+main .contact form .label-checkbox label {
   font-size: 1.2vw;
 }
-.contact form .checkbox p {
+main .contact form .checkbox p {
   font-size: 0.85vw;
   letter-spacing: 0.02vw;
   word-spacing: 0.04vw;
   font-weight: lighter;
   color: gray;
 }
-.contact form .checkbox > p {
+main .contact form .checkbox > p {
   margin-bottom: 0;
 }
-.contact form .checkbox .pa {
+main .contact form .checkbox .pa {
   display: flex;
   align-items: center;
 }
-.contact form .checkbox .pa input {
+main .contact form .checkbox .pa input {
   width: 1.2vw;
   height: 1.2vw;
   display: block;
   margin-left: 0.6vw;
   color: #19587d;
 }
-.contact form .frequence select {
+main .contact form .frequence select {
   width: 100%;
   margin-top: 0.6vw;
   background-color: transparent;
@@ -385,10 +383,10 @@ main > img.justiceImage {
   font-weight: lighter;
   color: gray;
 }
-.contact form .frequence select option {
+main .contact form .frequence select option {
   background: linear-gradient(315deg, rgba(25, 88, 125, 0.3725490196) 16%, rgba(237, 222, 191, 0.3725490196) 96%);
 }
-.contact form .input-type-button .input-disabled input {
+main .contact form .input-type-button .input-disabled input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -401,7 +399,7 @@ main > img.justiceImage {
   font-weight: lighter;
   color: #ffffff;
 }
-.contact form .input-type-button .button input {
+main .contact form .input-type-button .button input {
   background-color: transparent;
   border: none;
   padding: 0.5vw 1.5vw;
@@ -412,18 +410,18 @@ main > img.justiceImage {
   color: #ffffff;
   cursor: pointer;
 }
-.contact form .input-type-button .button input:hover {
+main .contact form .input-type-button .button input:hover {
   background: linear-gradient(315deg, #890008, #eddebf);
 }
-.contact form .input-type-button .button .gradient {
+main .contact form .input-type-button .button .gradient {
   border-style: solid;
   border-width: 0.1vw;
   border-image: linear-gradient(135deg, rgb(163, 152, 147), rgb(35, 129, 141)) 1;
 }
-.contact form .message .message-label label {
+main .contact form .message .message-label label {
   font-size: 1.2vw;
 }
-.contact form .message .message-input input {
+main .contact form .message .message-input input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -437,219 +435,105 @@ main > img.justiceImage {
   font-weight: lighter;
   color: gray;
 }
-.contact form .confirmer {
+main .contact form .confirmer {
   padding-bottom: 3vw;
 }
 
 /* --footer-- */
 footer {
   background-color: #000000;
+  /* section footer */
 }
-
-/* section footer */
-.footer .a {
+footer .footer .a {
   padding: 9.5vw;
 }
-.footer .a .b img {
+footer .footer .a .b img {
   width: 5.5vw;
 }
-.footer .a .replique {
+footer .footer .a .replique {
   text-align: center;
 }
-.footer .a .replique .c {
+footer .footer .a .replique .c {
   font-size: 0.9vw;
   letter-spacing: 0.03vw;
   line-height: 0.5vw;
 }
-.footer .a .replique .d {
+footer .footer .a .replique .d {
   font-size: 0.7vw;
   letter-spacing: 0.03vw;
   line-height: 0.5vw;
   color: rgb(175, 170, 170);
   padding-top: 0.3vw;
 }
-.footer .a .replique .e {
+footer .footer .a .replique .e {
   font-size: 0.7vw;
   letter-spacing: 0.03vw;
   line-height: 0.5vw;
   color: #19587d;
   padding-top: 0.3vw;
 }
-.footer .a .f {
+footer .footer .a .f {
   float: right;
   position: relative;
   top: -3vw;
 }
-.footer .a .f img {
+footer .footer .a .f img {
   width: 5.5vw;
 }
 
 /* VERSION DESKTOP  &  MOBILE */
-body {
-  width: 80vw;
-  margin: 0 auto;
-  font-family: "Space Grotesk";
-  color: #ffffff;
-}
-
-h1,
-nav,
-button {
-  font-family: "Rajdhani";
-}
-
-.header,
-section {
-  width: 68.6vw;
-  border-left: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
-  border-right: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
-  margin: 0 auto;
-}
-
-.button {
-  text-align: center;
-}
-
-button {
-  letter-spacing: 0.1vw;
-  font-size: 0.95vw;
-  color: #ffffff;
-  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
-  border: none;
-  margin: 0;
-  padding: 1.25vw 0;
-  width: 14vw;
-  cursor: pointer;
-}
-button:hover {
-  background: linear-gradient(315deg, #890008, #eddebf);
-}
-
-.flecheDown.down,
-.startQuiz,
-.next,
-.quiz,
-.heading-game,
-.button {
-  position: relative;
-  animation: fadeIn 4s;
-  animation-delay: 2s;
-  -webkit-animation: fadeIn 4s;
-  -moz-animation: fadeIn 4s;
-  -o-animation: fadeIn 4s;
-  -ms-animation: fadeIn 4s;
-}
-
-@keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-@-ms-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
 /* --header-- */
-.headergame {
-  height: 47.619047619vw;
-  margin: 0 auto;
-  background-image: url("/Assets/Illustrations/Batgame_1.png");
-  background-size: 100%;
-  background-color: #980008;
+.backgroundGame {
+  background-image: url("../Assets/Illustrations/Batgame_1.png");
 }
-.headergame .header nav {
+.backgroundGame .heightHeaderGame {
+  height: 47.619047619vw;
+}
+.backgroundGame .heightHeaderGame nav {
   border-bottom: none;
 }
-.headergame .header .nombreQuestion {
-  /* affichage caché du nombre de questions opacité normale: 0; effet :hover opacity: 1 */
-  opacity: 0;
-}
-.headergame .header .nombreQuestion:hover {
-  opacity: 1;
-}
-.headergame .header .heading-game {
-  color: #ffffff;
-  font-size: 2.55vw;
-  font-weight: bold;
-  padding-top: 6vw; /* rectification 7vw -> 6vw */
-  padding-left: 4vw;
-}
-
-#game {
+.backgroundGame .heightHeaderGame nav #game {
   font-weight: bold;
   text-decoration: underline;
 }
-
-/* --main-- */
-section {
-  background-color: #000000;
+.backgroundGame .heightHeaderGame .nombreQuestion {
+  opacity: 0;
+}
+.backgroundGame .heightHeaderGame .nombreQuestion:hover {
+  opacity: 1;
+}
+.backgroundGame .heightHeaderGame .game {
+  font-size: 2.55vw;
+  padding-top: 6vw;
+  padding-left: 4vw;
 }
 
-.down {
+/* --main-- */
+main section {
+  background-color: #000000;
+}
+main section .down {
   padding-top: 3.5vw;
   padding-bottom: 5.2vw;
 }
-
-.startQuiz .start {
+main section .startQuiz .start {
   padding: 1.5vw;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
   font-size: 2vw;
 }
-.startQuiz img {
+main section .startQuiz img {
   display: block;
   width: 77%;
   margin: auto;
   margin-top: 0.6vw;
   margin-bottom: 6.2vw;
 }
-
-.quiz {
+main section .quiz {
   display: none;
 }
-.quiz .numero {
+main section .quiz .numero {
   width: 10vw;
   padding: 4vw 2vw 6vw 2vw;
   margin: 0 auto;
@@ -657,23 +541,23 @@ section {
   font-weight: 900;
   font-size: 2vw;
 }
-.quiz .question {
+main section .quiz .question {
   height: 3vw;
   padding-left: 24.9vw;
   font-size: 1.3vw;
   font-weight: bolder;
 }
-.quiz .wrap {
+main section .quiz .wrap {
   display: flex;
 }
-.quiz .wrap .image {
+main section .quiz .wrap .image {
   width: 24.9vw;
   text-align: center;
 }
-.quiz .wrap .response {
+main section .quiz .wrap .response {
   padding-right: 13.5vw;
 }
-.quiz .wrap .response .res {
+main section .quiz .wrap .response .res {
   width: 30.4vw;
   height: 2.6vw;
   margin: 0.7vw auto;
@@ -681,38 +565,44 @@ section {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.3098039216);
 }
-.quiz .wrap .response .res input {
+main section .quiz .wrap .response .res input {
   width: 1.6vw;
   height: 1.6vw;
   margin-left: 0.3vw;
   display: block;
   cursor: pointer;
 }
-.quiz .wrap .response .res label {
+main section .quiz .wrap .response .res label {
   font-size: 1.2vw;
   color: #ffffff;
   margin-left: 0.65vw;
   display: flex;
   align-items: center;
 }
-.quiz .wrap .response .res span {
+main section .quiz .wrap .response .res span {
   font-size: 1.2vw;
   color: #ffffff;
   margin-left: 0.65vw;
   opacity: 0.7;
 }
-.quiz .wrap .response div:nth-child(3) {
+main section .quiz .wrap .response div:nth-child(3) {
   margin-bottom: 9.8vw;
 }
-
-.result {
+main section .note {
+  font-size: 6vw;
+  font-weight: bold;
+}
+main section .zzz {
+  font-size: 6vw;
+  font-weight: bold;
+}
+main section .result {
   display: none;
 }
-.result img {
+main section .result img {
   width: 100%;
 }
-
-.next {
+main section .next {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -732,19 +622,37 @@ section {
 /* --footer-- */
 footer {
   background-color: #000000;
+  /* section footer */
 }
-
-/* section footer */
-.footGame .g {
+footer .footer .footGame .g {
   padding-top: 10.5vw;
 }
 
+header {
+  background-size: 100%;
+  background-color: #980008;
+}
+header .header {
+  margin: 0 auto;
+}
+header .header .intro {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.23vw;
+  padding-top: 11.2vw;
+}
+header .header .heading {
+  color: #ffffff;
+  font-weight: bold;
+}
+header .header .button button {
+  margin: 2.5vw 1vw;
+}
+
 nav {
-  /*font-weight: bold;*/
   letter-spacing: 0.1vw;
   font-size: 1.5vw;
   height: 11.4vw;
-  border-bottom: 0.28vw solid rgba(188, 187, 189, 0.1843137255);
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -754,12 +662,12 @@ nav {
 nav .logohome {
   width: 6.69986vw;
   height: 2.2702vw;
-  background-image: url("/Assets/logos/logohome.png");
+  background-image: url("../Assets/logos/logohome.png");
   background-size: 100%;
   cursor: pointer;
 }
 nav .logohome:hover {
-  background-image: url("/Assets/logos/logohoma.png");
+  background-image: url("../Assets/logos/logohoma.png");
 }
 nav .link {
   display: flex;
@@ -791,43 +699,43 @@ nav .link a:hover {
   height: 3.23vw;
 }
 .social-lateral .logo#flecheHaut {
-  background-image: url("/Assets/logos/logo_bat_flèche.png");
+  background-image: url("../Assets/logos/logo_bat_flèche.png");
   background-size: 100%;
 }
 .social-lateral .logo#flecheHaut:hover {
-  background-image: url("/Assets/logos/logo_bat_flèche_a.png");
+  background-image: url("../Assets/logos/logo_bat_flèche_a.png");
 }
 .social-lateral .logo#flecheBas {
-  background-image: url("/Assets/logos/logo_bat_flèche_2.png");
+  background-image: url("../Assets/logos/logo_bat_flèche_2.png");
   background-size: 100%;
 }
 .social-lateral .logo#flecheBas:hover {
-  background-image: url("/Assets/logos/logo_bat_flèche_2_a.png");
+  background-image: url("../Assets/logos/logo_bat_flèche_2_a.png");
 }
 .social-lateral .icon {
   width: 1.3vw;
   height: 1.3vw;
 }
 .social-lateral .icon#fb {
-  background-image: url("/Assets/logos/icon_facebook.png");
+  background-image: url("../Assets/logos/icon_facebook.png");
   background-size: 100%;
 }
 .social-lateral .icon#fb:hover {
-  background-image: url("/Assets/logos/icon_facebook_a.png");
+  background-image: url("../Assets/logos/icon_facebook_a.png");
 }
 .social-lateral .icon#ig {
-  background-image: url("/Assets/logos/icon_ig.png");
+  background-image: url("../Assets/logos/icon_ig.png");
   background-size: 100%;
 }
 .social-lateral .icon#ig:hover {
-  background-image: url("/Assets/logos/icon_igcopie.png");
+  background-image: url("../Assets/logos/icon_igcopie.png");
 }
 .social-lateral .icon#tw {
-  background-image: url("/Assets/logos/icon_tw.png");
+  background-image: url("../Assets/logos/icon_tw.png");
   background-size: 100%;
 }
 .social-lateral .icon#tw:hover {
-  background-image: url("/Assets/logos/icon_tw_a.png");
+  background-image: url("../Assets/logos/icon_tw_a.png");
 }
 
 .g {
@@ -856,31 +764,31 @@ nav .link a:hover {
   width: 2.3vw;
   height: 2.56vw;
   margin-right: 0.6vw;
-  background-image: url("/Assets/logos/logo_sayna_white.png");
+  background-image: url("../Assets/logos/logo_sayna_white.png");
   background-size: 100%;
 }
 .footer-social .sayna:hover {
-  background-image: url("/Assets/logos/logo_sayna_yellow.png");
+  background-image: url("../Assets/logos/logo_sayna_yellow.png");
 }
 .footer-social .x {
   width: 1vw;
   height: 1vw;
   margin-right: 1vw;
-  background-image: url("/Assets/logos/icon_x.png");
+  background-image: url("../Assets/logos/icon_x.png");
   background-size: 100%;
 }
 .footer-social .x:hover {
-  background-image: url("/Assets/logos/icon_x_a.png");
+  background-image: url("../Assets/logos/icon_x_a.png");
 }
 .footer-social .dc {
   width: 2.8vw;
   height: 2.8vw;
   margin-right: 0.5vw;
-  background-image: url("/Assets/logos/icon_DC.png");
+  background-image: url("../Assets/logos/icon_DC.png");
   background-size: 100%;
 }
 .footer-social .dc:hover {
-  background-image: url("/Assets/logos/icon_DC_a.png");
+  background-image: url("../Assets/logos/icon_DC_a.png");
 }
 .footer-social .icon {
   width: 1.3vw;
@@ -888,31 +796,25 @@ nav .link a:hover {
   margin-left: 1.8vw;
 }
 .footer-social .icon.fb {
-  background-image: url("/Assets/logos/icon_facebook.png");
+  background-image: url("../Assets/logos/icon_facebook.png");
   background-size: 100%;
 }
 .footer-social .icon.fb:hover {
-  background-image: url("/Assets/logos/icon_facebook_a.png");
+  background-image: url("../Assets/logos/icon_facebook_a.png");
 }
 .footer-social .icon.ig {
-  background-image: url("/Assets/logos/icon_ig.png");
+  background-image: url("../Assets/logos/icon_ig.png");
   background-size: 100%;
 }
 .footer-social .icon.ig:hover {
-  background-image: url("/Assets/logos/icon_igcopie.png");
+  background-image: url("../Assets/logos/icon_igcopie.png");
 }
 .footer-social .icon.tw {
-  background-image: url("/Assets/logos/icon_tw.png");
+  background-image: url("../Assets/logos/icon_tw.png");
   background-size: 100%;
 }
 .footer-social .icon.tw:hover {
-  background-image: url("/Assets/logos/icon_tw_a.png");
-}
-
-.flecheDown {
-  display: block;
-  margin: auto;
-  width: 4vw;
+  background-image: url("../Assets/logos/icon_tw_a.png");
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,20 @@
+body {
+	width: 80vw;
+	margin: 0 auto;
+	font-family: "Space Grotesk";
+	color: $text-color;
+}
+
+h1,
+nav,
+button {
+	font-family: "Rajdhani";
+}
+
+.header,
+section {
+	width: 68.6vw;
+	border-left: 0.28vw solid $border-page-color;
+	border-right: 0.28vw solid $border-page-color;
+	margin: 0 auto;
+}

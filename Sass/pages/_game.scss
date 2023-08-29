@@ -2,263 +2,166 @@
 
 /* VERSION DESKTOP  &  MOBILE */
 
-body {
-	width: 80vw;
-	margin: 0 auto;
-	font-family: "Space Grotesk";
-	color: $text-color;
-}
-
-h1,
-nav,
-button {
-	font-family: "Rajdhani";
-}
-
-.header,
-section {
-	width: 68.6vw;
-	border-left: 0.28vw solid $border-page-color;
-	border-right: 0.28vw solid $border-page-color;
-	margin: 0 auto;
-}
-
-.button {
-	text-align: center;
-}
-
-button {
-	letter-spacing: 0.1vw;
-	font-size: 0.95vw;
-	color: $text-color;
-	background: $background-button;
-	border: none;
-	margin: 0;
-	padding: 1.25vw 0;
-	width: 14vw;
-	cursor: pointer;
-	&:hover {
-		background: $background-button-hover;
-	}
-}
-.flecheDown.down,
-.startQuiz,
-.next,
-.quiz,
-.heading-game,
-.button {
-	position: relative;
-	animation: fadeIn 4s;
-	animation-delay: 2s;
-	-webkit-animation: fadeIn 4s;
-	-moz-animation: fadeIn 4s;
-	-o-animation: fadeIn 4s;
-	-ms-animation: fadeIn 4s;
-}
-@keyframes fadeIn {
-	0% {
-		left: -70vw;
-		opacity: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
-}
-@-webkit-keyframes fadeIn {
-	0% {
-		left: -70vw;
-		opacity: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
-}
-@-moz-keyframes fadeIn {
-	0% {
-		left: -70vw;
-		opacity: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
-}
-@-o-keyframes fadeIn {
-	0% {
-		left: -70vw;
-		opacity: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
-}
-@-ms-keyframes fadeIn {
-	0% {
-		left: -70vw;
-		opacity: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
-}
-
 /* --header-- */
 
-.headergame {
-	height: calc(80vw / 1.68);
-	margin: 0 auto;
-	background-image: url("/Assets/Illustrations/Batgame_1.png");
-	background-size: 100%;
-	background-color: $red-batman1;
-	.header {
+.backgroundGame {
+	background-image: url("../Assets/Illustrations/Batgame_1.png");
+	.heightHeaderGame {
+		height: calc(80vw / 1.68);
 		nav {
 			border-bottom: none;
+			#game {
+				font-weight: bold;
+				text-decoration: underline;
+			}
 		}
 		.nombreQuestion {
-			/* affichage caché du nombre de questions opacité normale: 0; effet :hover opacity: 1 */
+			// affichage caché du nombre de questions opacité normale: 0; effet :hover opacity: 1
 			opacity: 0;
 			&:hover {
 				opacity: 1;
 			}
 		}
-		.heading-game {
-			color: $text-color;
+		.game {
 			font-size: 2.55vw;
-			font-weight: bold;
-			padding-top: 6vw; /* rectification 7vw -> 6vw */
+			padding-top: 6vw; // rectification 7vw -> 6vw
 			padding-left: 4vw;
 		}
 	}
 }
 
-#game {
-	font-weight: bold;
-	text-decoration: underline;
-}
-
 /* --main-- */
 
-section {
-	background-color: $background-color;
-}
+main {
+	section {
+		background-color: $background-color;
 
-.down {
-	padding-top: 3.5vw;
-	padding-bottom: 5.2vw;
-}
-
-.startQuiz {
-	.start {
-		padding: 1.5vw;
-		text-transform: uppercase;
-		text-align: center;
-		font-weight: bold;
-		font-size: 2vw;
-	}
-	img {
-		display: block;
-		width: 77%;
-		margin: auto;
-		margin-top: 0.6vw;
-		margin-bottom: 6.2vw;
-	}
-}
-
-.quiz {
-	display: none;
-	.numero {
-		width: 10vw;
-		padding: 4vw 2vw 6vw 2vw;
-		margin: 0 auto;
-		text-align: center;
-		font-weight: 900;
-		font-size: 2vw;
-	}
-	.question {
-		height: 3vw;
-		padding-left: 24.9vw;
-		font-size: 1.3vw;
-		font-weight: bolder;
-	}
-	.wrap {
-		display: flex;
-		.image {
-			width: 24.9vw;
-			text-align: center;
+		.down {
+			padding-top: 3.5vw;
+			padding-bottom: 5.2vw;
 		}
-		.response {
-			padding-right: 13.5vw;
-			.res {
-				width: 30.4vw;
-				height: 2.6vw;
-				margin: 0.7vw auto;
+
+		.startQuiz {
+			.start {
+				padding: 1.5vw;
+				text-transform: uppercase;
+				text-align: center;
+				font-weight: bold;
+				font-size: 2vw;
+			}
+			img {
+				display: block;
+				width: 77%;
+				margin: auto;
+				margin-top: 0.6vw;
+				margin-bottom: 6.2vw;
+			}
+		}
+
+		.quiz {
+			display: none;
+			.numero {
+				width: 10vw;
+				padding: 4vw 2vw 6vw 2vw;
+				margin: 0 auto;
+				text-align: center;
+				font-weight: 900;
+				font-size: 2vw;
+			}
+			.question {
+				height: 3vw;
+				padding-left: 24.9vw;
+				font-size: 1.3vw;
+				font-weight: bolder;
+			}
+			.wrap {
 				display: flex;
-				align-items: center;
-				background-color: $drop-shadow-color;
-				input {
-					width: 1.6vw;
-					height: 1.6vw;
-					margin-left: 0.3vw;
-					display: block;
-					cursor: pointer;
+				.image {
+					width: 24.9vw;
+					text-align: center;
 				}
-				label {
-					font-size: 1.2vw;
-					color: $text-color;
-					margin-left: 0.65vw;
-					display: flex;
-					align-items: center;
+				.response {
+					padding-right: 13.5vw;
+					.res {
+						width: 30.4vw;
+						height: 2.6vw;
+						margin: 0.7vw auto;
+						display: flex;
+						align-items: center;
+						background-color: $drop-shadow-color;
+						input {
+							width: 1.6vw;
+							height: 1.6vw;
+							margin-left: 0.3vw;
+							display: block;
+							cursor: pointer;
+						}
+						label {
+							font-size: 1.2vw;
+							color: $text-color;
+							margin-left: 0.65vw;
+							display: flex;
+							align-items: center;
+						}
+						span {
+							font-size: 1.2vw;
+							color: $text-color;
+							margin-left: 0.65vw;
+							opacity: 0.7; // cette partie nous dit si la réponse est vraie ou fausse donc, on la cache
+						}
+					}
 				}
-				span {
-					font-size: 1.2vw;
-					color: $text-color;
-					margin-left: 0.65vw;
-					opacity: 0.7; // cette partie nous dit si la réponse est vraie ou fausse donc, on la cache
+				.response div:nth-child(3) {
+					margin-bottom: 9.8vw;
 				}
 			}
 		}
-		.response div:nth-child(3) {
-			margin-bottom: 9.8vw;
+		.note {
+			font-size: 6vw;
+			font-weight: bold;
+		}
+
+		.zzz {
+			font-size: 6vw;
+			font-weight: bold;
+		}
+
+		.result {
+			display: none;
+			img {
+				width: 100%;
+			}
+		}
+
+		.next {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-transform: uppercase;
+			font-size: 0.95vw;
+			font-weight: lighter;
+			color: $text-color;
+			letter-spacing: 0.1vw;
+			width: 19.5vw;
+			height: 3.7vw;
+			margin: 0 auto;
+			text-align: center;
+			background-color: $grey-bat;
+			cursor: pointer;
 		}
 	}
-}
-
-.result {
-	display: none;
-	img {
-		width: 100%;
-	}
-}
-
-.next {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-transform: uppercase;
-	font-size: 0.95vw;
-	font-weight: lighter;
-	color: $text-color;
-	letter-spacing: 0.1vw;
-	width: 19.5vw;
-	height: 3.7vw;
-	margin: 0 auto;
-	text-align: center;
-	background-color: $grey-bat;
-	cursor: pointer;
 }
 
 /* --footer-- */
 
 footer {
 	background-color: $background-color;
-}
-
-/* section footer */
-
-.footGame .g {
-	padding-top: 10.5vw;
+	/* section footer */
+	.footer {
+		.footGame {
+			.g {
+				padding-top: 10.5vw;
+			}
+		}
+	}
 }

@@ -1,10 +1,15 @@
 @import "./utils/variables";
 
+@import "./bases/animation";
+@import "./bases/general";
+
+@import "./components/button";
+@import "./components/flecheDown";
+
 @import "./pages/home";
 @import "./pages/game";
 
+@import "./layouts/header";
 @import "./layouts/nav";
 @import "./layouts/social-lateral";
 @import "./layouts/foot-footer";
-
-@import "./components/flecheDown";

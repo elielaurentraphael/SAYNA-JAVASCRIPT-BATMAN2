@@ -1,0 +1,70 @@
+.intro,
+.home,
+.animation,
+.justice,
+.contact,
+.justiceImage,
+.flecheDown.down,
+.startQuiz,
+.next,
+.quiz,
+.game,
+.button {
+	position: relative;
+	animation: fadeIn 4s;
+	animation-delay: 2s;
+	-webkit-animation: fadeIn 4s;
+	-moz-animation: fadeIn 4s;
+	-o-animation: fadeIn 4s;
+	-ms-animation: fadeIn 4s;
+}
+@keyframes fadeIn {
+	0% {
+		left: -70vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		left: -70vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+@-moz-keyframes fadeIn {
+	0% {
+		left: -70vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+@-o-keyframes fadeIn {
+	0% {
+		left: -70vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+@-ms-keyframes fadeIn {
+	0% {
+		left: -70vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}

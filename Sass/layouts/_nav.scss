@@ -1,9 +1,7 @@
 nav {
-	/*font-weight: bold;*/
 	letter-spacing: 0.1vw;
 	font-size: 1.5vw;
 	height: 11.4vw;
-	border-bottom: 0.28vw solid $border-page-color;
 	display: flex;
 	align-items: start;
 	justify-content: space-between;
@@ -12,11 +10,11 @@ nav {
 	.logohome {
 		width: 6.69986vw;
 		height: 2.2702vw;
-		background-image: url("/Assets/logos/logohome.png");
+		background-image: url("../Assets/logos/logohome.png");
 		background-size: 100%;
 		cursor: pointer;
 		&:hover {
-			background-image: url("/Assets/logos/logohoma.png");
+			background-image: url("../Assets/logos/logohoma.png");
 		}
 	}
 	.link {
