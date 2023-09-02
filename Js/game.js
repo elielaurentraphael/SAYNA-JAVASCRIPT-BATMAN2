@@ -51,17 +51,13 @@ function jeux(x) {
 }
 
 function disabled() {
-	console.log("LLLLLLLLLLLLLL");
-	// console.log("Le quiz rentre dans disabled()");
 	$(".res:first-child input").prop("disabled", true);
 	$(".res:nth-child(2) input").prop("disabled", true); // on désactive les cases à cocher
 	$(".res:last-child input").prop("disabled", true);
 	questionSuivante();
-	console.log("MMMMMMMMMMMMMMMM");
 }
 
 function questionSuivante() {
-	console.log("QQQQQQQQQQQQQQQ");
 	$(".next").removeAttr("disabled");
 }
 
@@ -69,30 +65,22 @@ function enabled() {
 	$(".res:first-child input").prop("disabled", false);
 	$(".res:nth-child(2) input").prop("disabled", false); // on active les cases à cocher
 	$(".res:last-child input").prop("disabled", false);
-	console.log("RRRRRRRRRRRRRR");
 }
 
 function unchecked() {
 	$(".res:first-child input").prop("checked", false);
 	$(".res:nth-child(2) input").prop("checked", false); // on vide les cases à cocher
 	$(".res:last-child input").prop("checked", false);
-	console.log("YYYYYYYYYYYYYY");
 }
 
 function numera() {
 	let numero = numer.textContent;
 	let numeroLength = numero.length;
 	let numb;
-	console.log("DDDDDDDDDD");
-	console.log(`typeof numero : ${typeof numero}`);
 	if (numeroLength < 5) {
-		console.log("EEEEEEEEEEEE");
 		numb = numero[0];
-		console.log("FFFFFFFFFFFFF");
 	} else {
-		console.log("GGGGGGGGGGGG");
 		numb = numero[0] + numero[1];
-		console.log(`typeof numb : ${typeof numb}`);
 	}
 	return numb;
 }
@@ -107,33 +95,19 @@ bouton.addEventListener("click", (e) => {
 		jeux(0); // la console du quiz avec la première question et la proposition des trois réponses
 		bouton.textContent = "question suivante"; // l'étiquette du bouton change "démarrer le quiz" devient "question suivante"
 		choose(); // choisir une réponse parmi les trois proposées en cochant une case
-		console.log("AAAAAAAAAAA");
 	} else {
-		// let numero = $(".numero").text();
-		// let numeroLength = numero.length;
 		let letter;
-		console.log("BBBBBBBBBB");
 		letter = numera();
-		console.log(`letter : ${letter}`);
-		console.log("CCCCCCCCCCC");
-		console.log(`$(".nombreQuestion").text() : ${$(".nombreQuestion").text()}`);
-
 		if (letter == $(".nombreQuestion").text()) {
-			console.log("?????????");
 			// si le numéro de la question = nombre de question: c'est la fin du quiz
 			$(".quiz").fadeOut(); // après le choix de la réponse, l'action sur le bouton "question suivante" fait disparaitre la console du quiz et, ->
 			$(".next").fadeOut();
 			$(".result").css("display", "block"); // -> affiche le résultat
-			console.log("HHHHHHHHHHHH");
 		} else {
 			// numéro de la question < nombre de questions, on continue le quiz
-			console.log("nandingana an!");
 
 			enabled();
 			unchecked();
-
-			//const res = document.querySelector(".res");
-			const ress = document.querySelectorAll(".res");
 
 			jeux(letter); // on attaque la question suivante
 			choose(); // choix d'une réponse
@@ -150,8 +124,6 @@ note.textContent = 0;
 // fonction choisir une réponse
 
 function choose() {
-	console.log("JJJJJJJJJJJJJ");
-	//let points = 0;
 	let z = parseInt(note.textContent);
 	resInputs.forEach((resInput) => {
 		// pour chaque case à cocher
@@ -160,14 +132,9 @@ function choose() {
 			let j = e.target.id;
 			if (isGoods[j].textContent === "true") {
 				// chaque bonne réponse vaut 1 point, mauvaise réponse vaut 0
-				console.log(`e.target.id = ${j}`);
-				// let z = parseInt(note.textContent);
 				z++;
-				console.log(`z++ = ${z}`);
 				note.textContent = z;
-				console.log(`note = ${z}`);
 				disabled();
-				console.log("KKKKKKKKKKKKKKK");
 			} else {
 				disabled();
 			}
