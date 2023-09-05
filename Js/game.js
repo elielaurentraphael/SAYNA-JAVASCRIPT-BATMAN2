@@ -156,7 +156,6 @@ bouton.addEventListener("click", (e) => {
 			jeux(letter); // on affiche la question suivante
 			// $(".quiz").fadeIn(4000);
 
-			// console.log("AAAAAAAAA");
 			choose(); // choix d'une réponse
 		}
 	}
@@ -171,7 +170,6 @@ function choose() {
 		// pour chaque case à cocher
 		resInput.addEventListener("change", (e) => {
 			console.log(`question n° ${numera()} répondue`);
-			// console.log("kkkkkkkkkkk");
 			// on écoute l'événement "change"
 			let j = e.target.id;
 			if (isGoods[j].textContent === "true") {
