@@ -503,9 +503,12 @@ footer .footer .a .f img {
   opacity: 1;
 }
 .backgroundGame .heightHeaderGame .game {
-  font-size: 2.55vw;
-  padding-top: 6vw;
-  padding-left: 4vw;
+  font-family: "Rajdhani";
+  font-size: 2.65vw;
+  font-weight: bold;
+  letter-spacing: 0.2vw;
+  padding-top: 7.3vw;
+  padding-left: 4.3vw;
 }
 
 /* --main-- */
@@ -532,6 +535,153 @@ main section .startQuiz img {
 }
 main section .quiz {
   display: none;
+}
+main section .quiz .imageQuestion-1 {
+  display: none;
+  position: absolute;
+  top: 11.5vw;
+  left: 12vw;
+  width: 11vw;
+}
+main section .quiz .imageQuestion-2 {
+  display: none;
+  position: absolute;
+  top: 13.7vw;
+  left: 11.5vw;
+  width: 9vw;
+}
+main section .quiz .imageQuestion-3 {
+  display: none;
+  position: absolute;
+  top: 10.5vw;
+  left: 1.5vw;
+  width: 22.5vw;
+}
+main section .quiz .imageQuestion-4 {
+  display: none;
+  position: absolute;
+  top: 8.8vw;
+  left: 11.5vw;
+  width: 13.6vw;
+}
+main section .quiz .imageQuestion-5 {
+  display: none;
+  position: absolute;
+  top: 16.5vw;
+  left: 7.3vw;
+  width: 15.3vw;
+}
+main section .quiz .imageQuestion-6 {
+  display: none;
+}
+main section .quiz .imageQuestion-6 .imageQuestionSix-a {
+  position: absolute;
+  top: 9.5vw;
+  left: 11vw;
+  width: 10vw;
+}
+main section .quiz .imageQuestion-6 .imageQuestionSix-b {
+  position: absolute;
+  top: 38.5vw;
+  left: 6vw;
+  width: 15vw;
+}
+main section .quiz .imageQuestion-6 .imageQuestionSix-c {
+  position: absolute;
+  top: 26.5vw;
+  left: 57.4vw;
+  width: 8.5vw;
+}
+main section .quiz .imageQuestion-7 {
+  display: none;
+  position: absolute;
+  top: 11.2vw;
+  left: 1.5vw;
+  width: 21.5vw;
+}
+main section .quiz .imageQuestion-8 {
+  display: none;
+  position: absolute;
+  top: 13vw;
+  left: 8.5vw;
+  width: 18vw;
+}
+main section .quiz .imageQuestion-9 {
+  display: none;
+}
+main section .quiz .imageQuestion-9 .imageQuestionNeuf-a {
+  position: absolute;
+  top: 7.3vw;
+  left: 8vw;
+  width: 12.5vw;
+}
+main section .quiz .imageQuestion-9 .imageQuestionNeuf-b {
+  position: absolute;
+  top: 37.1vw;
+  left: 45vw;
+  width: 11vw;
+}
+main section .quiz .imageQuestion-9 .imageQuestionNeuf-c {
+  position: absolute;
+  top: 34.5vw;
+  left: 10.5vw;
+  width: 14.5vw;
+}
+main section .quiz .imageQuestion-10 {
+  display: none;
+}
+main section .quiz .imageQuestion-10 .imageQuestionDix-a {
+  position: absolute;
+  top: 12.5vw;
+  left: 9vw;
+  width: 9.2vw;
+}
+main section .quiz .imageQuestion-10 .imageQuestionDix-b {
+  position: absolute;
+  top: 3.3vw;
+  left: 42.2vw;
+  width: 13vw;
+}
+main section .quiz .imageQuestion-10 .imageQuestionDix-c {
+  position: absolute;
+  top: 39vw;
+  left: 42.8vw;
+  width: 8.5vw;
+}
+main section .quiz .imageQuestion-11 {
+  display: none;
+  position: absolute;
+  top: 9.5vw;
+  left: 4vw;
+  width: 20vw;
+}
+main section .quiz .imageQuestion-12 {
+  display: none;
+  position: absolute;
+  top: 7vw;
+  left: 7.8vw;
+  width: 13vw;
+}
+main section .quiz .imageQuestion-13 {
+  display: none;
+  position: absolute;
+  top: 9.35vw;
+  left: 5vw;
+  width: 19.5vw;
+}
+main section .quiz .imageQuestion-14 {
+  display: none;
+  position: absolute;
+  top: 12.3vw;
+  left: 2.3vw;
+  width: 22.8vw;
+}
+main section .quiz .imageQuestion-15 {
+  display: none;
+  position: absolute;
+  top: 10.5vw;
+  left: 7.65vw;
+  width: 14vw;
 }
 main section .quiz .numero {
   width: 10vw;
@@ -583,7 +733,7 @@ main section .quiz .wrap .response .res span {
   font-size: 1.2vw;
   color: #ffffff;
   margin-left: 0.65vw;
-  opacity: 0.7;
+  opacity: 0.1;
 }
 main section .quiz .wrap .response div:nth-child(3) {
   margin-bottom: 9.8vw;

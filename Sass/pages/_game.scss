@@ -23,9 +23,12 @@
 			}
 		}
 		.game {
-			font-size: 2.55vw;
-			padding-top: 6vw; // rectification 7vw -> 6vw
-			padding-left: 4vw;
+			font-family: "Rajdhani";
+			font-size: 2.65vw;
+			font-weight: bold;
+			letter-spacing: 0.2vw;
+			padding-top: 7.3vw; // rectification 7vw -> 6vw
+			padding-left: 4.3vw;
 		}
 	}
 }
@@ -60,6 +63,153 @@ main {
 
 		.quiz {
 			display: none;
+			.imageQuestion-1 {
+				display: none;
+				position: absolute;
+				top: 11.5vw;
+				left: 12vw;
+				width: 11vw;
+			}
+			.imageQuestion-2 {
+				display: none;
+				position: absolute;
+				top: 13.7vw;
+				left: 11.5vw;
+				width: 9vw;
+			}
+			.imageQuestion-3 {
+				display: none;
+				position: absolute;
+				top: 10.5vw;
+				left: 1.5vw;
+				width: 22.5vw;
+			}
+			.imageQuestion-4 {
+				display: none;
+				position: absolute;
+				top: 8.8vw;
+				left: 11.5vw;
+				width: 13.6vw;
+			}
+			.imageQuestion-5 {
+				display: none;
+				position: absolute;
+				top: 16.5vw;
+				left: 7.3vw;
+				width: 15.3vw;
+			}
+			.imageQuestion-6 {
+				display: none;
+				.imageQuestionSix-a {
+					position: absolute;
+					top: 9.5vw;
+					left: 11vw;
+					width: 10vw;
+				}
+				.imageQuestionSix-b {
+					position: absolute;
+					top: 38.5vw;
+					left: 6vw;
+					width: 15vw;
+				}
+				.imageQuestionSix-c {
+					position: absolute;
+					top: 26.5vw;
+					left: 57.4vw;
+					width: 8.5vw;
+				}
+			}
+			.imageQuestion-7 {
+				display: none;
+				position: absolute;
+				top: 11.2vw;
+				left: 1.5vw;
+				width: 21.5vw;
+			}
+			.imageQuestion-8 {
+				display: none;
+				position: absolute;
+				top: 13vw;
+				left: 8.5vw;
+				width: 18vw;
+			}
+			.imageQuestion-9 {
+				display: none;
+				.imageQuestionNeuf-a {
+					position: absolute;
+					top: 7.3vw;
+					left: 8vw;
+					width: 12.5vw;
+				}
+				.imageQuestionNeuf-b {
+					position: absolute;
+					top: 37.1vw;
+					left: 45vw;
+					width: 11vw;
+				}
+				.imageQuestionNeuf-c {
+					position: absolute;
+					top: 34.5vw;
+					left: 10.5vw;
+					width: 14.5vw;
+				}
+			}
+			.imageQuestion-10 {
+				display: none;
+				.imageQuestionDix-a {
+					position: absolute;
+					top: 12.5vw;
+					left: 9vw;
+					width: 9.2vw;
+				}
+				.imageQuestionDix-b {
+					position: absolute;
+					top: 3.3vw;
+					left: 42.2vw;
+					width: 13vw;
+				}
+				.imageQuestionDix-c {
+					position: absolute;
+					top: 39vw;
+					left: 42.8vw;
+					width: 8.5vw;
+				}
+			}
+			.imageQuestion-11 {
+				display: none;
+				position: absolute;
+				top: 9.5vw;
+				left: 4vw;
+				width: 20vw;
+			}
+			.imageQuestion-12 {
+				display: none;
+				position: absolute;
+				top: 7vw;
+				left: 7.8vw;
+				width: 13vw;
+			}
+			.imageQuestion-13 {
+				display: none;
+				position: absolute;
+				top: 9.35vw;
+				left: 5vw;
+				width: 19.5vw;
+			}
+			.imageQuestion-14 {
+				display: none;
+				position: absolute;
+				top: 12.3vw;
+				left: 2.3vw;
+				width: 22.8vw;
+			}
+			.imageQuestion-15 {
+				display: none;
+				position: absolute;
+				top: 10.5vw;
+				left: 7.65vw;
+				width: 14vw;
+			}
 			.numero {
 				width: 10vw;
 				padding: 4vw 2vw 6vw 2vw;
@@ -107,7 +257,7 @@ main {
 							font-size: 1.2vw;
 							color: $text-color;
 							margin-left: 0.65vw;
-							opacity: 0.7; // cette partie nous dit si la réponse est vraie ou fausse donc, on la cache
+							opacity: 0.1; // cette partie nous dit si la réponse est vraie ou fausse donc, on la cache
 						}
 					}
 				}
