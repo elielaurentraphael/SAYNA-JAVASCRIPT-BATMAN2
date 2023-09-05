@@ -152,9 +152,9 @@ bouton.addEventListener("click", (e) => {
 			enabled(); // on active les cases à cocher
 			unchecked(); // on éfface les cochages éventuels
 
-			$(".quiz").fadeOut(4000);
+			// $(".quiz").fadeOut(4000);
 			jeux(letter); // on affiche la question suivante
-			$(".quiz").fadeIn(4000);
+			// $(".quiz").fadeIn(4000);
 
 			// console.log("AAAAAAAAA");
 			choose(); // choix d'une réponse
