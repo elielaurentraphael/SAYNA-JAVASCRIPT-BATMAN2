@@ -1,77 +1,89 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
-.intro,
-.home,
-.animation,
-.justice,
-.contact,
-.justiceImage,
+/*
+.fadeInSlideScroll,
 .flecheDown.down,
 .startQuiz,
 .next,
 .quiz,
-.game,
-.button {
-  position: relative;
-  animation: fadeIn 4s;
-  animation-delay: 2s;
-  -webkit-animation: fadeIn 4s;
-  -moz-animation: fadeIn 4s;
-  -o-animation: fadeIn 4s;
-  -ms-animation: fadeIn 4s;
+.game {
+	position: relative;
+	visibility: hidden;
+	animation: fadeIn 7s;
+	animation-delay: 2s;
+	-webkit-animation: fadeIn 7s;
+	-moz-animation: fadeIn 7s;
+	-o-animation: fadeIn 7s;
+	-ms-animation: fadeIn 7s;
 }
-
 @keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
+	from {
+		left: -70vw;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
 }
 @-webkit-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
+	from {
+		left: -70vw;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
 }
 @-moz-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
+	from {
+		left: -70vw;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
 }
 @-o-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
+	from {
+		left: -70vw;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
 }
 @-ms-keyframes fadeIn {
-  0% {
-    left: -70vw;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
+	from {
+		left: -70vw;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
 }
+*/
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@400;700&display=swap");
+.fadeInSlideScroll,
+.flecheDown.down,
+.startQuiz,
+.next,
+.quiz,
+.game {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-30vw);
+  transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
+  -webkit-transform: translateX(-30vw);
+  -moz-transform: translateX(-30vw);
+  -ms-transform: translateX(-30vw);
+  -o-transform: translateX(-30vw);
+}
+
 body {
   width: 80vw;
   margin: 0 auto;
@@ -186,19 +198,54 @@ section > div > .images .description img {
   display: block;
   width: 100%;
 }
-section > div > .images .description > p {
+section > div > .images .description .etiquette {
+  visibility: hidden;
+  position: relative;
+  display: grid;
+  align-items: center;
+  height: 5.7vw;
+  top: -5.8vw;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+section > div > .images .description .etiquette .person {
+  position: absolute;
+  top: 0.4vw;
+  left: 1.5vw;
+  width: 3.5vw;
+  border-radius: 4vw;
+  -webkit-border-radius: 4vw;
+  -moz-border-radius: 4vw;
+  -ms-border-radius: 4vw;
+  -o-border-radius: 4vw;
+}
+section > div > .images .description .etiquette > p {
+  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
   color: #ffffff;
   text-align: center;
-  font-size: 1.15vw;
-  font-weight: 500;
-  margin: 1.2vw 0;
+  font-size: 0.7vw;
+  font-weight: 900;
+  padding: 0.8vw 0;
+  margin-left: 2.5vw;
+  margin-right: 1.7vw;
+  border-radius: 3.1vw;
+  -webkit-border-radius: 3.1vw;
+  -moz-border-radius: 3.1vw;
+  -ms-border-radius: 3.1vw;
+  -o-border-radius: 3.1vw;
 }
 section > div > .images .description:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.zoomImage {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
 }
 
 main {
@@ -479,6 +526,12 @@ footer .footer .a .f {
 }
 footer .footer .a .f img {
   width: 5.5vw;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  pointer-events: none;
 }
 
 /* VERSION DESKTOP  &  MOBILE */
@@ -798,6 +851,11 @@ header .header .heading {
 header .header .button button {
   margin: 2.5vw 1vw;
 }
+header .scroll {
+  position: fixed;
+  top: 10vw;
+  left: 10vw;
+}
 
 nav {
   letter-spacing: 0.1vw;
@@ -817,7 +875,7 @@ nav .logohome {
   cursor: pointer;
 }
 nav .logohome:hover {
-  background-image: url("../Assets/logos/logohoma.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 nav .link {
   display: flex;
@@ -837,7 +895,7 @@ nav .link a:hover {
   display: inline-block;
   position: fixed;
   top: 19.3vw;
-  right: 12.2vw;
+  right: 12.1vw;
   z-index: 1; /* amelioration de l'effet hover */
 }
 .social-lateral div {
@@ -853,14 +911,14 @@ nav .link a:hover {
   background-size: 100%;
 }
 .social-lateral .logo#flecheHaut:hover {
-  background-image: url("../Assets/logos/logo_bat_flèche_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .social-lateral .logo#flecheBas {
   background-image: url("../Assets/logos/logo_bat_flèche_2.png");
   background-size: 100%;
 }
 .social-lateral .logo#flecheBas:hover {
-  background-image: url("../Assets/logos/logo_bat_flèche_2_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .social-lateral .icon {
   width: 1.3vw;

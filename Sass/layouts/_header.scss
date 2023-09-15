@@ -19,4 +19,10 @@ header {
 			}
 		}
 	}
+	// affichage du niveau de scroll dans la page
+	.scroll {
+		position: fixed;
+		top: 10vw;
+		left: 10vw;
+	}
 }

@@ -6,61 +6,79 @@
 		<title>home</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="./Styles/styles.css" />
-		<script src="/Docs-dev/jquery-3.7.0.js" defer></script>
-		<script src="/Js/home.js" defer></script>
+		<script src="./Docs-dev/jquery-3.7.0.js" defer></script>
+		<script src="./Js/home.js" defer></script>
+		<script src="./Js/batman.js" defer></script>
 	</head>
 	<body>
 		<!-- VERSION DESKTOP -->
 
-		<!-- header -->
+		<!-- HEADER -->
+
+		<!-- class .fadeInSlideScroll: apparition progressive (suivant le défilement/scroll) des éléments avec fadeIn et slide -->
 
 		<header class="backgroundHome">
 			<div class="header heightHeaderHome" id="header">
-				<nav>
+				<!-- ajout de class .fadeInSlideScroll -->
+				<nav class="fadeInSlideScroll">
 					<div class="logohome"></div>
 					<div class="link">
 						<a href="./index.html" id="home">HOME</a>
 						<a href="./game.html">GAME</a>
 					</div>
 				</nav>
-				<div class="intro">
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="intro fadeInSlideScroll">
 					Au nom de ses parents assassinés, Bruce Wayne mène<br />
 					une guerre éternelle contre les criminels de Gotham City.<br />
 					Il est vengeur. Il est la nuit.
 				</div>
-				<div class="heading home">Il est Batman.</div>
-				<div class="button">
-					<a href="#batmanAuCinema"><button>VOIR LE HEROS</button></a>
-					<a href="#nemesis"><button>LES ADVERSAIRES</button></a>
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="heading home fadeInSlideScroll">Il est Batman.</div>
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="button fadeInSlideScroll">
+					<!-- jsScrollBut: scrolling progressif en javascript vers l'ancre #batmanAuCinema' -->
+					<a href="#batmanAuCinema" class="jsScrollBut"
+						><button>VOIR LE HEROS</button></a
+					>
+					<!-- jsScrollButa: scrolling progressif en javascript vers l'ancre #nemesis' -->
+					<a href="#nemesis" class="jsScrollButa"
+						><button>LES ADVERSAIRES</button></a
+					>
 				</div>
 				<div class="social-lateral">
-					<a href="#header">
+					<!-- jsScroll: scrolling progressif en javascript vers l'ancre #header' -->
+					<a href="#header" class="jsScroll">
 						<div class="logo" id="flecheHaut"></div>
 					</a>
 					<div class="icon" id="fb"></div>
 					<div class="icon" id="ig"></div>
 					<div class="icon" id="tw"></div>
-					<a href="#contact">
+					<!-- jsScroll: scrolling progressif en javascript vers l'ancre #contact' -->
+					<a href="#contact" class="jsScroll">
 						<div class="logo" id="flecheBas"></div>
 					</a>
 				</div>
 			</div>
+			<div class="scroll">000</div>
 		</header>
 
-		<!-- main -->
+		<!-- MAIN -->
 
 		<main>
-			<!-- section batman au cinéma -->
+			<!-- SECTION BATMAN AU CINEMA -->
 
 			<section class="batmanAuCinema" id="batmanAuCinema">
 				<div class="animation">
+					<!-- ajout de class .fadeInSlideScroll -->
 					<img
-						class="flecheDown"
+						class="flecheDown fadeInSlideScroll"
 						src="./Assets/logos/flèche_down_header.png"
 						alt="flèche down"
 					/>
-					<h1>BATMAN AU CINÉMA</h1>
-					<p>
+					<!-- ajout de class .fadeInSlideScroll -->
+					<h1 class="fadeInSlideScroll">BATMAN AU CINÉMA</h1>
+					<p class="fadeInSlideScroll">
 						Le personnage de Batman est un super héros de l’univers de DC
 						Comics. Il a été créé par le dessinateur Bob Kane et le scénariste
 						Bill Finger et apparaît pour la première fois dans le comic book
@@ -70,43 +88,71 @@
 						de nombreux reboot, donnant l’occasion à de multiples acteurs
 						d’interpréter l’homme chauve-souris. Voici les trois derniers :
 					</p>
-					<div class="images">
-						<div class="description">
+					<!-- class .zoomImage: zoom de 0 à 1 (suivant le défilement/scroll) des images -->
+					<!-- ajout de class .zoomImage -->
+					<div class="images zoomImage">
+						<div class="description" id="un">
 							<img src="./Assets/Illustrations-1/Bathome2.png" alt="Bathome2" />
-							<p>
-								Robert Pattinson<br />
-								(2022)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/robert_pattinson.jpg"
+									class="person"
+									alt="Robert Pattinson"
+								/>
+								<p>
+									Robert Pattinson<br />
+									(2022)
+								</p>
+							</div>
 						</div>
-						<div class="description">
+						<div class="description" id="deux">
 							<img src="./Assets/Illustrations-1/Bathome3.png" alt="Bathome3" />
-							<p>
-								Christian Bale<br />
-								(2006 - 2008 - 2012)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/christian_bale.jpg"
+									class="person"
+									alt="Christian Bale"
+								/>
+								<p>
+									Christian Bale<br />
+									(2006 - 2008 - 2012)
+								</p>
+							</div>
 						</div>
-						<div class="description">
+						<div class="description" id="trois">
 							<img src="./Assets/Illustrations-1/Bathome4.png" alt="Bathome4" />
-							<p>
-								Ben Affleck<br />
-								20016- 2017/2020 – 2023
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/ben_affleck.jpg"
+									class="person"
+									alt="Ben Affleck"
+								/>
+								<p>
+									Ben Affleck<br />
+									20016- 2017/2020 – 2023
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- section némésis -->
+			<!-- SECTION NEMESIS -->
 
 			<section class="nemesis" id="nemesis">
 				<div class="animation">
-					<h1>NÉMÉSIS</h1>
+					<!-- ajout de class .fadeInSlideScroll -->
+					<h1 class="fadeInSlideScroll">NÉMÉSIS</h1>
 					<img
 						class="bathome13"
 						src="./Assets/Illustrations-1/Bathome13.png"
 						alt="Bathome13"
 					/>
-					<p>
+					<!-- ajout de class .fadeInSlideScroll -->
+					<p class="fadeInSlideScroll">
 						Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi,
 						il affrontera la plupart du temps, des vilains sans capacités
 						surnaturelles mais particulièrement violents ou
@@ -118,27 +164,52 @@
 						la physique. Parmi les derniers ennemis emblématiques que nous avons
 						pu voir au cinéma, on retrouve :
 					</p>
-					<div class="images">
-						<div class="description">
+					<!-- ajout de class .zoomImage -->
+					<div class="images zoomImage">
+						<div class="description" id="quatre">
 							<img src="./Assets/Illustrations-1/Bathome5.png" alt="Bathome5" />
-							<p>
-								The Riddler - Paul Dano<br />
-								(2022)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/riddler.jpg"
+									class="person"
+									alt="Paul Dano"
+								/>
+								<p>
+									The Riddler - Paul Dano<br />
+									(2022)
+								</p>
+							</div>
 						</div>
-						<div class="description">
+						<div class="description" id="cinq">
 							<img src="./Assets/Illustrations-1/Bathome6.png" alt="Bathome6" />
-							<p>
-								Le Joker - Heath Ledger<br />
-								(2008)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/le_joker.jpg"
+									class="person"
+									alt="Le Joker"
+								/>
+								<p>
+									Le Joker - Heath Ledger<br />
+									(2008)
+								</p>
+							</div>
 						</div>
-						<div class="description">
+						<div class="description" id="six">
 							<img src="./Assets/Illustrations-1/Bathome7.png" alt="Bathome7" />
-							<p>
-								Darkseid - Ray Porter<br />
-								(2022)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/darkseid.jpg"
+									class="person"
+									alt="Darkseid"
+								/>
+								<p>
+									Darkseid - Ray Porter<br />
+									(2022)
+								</p>
+							</div>
 						</div>
 					</div>
 					<img
@@ -149,12 +220,13 @@
 				</div>
 			</section>
 
-			<!-- section alliés -->
+			<!-- SECTION ALLIES -->
 
 			<section class="allies">
 				<div class="animation">
-					<h1>ALLIES</h1>
-					<p>
+					<!-- ajout de class .fadeInSlideScroll -->
+					<h1 class="fadeInSlideScroll">ALLIES</h1>
+					<p class="fadeInSlideScroll">
 						Alfred est le majordome des Wayne. A leur mort il s’occupe de
 						l’éducation du jeune Bruce
 						<span
@@ -167,39 +239,65 @@
 						pourra compter sur l’aide infaillible de James Gordon, “Jim”, qui
 						désire lui aussi nettoyer sa ville de la criminalité qui y règne.
 					</p>
-					<div class="images">
-						<div class="description">
+					<!-- ajout de class .zoomImage -->
+					<div class="images zoomImage">
+						<div class="description" id="sept">
 							<img src="./Assets/Illustrations-1/Bathome9.png" alt="Bathome9" />
-							<p>
-								Alfred Pennyworth - Michael Cain<br />
-								(2006 - 2008 - 2012)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/alfred_pennyworth.jpg"
+									class="person"
+									alt="alfred_pennyworth"
+								/>
+								<p>
+									Alfred Pennyworth - Michael Cain<br />
+									(2006 - 2008 - 2012)
+								</p>
+							</div>
 						</div>
-						<div class="description">
+						<div class="description" id="huit">
 							<img src="./Assets/Illustrations-1/Bathome8.png" alt="Bathome8" />
-							<p>
-								Catwoman - Zoé Kravitz<br />
-								(2008)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/catwoman.jpg"
+									class="person"
+									alt="catwoman"
+								/>
+								<p>
+									Catwoman - Zoé Kravitz<br />
+									(2008)
+								</p>
+							</div>
 						</div>
-						<div class="description">
+						<div class="description" id="neuf">
 							<img
 								src="./Assets/Illustrations-1/Bathome10.png"
 								alt="Bathome10"
 							/>
-							<p>
-								James Gordon<br />
-								(2014-2019)
-							</p>
+							<!-- mini description du personnage -->
+							<div class="etiquette">
+								<img
+									src="./Assets/Personnage/gordon.jpg"
+									class="person"
+									alt="gordon"
+								/>
+								<p>
+									James Gordon<br />
+									(2014-2019)
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- section justice league -->
+			<!-- SECTION JUSTICE LEAGUE -->
 
 			<section class="justiceLeague">
-				<div class="justice">
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="justice fadeInSlideScroll">
 					<h1>JUSTICE LEAGUE</h1>
 					<p>
 						Lorsque la Terre est menacée les plus grands super-héros s’allient
@@ -213,20 +311,22 @@
 				</div>
 			</section>
 
-			<!-- class justiceImage -->
+			<!-- CLASSE JUSTICEIMAGE -->
 
+			<!-- ajout de class .zoomImage -->
 			<img
-				class="justiceImage"
+				class="justiceImage zoomImage"
 				src="./Assets/Illustrations-1/Bathome11a.png"
 				alt="bathome11"
 			/>
 
-			<!-- section multimédia -->
+			<!-- SECTION MULTIMEDIA -->
 
 			<section class="multimedia">
 				<div class="animation">
-					<h1>MULTIMÉDIA</h1>
-					<div class="media">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<h1 class="fadeInSlideScroll">MULTIMÉDIA</h1>
+					<div class="media fadeInSlideScroll">
 						<div class="fleche">
 							<img src="./Assets/logos/icon_flèche_1.png" alt="fleche one" />
 						</div>
@@ -258,7 +358,8 @@
 							<img src="./Assets/logos/icon_flèche_2.png" alt="fleche two" />
 						</div>
 					</div>
-					<div class="bandeAnnonce">
+					<!-- ajout de class .zoomImage -->
+					<div class="bandeAnnonce zoomImage">
 						<img
 							class="bathome-ba2"
 							src="./Assets/Illustrations-1/Bathome_ba2.png"
@@ -274,15 +375,18 @@
 				</div>
 			</section>
 
-			<!-- class contact -->
+			<!-- CLASS CONTACT -->
 
 			<div class="contact" id="contact">
-				<h1>PRENONS CONTACT</h1>
+				<!-- ajout de class .fadeInSlideScroll -->
+				<h1 class="fadeInSlideScroll">PRENONS CONTACT</h1>
 				<form action="popupbox.html">
-					<div class="label-email">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="label-email fadeInSlideScroll">
 						<label for="email">ADRESSE EMAIL</label>
 					</div>
-					<div class="email">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="email fadeInSlideScroll">
 						<input
 							type="email"
 							id="email"
@@ -292,10 +396,12 @@
 						<!-- champ obligatoir -->
 					</div>
 
-					<div class="label-checkbox">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="label-checkbox fadeInSlideScroll">
 						<label for="checkbox">NEWSLETTER</label>
 					</div>
-					<div class="checkbox">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="checkbox fadeInSlideScroll">
 						<p>
 							En cochant cette case vous acceptez de recevoir l'actualité
 							concernant les
@@ -307,7 +413,8 @@
 						</div>
 					</div>
 
-					<div class="frequence">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="frequence fadeInSlideScroll">
 						<label for="frequency"></label>
 						<select name="frequency" id="frequency" required>
 							<!-- champ obligatoir -->
@@ -325,7 +432,8 @@
 						</select>
 					</div>
 
-					<div class="input-type-button">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="input-type-button fadeInSlideScroll">
 						<div class="input-disabled">
 							<input
 								type="text"
@@ -340,7 +448,8 @@
 						</div>
 					</div>
 
-					<div class="message">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="message fadeInSlideScroll">
 						<div class="message-label">
 							<label for="message">MESSAGE</label>
 						</div>
@@ -353,7 +462,8 @@
 						</div>
 					</div>
 
-					<div class="confirmer">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="confirmer fadeInSlideScroll">
 						<div class="button">
 							<button type="submit">CONFIRMER</button>
 						</div>
@@ -362,14 +472,15 @@
 			</div>
 		</main>
 
-		<!-- footer -->
+		<!-- FOOTER -->
 
 		<footer>
-			<!-- section footer -->
+			<!-- SECTION FOOTER -->
 
 			<section class="footer">
 				<div class="animation">
-					<div class="a">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="a fadeInSlideScroll">
 						<div class="b">
 							<img
 								src="./Assets/logos/icon_guillemets_1.png"
@@ -409,14 +520,16 @@
 							/>
 						</div>
 					</div>
-					<div class="g">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="g fadeInSlideScroll">
 						<img src="./Assets/logos/icon_WB.png" alt="icon_WB" />
 						<p>
 							Ce projet respecte l’univers cinématographique des films Batman
 							récents. Version Nolan & Snyder & Reeves
 						</p>
 					</div>
-					<div class="footer-social">
+					<!-- ajout de class .fadeInSlideScroll -->
+					<div class="footer-social fadeInSlideScroll">
 						<div class="sayna"></div>
 						<div class="x"></div>
 						<div class="dc"></div>
@@ -427,5 +540,9 @@
 				</div>
 			</section>
 		</footer>
+
+		<!-- CANVAS ANIMATION -->
+
+		<canvas></canvas>
 	</body>
 </html>

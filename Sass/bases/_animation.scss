@@ -1,70 +1,83 @@
-.intro,
-.home,
-.animation,
-.justice,
-.contact,
-.justiceImage,
+/*
+.fadeInSlideScroll,
 .flecheDown.down,
 .startQuiz,
 .next,
 .quiz,
-.game,
-.button {
+.game {
 	position: relative;
-	animation: fadeIn 4s;
+	visibility: hidden;
+	animation: fadeIn 7s;
 	animation-delay: 2s;
-	-webkit-animation: fadeIn 4s;
-	-moz-animation: fadeIn 4s;
-	-o-animation: fadeIn 4s;
-	-ms-animation: fadeIn 4s;
+	-webkit-animation: fadeIn 7s;
+	-moz-animation: fadeIn 7s;
+	-o-animation: fadeIn 7s;
+	-ms-animation: fadeIn 7s;
 }
 @keyframes fadeIn {
-	0% {
+	from {
 		left: -70vw;
 		opacity: 0;
 	}
-	100% {
+	to {
 		left: 0;
 		opacity: 1;
 	}
 }
 @-webkit-keyframes fadeIn {
-	0% {
+	from {
 		left: -70vw;
 		opacity: 0;
 	}
-	100% {
+	to {
 		left: 0;
 		opacity: 1;
 	}
 }
 @-moz-keyframes fadeIn {
-	0% {
+	from {
 		left: -70vw;
 		opacity: 0;
 	}
-	100% {
+	to {
 		left: 0;
 		opacity: 1;
 	}
 }
 @-o-keyframes fadeIn {
-	0% {
+	from {
 		left: -70vw;
 		opacity: 0;
 	}
-	100% {
+	to {
 		left: 0;
 		opacity: 1;
 	}
 }
 @-ms-keyframes fadeIn {
-	0% {
+	from {
 		left: -70vw;
 		opacity: 0;
 	}
-	100% {
+	to {
 		left: 0;
 		opacity: 1;
 	}
+}
+*/
+
+.fadeInSlideScroll,
+.flecheDown.down,
+.startQuiz,
+.next,
+.quiz,
+.game {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-30vw);
+	transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
+	-webkit-transform: translateX(-30vw);
+	-moz-transform: translateX(-30vw);
+	-ms-transform: translateX(-30vw);
+	-o-transform: translateX(-30vw);
 }

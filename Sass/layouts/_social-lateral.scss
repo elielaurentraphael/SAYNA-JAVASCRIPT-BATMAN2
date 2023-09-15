@@ -2,7 +2,8 @@
 	display: inline-block;
 	position: fixed;
 	top: 19.3vw;
-	right: 12.2vw;
+	//top: 0;
+	right: 12.1vw;
 	z-index: 1; /* amelioration de l'effet hover */
 	div {
 		cursor: pointer;
@@ -15,14 +16,18 @@
 			background-image: url("../Assets/logos/logo_bat_flèche.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("../Assets/logos/logo_bat_flèche_a.png");
+				// modification de la technique d'obtention de la couleur jaune de l'effet "hover";
+				filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg)
+					brightness(187%) contrast(109%);
 			}
 		}
 		&#flecheBas {
 			background-image: url("../Assets/logos/logo_bat_flèche_2.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("../Assets/logos/logo_bat_flèche_2_a.png");
+				// modification de la technique d'obtention de la couleur jaune de l'effet "hover";
+				filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg)
+					brightness(187%) contrast(109%);
 			}
 		}
 	}

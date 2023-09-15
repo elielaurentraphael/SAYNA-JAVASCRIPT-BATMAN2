@@ -14,7 +14,9 @@ nav {
 		background-size: 100%;
 		cursor: pointer;
 		&:hover {
-			background-image: url("../Assets/logos/logohoma.png");
+			// modification de la technique d'obtention de la couleur jaune de l'effet "hover";
+			filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg)
+				brightness(187%) contrast(109%);
 		}
 	}
 	.link {
