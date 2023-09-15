@@ -17,7 +17,8 @@
 
 		<header class="backgroundGame">
 			<div class="header heightHeaderGame" id="header">
-				<nav>
+				<!-- ajout de class .fadeInSlideScroll -->
+				<nav class="fadeInSlideScroll">
 					<div class="logohome"></div>
 					<div class="link">
 						<a href="./index.html">HOME</a>
@@ -46,12 +47,14 @@
 
 		<main>
 			<section>
+				<!-- ajout de class .fadeInSlideScroll -->
 				<img
-					class="flecheDown down"
+					class="flecheDown down fadeInSlideScroll"
 					src="./Assets/logos/flèche_down_header.png"
 					alt="flèche down"
 				/>
-				<div class="startQuiz">
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="startQuiz fadeInSlideScroll">
 					<div class="start">connaissez vous bien le chevalier noir ?</div>
 					<div>
 						<img
@@ -61,19 +64,20 @@
 					</div>
 				</div>
 
-				<div class="quiz">
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="quiz fadeInSlideScroll">
 					<img
-						class="imageQuestion-1"
+						class="imageQuestion-1 zoomImage"
 						src="./Assets/Illustrations/Batgame_3.png"
 						alt="Batgame_3.png"
 					/>
 					<img
-						class="imageQuestion-2"
+						class="imageQuestion-2 zoomImage"
 						src="./Assets/Illustrations/Batgame_4.png"
 						alt="Batgame_4.png"
 					/>
 					<img
-						class="imageQuestion-3"
+						class="imageQuestion-3 zoomImage"
 						src="./Assets/Illustrations/Batgame_5.png"
 						alt="Batgame_5.png"
 					/>
@@ -207,7 +211,8 @@
 					/>
 				</div>
 
-				<button class="next" type="button"></button>
+				<!-- ajout de class .fadeInSlideScroll -->
+				<button class="next fadeInSlideScroll" type="button"></button>
 			</section>
 		</main>
 
@@ -217,7 +222,8 @@
 			<!-- section footer -->
 
 			<section class="footer">
-				<div class="animation footGame">
+				<!-- ajout de class .fadeInSlideScroll -->
+				<div class="animation footGame fadeInSlideScroll">
 					<div class="g">
 						<img src="./Assets/logos/icon_WB.png" alt="icon_WB" />
 						<p>
@@ -236,5 +242,9 @@
 				</div>
 			</section>
 		</footer>
+
+		<!-- CANVAS ANIMATION -->
+
+		<canvas></canvas>
 	</body>
 </html>
