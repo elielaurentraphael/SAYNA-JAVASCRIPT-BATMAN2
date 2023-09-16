@@ -90,6 +90,8 @@ function scrollZoomImage() {
 			image.style.opacity = "1";
 			image.style.visibility = "visible";
 			image.style.transform = "scale(1)";
+			image.style.transition =
+				"opacity 3s ease, visibility 3s ease, transform 3s ease";
 		}
 	});
 }

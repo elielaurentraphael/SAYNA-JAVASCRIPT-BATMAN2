@@ -32,6 +32,12 @@ section {
   margin: 0 auto;
 }
 
+.zoomImage {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+
 .button {
   text-align: center;
 }
@@ -166,13 +172,6 @@ section > div > .images .description:hover {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-}
-
-.zoomImage {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0);
-  transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
 }
 
 main {
@@ -517,42 +516,58 @@ main section .quiz {
   display: none;
 }
 main section .quiz .imageQuestion-1 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 11.5vw;
   left: 12vw;
   width: 11vw;
 }
 main section .quiz .imageQuestion-2 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 13.7vw;
   left: 11.5vw;
   width: 9vw;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
 }
 main section .quiz .imageQuestion-3 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 10.5vw;
   left: 1.5vw;
   width: 22.5vw;
 }
 main section .quiz .imageQuestion-4 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 8.8vw;
   left: 11.5vw;
   width: 13.6vw;
 }
 main section .quiz .imageQuestion-5 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 16.5vw;
   left: 7.3vw;
   width: 15.3vw;
 }
 main section .quiz .imageQuestion-6 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
 }
 main section .quiz .imageQuestion-6 .imageQuestionSix-a {
   position: absolute;
@@ -573,21 +588,27 @@ main section .quiz .imageQuestion-6 .imageQuestionSix-c {
   width: 8.5vw;
 }
 main section .quiz .imageQuestion-7 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 11.2vw;
   left: 1.5vw;
   width: 21.5vw;
 }
 main section .quiz .imageQuestion-8 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 13.3vw;
   left: 8.8vw;
   width: 14.6vw;
 }
 main section .quiz .imageQuestion-9 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
 }
 main section .quiz .imageQuestion-9 .imageQuestionNeuf-a {
   position: absolute;
@@ -608,7 +629,9 @@ main section .quiz .imageQuestion-9 .imageQuestionNeuf-c {
   width: 14.5vw;
 }
 main section .quiz .imageQuestion-10 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
 }
 main section .quiz .imageQuestion-10 .imageQuestionDix-a {
   position: absolute;
@@ -629,35 +652,45 @@ main section .quiz .imageQuestion-10 .imageQuestionDix-c {
   width: 8.5vw;
 }
 main section .quiz .imageQuestion-11 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 9.5vw;
   left: 4vw;
   width: 20vw;
 }
 main section .quiz .imageQuestion-12 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 7vw;
   left: 7.8vw;
   width: 13vw;
 }
 main section .quiz .imageQuestion-13 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 9.35vw;
   left: 5vw;
   width: 19.5vw;
 }
 main section .quiz .imageQuestion-14 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 12.3vw;
   left: 2.3vw;
   width: 22.8vw;
 }
 main section .quiz .imageQuestion-15 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
   position: absolute;
   top: 10.5vw;
   left: 7.65vw;

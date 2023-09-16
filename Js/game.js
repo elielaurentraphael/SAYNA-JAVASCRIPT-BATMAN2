@@ -51,7 +51,7 @@ function jeux(x) {
 		},
 		error: function () {
 			console.log("Défaut de connexion !"); // signalisation de la défaillance reseau dans la console
-			$(".imageQuestion-9").css("display", "block");
+			// $(".imageQuestion-9").css("display", "block");
 		},
 	});
 }
@@ -60,10 +60,24 @@ function jeux(x) {
 
 function imageQuestion(m) {
 	if (m === 1) {
-		$(`.imageQuestion-${m}`).css("display", "block");
+		$(`.imageQuestion-${m}`).css({
+			visibility: "visible",
+			opacity: "1",
+			transform: "scale(1)",
+			transition: "visibility 3s ease, opacity 3s ease, transform 3s ease",
+		});
 	} else {
-		$(`.imageQuestion-${m - 1}`).css("display", "none");
-		$(`.imageQuestion-${m}`).css("display", "block");
+		$(`.imageQuestion-${m - 1}`).css({
+			visibility: "hidden",
+			opacity: "0",
+			transform: "scale(0)",
+		});
+		$(`.imageQuestion-${m}`).css({
+			visibility: "visible",
+			opacity: "1",
+			transform: "scale(1)",
+			transition: "visibility 3s ease, opacity 3s ease, transform 3s ease",
+		});
 	}
 }
 

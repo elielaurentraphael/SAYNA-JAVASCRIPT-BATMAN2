@@ -121,14 +121,6 @@ section > div > .images {
 	}
 }
 
-// etat initial du zoomImage
-.zoomImage {
-	opacity: 0;
-	visibility: hidden;
-	transform: scale(0);
-	transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
-}
-
 main {
 	background-color: $background-color;
 
