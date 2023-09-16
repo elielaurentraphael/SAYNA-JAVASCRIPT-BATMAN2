@@ -50,13 +50,16 @@ function isElementVisible(element) {
 	);
 }
 
-// apparition progressive des éléments fade-In + slide
+// apparition progressive des éléments (.fadeInSlideScroll) fade-In + slide
 function handleScrollFadeSlide() {
 	fadeInSlideScrollElements.forEach((element) => {
 		if (isElementVisible(element)) {
 			element.style.opacity = "1";
 			element.style.visibility = "visible";
 			element.style.transform = "translateX(0)";
+			element.style.transition =
+				"opacity 3s ease, visibility 3s ease, transform 3s ease";
+			// transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
 		}
 	});
 }
@@ -67,6 +70,7 @@ window.addEventListener("scroll", handleScrollFadeSlide);
 // Appel de la fonction handleScrollFadeSlide
 handleScrollFadeSlide();
 
+/*
 // affichage scroll
 $(document).ready(function () {
 	$(window).scroll(function () {
@@ -75,6 +79,7 @@ $(document).ready(function () {
 		console.log(`scroll : ${scroll}`); // affichage dans la console
 	});
 });
+*/
 
 // ZOOM PROGRESSIF DE 0 à 1
 
