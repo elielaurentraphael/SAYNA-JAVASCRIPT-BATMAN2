@@ -51,12 +51,13 @@ function jeux(x) {
 		},
 		error: function () {
 			console.log("Défaut de connexion !"); // signalisation de la défaillance reseau dans la console
-			// $(".imageQuestion-9").css("display", "block");
+			$(".imageQuestion-9").css("display", "block");
 		},
 	});
 }
 
 // fonction d'affichage des images suivant le numéro de la question
+// apparition progressive des images de quiz avec un zoom de 0% à 100%
 
 function imageQuestion(m) {
 	if (m === 1) {
@@ -71,6 +72,7 @@ function imageQuestion(m) {
 			visibility: "hidden",
 			opacity: "0",
 			transform: "scale(0)",
+			transition: "visibility 3s ease, opacity 3s ease, transform 3s ease",
 		});
 		$(`.imageQuestion-${m}`).css({
 			visibility: "visible",
