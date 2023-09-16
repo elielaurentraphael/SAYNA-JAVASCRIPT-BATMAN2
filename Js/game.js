@@ -23,7 +23,6 @@ $.ajax({
 	success: function (questions) {
 		let u = questions.length;
 		$(".nombreQuestion").text(u); // info du nombre de question avant de commencer le quiz
-		// console.log(`Nombre de questions: ${u}`);
 	},
 	error: function () {
 		console.log("Défaut de connexion !");
@@ -40,7 +39,6 @@ function jeux(x) {
 			let u = questions.length;
 			let y = parseInt(x);
 			$(".numero").text(y + 1 + "/" + u); // affichage numéro de la question
-			// console.log(`n° question = ${y + 1}`);
 			imageQuestion(y + 1);
 			$(".question").text(questions[x]["question"]); // affichage de la question
 			$(".res:first-child label").text(questions[x]["response"][0]["text"]); // réponse probable parmi les trois proposées
@@ -50,7 +48,6 @@ function jeux(x) {
 			$(".res:nth-child(2) span").text(questions[x]["response"][1]["isGood"]); // réponse vraie ou fausse
 			$(".res:last-child span").text(questions[x]["response"][2]["isGood"]); // réponse vraie ou fausse
 			$(".next").attr("disabled", "disabled"); // le bouton est de nouveau "enabled" après le choix de réponse
-			// console.log(`Question n° ${y + 1} affichée`);
 		},
 		error: function () {
 			console.log("Défaut de connexion !"); // signalisation de la défaillance reseau dans la console
@@ -73,7 +70,6 @@ function imageQuestion(m) {
 // fonction de désactivation des cases à cocher après le choix de la réponse
 
 function disabled() {
-	// console.log("3 - séquence : désactivation des cases à cocher");
 	$(".res:first-child input").prop("disabled", true);
 	$(".res:nth-child(2) input").prop("disabled", true); // on désactive les cases à cocher
 	$(".res:last-child input").prop("disabled", true);
@@ -83,24 +79,12 @@ function disabled() {
 // autorisation pour l'affichage de la question suivante
 
 function questionSuivante() {
-	//console.log("DDDDDDDDD");
 	$(".next").removeAttr("disabled");
-	/*
-	console.log(
-		"4 - séquence : on peut appeler la question suivante en appuyant le bouton 'question suivante'"
-	);
-	*/
 }
 
 // fonction d'activation des cases à cocher après l'affichage de la question
 
 function enabled() {
-	/*
-	console.log(
-		"5 - séquence : activation des cases à cocher pour la réponse de la question n° " +
-			(parseInt(numera()) + 1)
-	);
-	*/
 	$(".res:first-child input").prop("disabled", false);
 	$(".res:nth-child(2) input").prop("disabled", false); // on active les cases à cocher
 	$(".res:last-child input").prop("disabled", false);
@@ -109,7 +93,6 @@ function enabled() {
 // fonction d'éffacement des cochages éventuels des cases à cocher avant l'affichage de la question suivante
 
 function unchecked() {
-	// console.log("6 - séquence d'éffacement des cochages éventuels");
 	$(".res:first-child input").prop("checked", false);
 	$(".res:nth-child(2) input").prop("checked", false); // on vide les cases à cocher
 	$(".res:last-child input").prop("checked", false);
@@ -134,7 +117,6 @@ function numera() {
 bouton.addEventListener("click", (e) => {
 	e.stopImmediatePropagation();
 	if (bouton.textContent === "démarrer le quiz") {
-		// console.log("1 - séquence de démarrage");
 		$(".startQuiz, .flecheDown.down").fadeOut(); // faire disparaitre l'image de batman et la flèche
 		jeux(0); // chargement de la première question et la proposition des trois réponses
 		bouton.textContent = "question suivante"; // l'étiquette du bouton change "démarrer le quiz" devient "question suivante"
@@ -143,7 +125,6 @@ bouton.addEventListener("click", (e) => {
 	} else {
 		let letter;
 		letter = numera();
-		// console.log(`letter = ${letter}`);
 		if (letter == $(".nombreQuestion").text()) {
 			// si le numéro de la question = nombre de question: c'est la fin du quiz
 
@@ -156,9 +137,7 @@ bouton.addEventListener("click", (e) => {
 			enabled(); // on active les cases à cocher
 			unchecked(); // on éfface les cochages éventuels
 
-			// $(".quiz").fadeOut(4000);
 			jeux(letter); // on affiche la question suivante
-			// $(".quiz").fadeIn(4000);
 
 			choose(); // choix d'une réponse
 		}
@@ -168,12 +147,10 @@ bouton.addEventListener("click", (e) => {
 // fonction pour choisir une réponse
 
 function choose() {
-	// console.log("2 - séquence : on peut choisir une réponse");
 	let z = parseInt(note.textContent);
 	resInputs.forEach((resInput) => {
 		// pour chaque case à cocher
 		resInput.addEventListener("change", (e) => {
-			// console.log(`question n° ${numera()} répondue`);
 			// on écoute l'événement "change"
 			let j = e.target.id;
 			if (isGoods[j].textContent === "true") {

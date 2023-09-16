@@ -59,7 +59,6 @@ function handleScrollFadeSlide() {
 			element.style.transform = "translateX(0)";
 			element.style.transition =
 				"opacity 3s ease, visibility 3s ease, transform 3s ease";
-			// transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
 		}
 	});
 }
@@ -69,17 +68,6 @@ window.addEventListener("scroll", handleScrollFadeSlide);
 
 // Appel de la fonction handleScrollFadeSlide
 handleScrollFadeSlide();
-
-/*
-// affichage scroll
-$(document).ready(function () {
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		$(".scroll").html(scroll); // affichage sur la page home
-		console.log(`scroll : ${scroll}`); // affichage dans la console
-	});
-});
-*/
 
 // ZOOM PROGRESSIF DE 0 à 1
 
