@@ -50,8 +50,11 @@ function jeux(x) {
 			$(".next").attr("disabled", "disabled"); // le bouton est de nouveau "enabled" après le choix de réponse
 		},
 		error: function () {
-			console.log("Défaut de connexion !"); // signalisation de la défaillance reseau dans la console
-			$(".imageQuestion-9").css("display", "block");
+			$(".numero").text("Défaut de connexion !");
+			$(".question").text("Défaut de connexion !"); // signalisation de la défaillance reseau dans la console
+			$(".res:first-child label").text("Défaut de connexion !");
+			$(".res:nth-child(2) label").text("Défaut de connexion !");
+			$(".res:last-child label").text("Défaut de connexion !");
 		},
 	});
 }
