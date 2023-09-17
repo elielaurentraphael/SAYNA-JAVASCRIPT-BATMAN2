@@ -149,7 +149,8 @@ bouton.addEventListener("click", (e) => {
 
 			$(".quiz").fadeOut(); // après le choix de la réponse de la dernière question, l'action sur le bouton "question suivante" fait disparaitre la console du quiz et, ->
 			$(".next").fadeOut();
-			$(".result").css("display", "block"); // -> affiche le résultat avec la possibilité de refaire le quiz
+			//$(".result").css("display", "block"); // -> affiche le résultat avec la possibilité de refaire le quiz
+			resultat();
 		} else {
 			// numéro de la question < nombre de questions, on continue le quiz
 
@@ -181,5 +182,48 @@ function choose() {
 				disabled();
 			}
 		});
+	});
+}
+
+// affichage du résultat
+
+function resultat() {
+	// récuperation du bouton pour recommencer le quiz
+	const buttona = document.querySelector(".buttona");
+	// la note ou les points obtenus par l'utilisateur
+	let point = $(".note").text() + "/" + $(".nombreQuestion").text();
+
+	// note inférieure ou égale à 4
+	if (parseInt(note.textContent) <= 4) {
+		$(".result .box-result .box-titre p").html(
+			`<span>${point} </span> c'est pas tout a fait ça...`
+		);
+		$(".result .box-result .box-texte").html(
+			"<p>Oula ! Heureusement que le Riddler est sous les verrous... Il faut que<br />vous vous repassier les films, cette fois en enlevant peut-être le<br />masque qui vous a bloqué la vue ! Aller, rien n'est perdu !</p>"
+		);
+		// note supérieure à 4 (exclu) et inférieure à 9 (exclu)
+	} else if (parseInt(note.textContent) > 4 && parseInt(note.textContent) < 9) {
+		$(".result .box-result .box-titre p").html(
+			`<span>${point} </span> pas mal !`
+		);
+		$(".result .box-result .box-texte").html(
+			"<p>Encore un peut d'entrainement avec le Chevalier Noir vous serait<br />bénéfique, mais vous pouvez marcher la tête haute, vos<br />connaissances sont là. A vous de les consolider, foncer Gotham est<br />votre terrain de chasse !</p>"
+		);
+		// note supérieure ou égale à 9
+	} else {
+		$(".result .box-result .box-titre p").html(
+			`<span>${point} </span> bravo !`
+		);
+		$(".result .box-result .box-texte").html(
+			"<p>Vous êtes véritablement un super fan de l'univers de Batman !<br />Comics, films, rien ne vous échappe. Bruce Wayne a de quoi être fier,<br />Gotham est en paix et Batman peut prendre sa retraite, vous veillez<br />aux grains !</p>"
+		);
+	}
+
+	// on affiche le résultat
+	$(".result").css("display", "block");
+
+	// on peut récommencer le quiz
+	buttona.addEventListener("click", () => {
+		window.location.reload();
 	});
 }

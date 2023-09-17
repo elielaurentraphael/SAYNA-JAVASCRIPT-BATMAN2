@@ -746,7 +746,7 @@ main section .quiz .wrap .response .res span {
   font-size: 1.2vw;
   color: #ffffff;
   margin-left: 0.65vw;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 main section .quiz .wrap .response div:nth-child(3) {
   margin-bottom: 9.8vw;
@@ -762,8 +762,34 @@ main section .zzz {
 main section .result {
   display: none;
 }
-main section .result img {
-  width: 100%;
+main section .result .box-result {
+  border-radius: 1.5vw;
+  text-align: center;
+  padding-top: 5.5vw;
+  margin: 0 0.7vw;
+  background-image: linear-gradient(315deg, rgba(129, 58, 10, 0.8352941176), #000);
+}
+main section .result .box-result .box-titre {
+  text-transform: uppercase;
+}
+main section .result .box-result .box-titre p {
+  text-decoration: underline;
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+main section .result .box-result .box-texte p {
+  font-size: 1.5vw;
+  margin: 7.5vw 0;
+}
+main section .result .box-result .buttona {
+  width: 24vw;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  letter-spacing: 0.1vw;
+  padding: 1.2vw;
+  margin-bottom: 11.4vw;
+  background-image: linear-gradient(315deg, rgba(219, 99, 19, 0.8352941176), rgba(237, 222, 191, 0.3725490196));
 }
 main section .next {
   display: flex;
