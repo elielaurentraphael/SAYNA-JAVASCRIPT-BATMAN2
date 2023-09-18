@@ -59,7 +59,7 @@ function jeux(x) {
 	});
 }
 
-// fonction d'affichage des images suivant le numéro de la question
+// fonction d'affichage des images suivant le numéro de la question (m)
 // apparition progressive des images de quiz avec un zoom de 0% à 100%
 
 function imageQuestion(m) {
@@ -188,6 +188,19 @@ function choose() {
 // affichage du résultat
 
 function resultat() {
+	// on affiche le résultat
+	//$(".result").css("display", "block");
+	//$(".resultat").css("display", "block");
+	$(".resultat").fadeIn();
+
+	// cette ligne fait apparaître le résultat avec un zoom de 0 à 100%. Pour que cet effet (zoom de 0 à 100%) se produit, on doit envelopper la classe .result dans une autre classe .resultat et, on doit utiliser "$(".resultat").fadeIn();" pour supprimer la règle "display: none;" de la classe .resultat au lieu de "$(".resultat").css("display", "block");".
+	$(".result").css({
+		visibility: "visible",
+		opacity: "1",
+		transform: "scale(1)",
+		transition: "visibility 10s ease, opacity 10s ease, transform 10s ease",
+	});
+
 	// récuperation du bouton pour recommencer le quiz
 	const buttona = document.querySelector(".buttona");
 	// la note ou les points obtenus par l'utilisateur
@@ -218,9 +231,6 @@ function resultat() {
 			"<p>Vous êtes véritablement un super fan de l'univers de Batman !<br />Comics, films, rien ne vous échappe. Bruce Wayne a de quoi être fier,<br />Gotham est en paix et Batman peut prendre sa retraite, vous veillez<br />aux grains !</p>"
 		);
 	}
-
-	// on affiche le résultat
-	$(".result").css("display", "block");
 
 	// on peut récommencer le quiz
 	buttona.addEventListener("click", () => {

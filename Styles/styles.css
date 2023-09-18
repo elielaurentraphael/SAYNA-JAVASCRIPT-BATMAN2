@@ -493,6 +493,48 @@ canvas {
 /* --main-- */
 main section {
   background-color: #000000;
+  /*
+
+  cet commentaire nous aide à comprendre l'explication dans le fichier game.js
+
+  .result {
+  	display: none;
+  	opacity: 0;
+  	visibility: hidden;
+  	transform: scale(0);
+  	.box-result {
+  		border-radius: 1.5vw;
+  		text-align: center;
+  		padding-top: 5.5vw;
+  		margin: 0 0.7vw;
+  		background-image: linear-gradient(315deg, #813a0ad5, #000);
+  		.box-titre {
+  			text-transform: uppercase;
+  			p {
+  				text-decoration: underline;
+  				font-size: 2.5vw;
+  				font-weight: 600;
+  			}
+  		}
+  		.box-texte {
+  			p {
+  				font-size: 1.5vw;
+  				margin: 7.5vw 0;
+  			}
+  		}
+  		.buttona {
+  			width: 24vw;
+  			text-transform: uppercase;
+  			font-size: 1.2vw;
+  			font-weight: bolder;
+  			letter-spacing: 0.1vw;
+  			padding: 1.2vw;
+  			margin-bottom: 11.4vw;
+  			background-image: linear-gradient(315deg, #db6313d5, #eddebf5f);
+  		}
+  	}
+  }
+  */
 }
 main section .down {
   padding-top: 3.5vw;
@@ -746,7 +788,7 @@ main section .quiz .wrap .response .res span {
   font-size: 1.2vw;
   color: #ffffff;
   margin-left: 0.65vw;
-  opacity: 0.3;
+  opacity: 0.13;
 }
 main section .quiz .wrap .response div:nth-child(3) {
   margin-bottom: 9.8vw;
@@ -754,34 +796,40 @@ main section .quiz .wrap .response div:nth-child(3) {
 main section .note {
   font-size: 6vw;
   font-weight: bold;
+  opacity: 0.03;
 }
 main section .zzz {
   font-size: 6vw;
   font-weight: bold;
 }
-main section .result {
+main section .resultat {
   display: none;
 }
-main section .result .box-result {
+main section .resultat .result {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+main section .resultat .result .box-result {
   border-radius: 1.5vw;
   text-align: center;
   padding-top: 5.5vw;
   margin: 0 0.7vw;
   background-image: linear-gradient(315deg, rgba(129, 58, 10, 0.8352941176), #000);
 }
-main section .result .box-result .box-titre {
+main section .resultat .result .box-result .box-titre {
   text-transform: uppercase;
 }
-main section .result .box-result .box-titre p {
+main section .resultat .result .box-result .box-titre p {
   text-decoration: underline;
   font-size: 2.5vw;
   font-weight: 600;
 }
-main section .result .box-result .box-texte p {
+main section .resultat .result .box-result .box-texte p {
   font-size: 1.5vw;
   margin: 7.5vw 0;
 }
-main section .result .box-result .buttona {
+main section .resultat .result .box-result .buttona {
   width: 24vw;
   text-transform: uppercase;
   font-size: 1.2vw;

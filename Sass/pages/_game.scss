@@ -306,7 +306,7 @@ main {
 							font-size: 1.2vw;
 							color: $text-color;
 							margin-left: 0.65vw;
-							opacity: 0.3; // cette partie nous dit si la réponse est vraie ou fausse donc, on la cache
+							opacity: 0.13; // cette partie nous dit si la réponse est vraie ou fausse donc, on la cache
 						}
 					}
 				}
@@ -318,6 +318,7 @@ main {
 		.note {
 			font-size: 6vw;
 			font-weight: bold;
+			opacity: 0.03;
 		}
 
 		.zzz {
@@ -325,8 +326,55 @@ main {
 			font-weight: bold;
 		}
 
+		// affichage du résultat à la fin du quiz
+		.resultat {
+			display: none;
+			.result {
+				opacity: 0;
+				visibility: hidden;
+				transform: scale(0);
+				.box-result {
+					border-radius: 1.5vw;
+					text-align: center;
+					padding-top: 5.5vw;
+					margin: 0 0.7vw;
+					background-image: linear-gradient(315deg, #813a0ad5, #000);
+					.box-titre {
+						text-transform: uppercase;
+						p {
+							text-decoration: underline;
+							font-size: 2.5vw;
+							font-weight: 600;
+						}
+					}
+					.box-texte {
+						p {
+							font-size: 1.5vw;
+							margin: 7.5vw 0;
+						}
+					}
+					.buttona {
+						width: 24vw;
+						text-transform: uppercase;
+						font-size: 1.2vw;
+						font-weight: bolder;
+						letter-spacing: 0.1vw;
+						padding: 1.2vw;
+						margin-bottom: 11.4vw;
+						background-image: linear-gradient(315deg, #db6313d5, #eddebf5f);
+					}
+				}
+			}
+		}
+		/*
+
+		cet commentaire nous aide à comprendre l'explication dans le fichier game.js
+
 		.result {
 			display: none;
+			opacity: 0;
+			visibility: hidden;
+			transform: scale(0);
 			.box-result {
 				border-radius: 1.5vw;
 				text-align: center;
@@ -359,6 +407,7 @@ main {
 				}
 			}
 		}
+		*/
 
 		.next {
 			display: flex;
