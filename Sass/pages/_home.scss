@@ -172,8 +172,9 @@ main {
 
 	/* class justiceImage */
 	img.justiceImage {
-		display: block;
 		width: 100%;
+		position: relative;
+		left: -25%;
 	}
 
 	/* section multimédia */

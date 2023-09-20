@@ -15,5 +15,8 @@
 	"bugs": {
 		"url": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2/issues"
 	},
-	"homepage": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2#readme"
+	"homepage": "https://github.com/elielaurentraphael/SAYNA-JAVASCRIPT-BATMAN2#readme",
+	"dependencies": {
+		"swiper": "^10.2.0"
+	}
 }

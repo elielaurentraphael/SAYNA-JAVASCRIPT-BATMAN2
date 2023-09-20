@@ -219,8 +219,9 @@ main section .justice p {
   text-align: justify;
 }
 main img.justiceImage {
-  display: block;
   width: 100%;
+  position: relative;
+  left: -25%;
 }
 main .multimedia .media {
   display: flex;
@@ -1000,7 +1001,7 @@ nav .link a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 8vw;
+  padding-bottom: 18vw;
 }
 .footer-social .sayna {
   width: 2.3vw;
