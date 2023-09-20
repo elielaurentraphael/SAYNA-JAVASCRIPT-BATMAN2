@@ -151,7 +151,7 @@ section > div > .images .description .etiquette .person {
   -ms-border-radius: 4vw;
   -o-border-radius: 4vw;
 }
-section > div > .images .description .etiquette > p {
+section > div > .images .description .etiquette p {
   background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
   color: #ffffff;
   text-align: center;

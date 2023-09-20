@@ -106,13 +106,11 @@ scrollZoomImage();
 const descriptions = document.querySelectorAll(".description");
 descriptions.forEach((description) => {
 	description.addEventListener("mouseenter", (e) => {
-		console.log(`id description : ${e.target.id}`);
 		const id = e.target.id;
 		$(`#${id} .etiquette`).css("visibility", "visible");
 	});
 
-	$(".description").on("mouseleave", (e) => {
-		console.log(`id description : ${e.target.id}`);
+	description.addEventListener("mouseleave", (e) => {
 		const id = e.target.id;
 		$(`#${id} .etiquette`).css("visibility", "hidden");
 	});
