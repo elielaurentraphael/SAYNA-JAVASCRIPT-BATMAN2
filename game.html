@@ -1,242 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>game</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-		<link rel="stylesheet" href="./Styles/styles.css" />
-		<script src="./Docs-dev/jquery-3.7.0.js" defer></script>
-		<script src="./Js/game.js" defer></script>
-		<script src="./Js/batman.js" defer></script>
-	</head>
-	<body>
-		<!-- VERSION DESKTOP -->
 
-		<!-- header -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="./Styles/styles.css" />
+	<script src="./Docs-dev/jquery-3.7.0.js" defer></script>
+	<script src="./Js/batman.js" defer></script>
+	<script src="./Js/game.js" defer></script>
+</head>
 
-		<header class="backgroundGame">
-			<div class="header heightHeaderGame" id="header">
-				<!-- ajout de class .fadeInSlideScroll -->
-				<nav class="fadeInSlideScroll">
-					<div class="logohome"></div>
-					<div class="link">
-						<a href="./index.html">HOME</a>
-						<a href="./game.html" id="game">GAME</a>
-					</div>
-				</nav>
-				<div class="nombreQuestion"></div>
-				<!-- ajout de class .fadeInSlideScroll -->
-				<div class="heading game fadeInSlideScroll">
-					LET'S PLAY A<br />LITTLE GAME...
+<body>
+	<!-- VERSION DESKTOP -->
+
+	<!-- header -->
+
+	<header class="backgroundGame">
+		<div class="header heightHeaderGame" id="header">
+			<!-- ajout de class .fadeInSlideScroll -->
+			<nav class="fadeInSlideScroll">
+				<div class="logohome"></div>
+				<div class="link">
+					<a href="./index.html">HOME</a>
+					<a href="./game.html" id="game">GAME</a>
 				</div>
-				<div class="social-lateral">
-					<!-- jsScroll: scrolling progressif en javascript vers l'ancre #game' -->
-					<a href="#game" class="jsScroll">
-						<div class="logo" id="flecheHaut"></div>
-					</a>
-					<div class="icon" id="fb"></div>
-					<div class="icon" id="ig"></div>
-					<div class="icon" id="tw"></div>
-					<!-- jsScroll: scrolling progressif en javascript vers l'ancre #foot' -->
-					<a href="#foot" class="jsScroll">
-						<div class="logo" id="flecheBas"></div>
-					</a>
+			</nav>
+			<div class="nombreQuestion"></div>
+			<!-- ajout de class .fadeInSlideScroll -->
+			<div class="heading game fadeInSlideScroll">
+				LET'S PLAY A<br />LITTLE GAME...
+			</div>
+			<div class="social-lateral">
+				<!-- jsScroll: scrolling progressif en javascript vers l'ancre #game' -->
+				<a href="#game" class="jsScroll">
+					<div class="logo" id="flecheHaut"></div>
+				</a>
+				<div class="icon" id="fb"></div>
+				<div class="icon" id="ig"></div>
+				<div class="icon" id="tw"></div>
+				<!-- jsScroll: scrolling progressif en javascript vers l'ancre #foot' -->
+				<a href="#foot" class="jsScroll">
+					<div class="logo" id="flecheBas"></div>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- main -->
+
+	<main>
+		<section>
+			<!-- ajout de class .fadeInSlideScroll -->
+			<img class="flecheDown down fadeInSlideScroll" src="./Assets/logos/flèche_down_header.png" alt="flèche down" />
+			<!-- ajout de class .fadeInSlideScroll -->
+			<div class="startQuiz">
+				<div class="start fadeInSlideScroll">
+					connaissez vous bien le chevalier noir ?
+				</div>
+				<div>
+					<img class="zoomImage" src="./Assets/Illustrations/Batgame_2.png" alt="Batgame_2.png" />
 				</div>
 			</div>
-		</header>
 
-		<!-- main -->
-
-		<main>
-			<section>
-				<!-- ajout de class .fadeInSlideScroll -->
-				<img
-					class="flecheDown down fadeInSlideScroll"
-					src="./Assets/logos/flèche_down_header.png"
-					alt="flèche down"
-				/>
-				<!-- ajout de class .fadeInSlideScroll -->
-				<div class="startQuiz">
-					<div class="start fadeInSlideScroll">
-						connaissez vous bien le chevalier noir ?
-					</div>
-					<div>
-						<img
-							class="zoomImage"
-							src="./Assets/Illustrations/Batgame_2.png"
-							alt="Batgame_2.png"
-						/>
-					</div>
+			<!-- ajout de class .fadeInSlideScroll -->
+			<div class="quiz fadeInSlideScroll">
+				<img class="imageQuestion-1" src="./Assets/Illustrations/Batgame_3.png" alt="Batgame_3.png" />
+				<img class="imageQuestion-2" src="./Assets/Illustrations/Batgame_4.png" alt="Batgame_4.png" />
+				<img class="imageQuestion-3" src="./Assets/Illustrations/Batgame_5.png" alt="Batgame_5.png" />
+				<img class="imageQuestion-4" src="./Assets/Illustrations/Batgame_6.png" alt="Batgame_6.png" />
+				<img class="imageQuestion-5" src="./Assets/Illustrations/Batgame_7.png" alt="Batgame_7.png" />
+				<div class="imageQuestion-6">
+					<img class="imageQuestionSix-a" src="./Assets/Illustrations/Batgame_8.png" alt="Batgame_8.png" />
+					<img class="imageQuestionSix-b" src="./Assets/Illustrations/Batgame_9.png" alt="Batgame_9.png" />
+					<img class="imageQuestionSix-c" src="./Assets/Illustrations/Batgame_9-1.png" alt="Batgame_9-1.png" />
 				</div>
-
-				<!-- ajout de class .fadeInSlideScroll -->
-				<div class="quiz fadeInSlideScroll">
-					<img
-						class="imageQuestion-1"
-						src="./Assets/Illustrations/Batgame_3.png"
-						alt="Batgame_3.png"
-					/>
-					<img
-						class="imageQuestion-2"
-						src="./Assets/Illustrations/Batgame_4.png"
-						alt="Batgame_4.png"
-					/>
-					<img
-						class="imageQuestion-3"
-						src="./Assets/Illustrations/Batgame_5.png"
-						alt="Batgame_5.png"
-					/>
-					<img
-						class="imageQuestion-4"
-						src="./Assets/Illustrations/Batgame_6.png"
-						alt="Batgame_6.png"
-					/>
-					<img
-						class="imageQuestion-5"
-						src="./Assets/Illustrations/Batgame_7.png"
-						alt="Batgame_7.png"
-					/>
-					<div class="imageQuestion-6">
-						<img
-							class="imageQuestionSix-a"
-							src="./Assets/Illustrations/Batgame_8.png"
-							alt="Batgame_8.png"
-						/>
-						<img
-							class="imageQuestionSix-b"
-							src="./Assets/Illustrations/Batgame_9.png"
-							alt="Batgame_9.png"
-						/>
-						<img
-							class="imageQuestionSix-c"
-							src="./Assets/Illustrations/Batgame_9-1.png"
-							alt="Batgame_9-1.png"
-						/>
-					</div>
-					<img
-						class="imageQuestion-7"
-						src="./Assets/Illustrations/Batgame_10.png"
-						alt="Batgame_10.png"
-					/>
-					<img
-						class="imageQuestion-8"
-						src="./Assets/Illustrations/Batgame_11.png"
-						alt="Batgame_11.png"
-					/>
-					<div class="imageQuestion-9">
-						<img
-							class="imageQuestionNeuf-a"
-							src="./Assets/Illustrations/Batgame_12.png"
-							alt="Batgame_12.png"
-						/>
-						<img
-							class="imageQuestionNeuf-b"
-							src="./Assets/Illustrations/Batgame_13.png"
-							alt="Batgame_13.png"
-						/>
-						<img
-							class="imageQuestionNeuf-c"
-							src="./Assets/Illustrations/Batgame_13-1.png"
-							alt="Batgame_13-1.png"
-						/>
-					</div>
-					<div class="imageQuestion-10">
-						<img
-							class="imageQuestionDix-a"
-							src="./Assets/Illustrations/Batgame_14.png"
-							alt="Batgame_14.png"
-						/>
-						<img
-							class="imageQuestionDix-b"
-							src="./Assets/Illustrations/Batgame_15.png"
-							alt="Batgame_15.png"
-						/>
-						<img
-							class="imageQuestionDix-c"
-							src="./Assets/Illustrations/Batgame_16.png"
-							alt="Batgame_16.png"
-						/>
-					</div>
-					<img
-						class="imageQuestion-11"
-						src="./Assets/Illustrations/Batgame_17.png"
-						alt="Batgame_17.png"
-					/>
-					<img
-						class="imageQuestion-12"
-						src="./Assets/Illustrations/Batgame_18.png"
-						alt="Batgame_18.png"
-					/>
-					<img
-						class="imageQuestion-13"
-						src="./Assets/Illustrations/Batgame_19.png"
-						alt="Batgame_19.png"
-					/>
-					<img
-						class="imageQuestion-14"
-						src="./Assets/Illustrations/Batgame_20.png"
-						alt="Batgame_20.png"
-					/>
-					<img
-						class="imageQuestion-15"
-						src="./Assets/Illustrations/Batgame_21.png"
-						alt="Batgame_21.png"
-					/>
-					<div class="numero"></div>
-					<div class="question">Quel est l'autre nom de l'Homme-Mystère?</div>
-					<div class="wrap">
-						<div class="image"></div>
-						<div class="response">
-							<!-- <div class="box"></div> -->
-							<div class="res">
-								<input type="checkbox" id="0" />
-								<label for="0">bbb</label>
-								<span class="isGood">hhh</span>
-							</div>
-							<div class="res">
-								<input type="checkbox" id="1" />
-								<label for="1">bbb</label>
-								<span class="isGood">hhh</span>
-							</div>
-							<div class="res">
-								<input type="checkbox" id="2" />
-								<label for="2">bbb</label>
-								<span class="isGood">hhh</span>
-							</div>
+				<img class="imageQuestion-7" src="./Assets/Illustrations/Batgame_10.png" alt="Batgame_10.png" />
+				<img class="imageQuestion-8" src="./Assets/Illustrations/Batgame_11.png" alt="Batgame_11.png" />
+				<div class="imageQuestion-9">
+					<img class="imageQuestionNeuf-a" src="./Assets/Illustrations/Batgame_12.png" alt="Batgame_12.png" />
+					<img class="imageQuestionNeuf-b" src="./Assets/Illustrations/Batgame_13.png" alt="Batgame_13.png" />
+					<img class="imageQuestionNeuf-c" src="./Assets/Illustrations/Batgame_13-1.png" alt="Batgame_13-1.png" />
+				</div>
+				<div class="imageQuestion-10">
+					<img class="imageQuestionDix-a" src="./Assets/Illustrations/Batgame_14.png" alt="Batgame_14.png" />
+					<img class="imageQuestionDix-b" src="./Assets/Illustrations/Batgame_15.png" alt="Batgame_15.png" />
+					<img class="imageQuestionDix-c" src="./Assets/Illustrations/Batgame_16.png" alt="Batgame_16.png" />
+				</div>
+				<img class="imageQuestion-11" src="./Assets/Illustrations/Batgame_17.png" alt="Batgame_17.png" />
+				<img class="imageQuestion-12" src="./Assets/Illustrations/Batgame_18.png" alt="Batgame_18.png" />
+				<img class="imageQuestion-13" src="./Assets/Illustrations/Batgame_19.png" alt="Batgame_19.png" />
+				<img class="imageQuestion-14" src="./Assets/Illustrations/Batgame_20.png" alt="Batgame_20.png" />
+				<img class="imageQuestion-15" src="./Assets/Illustrations/Batgame_21.png" alt="Batgame_21.png" />
+				<div class="numero"></div>
+				<div class="question">Quel est l'autre nom de l'Homme-Mystère?</div>
+				<div class="wrap">
+					<div class="image"></div>
+					<div class="response">
+						<div class="res">
+							<input type="checkbox" id="0" />
+							<label for="0">bbb</label>
+							<span class="isGood">hhh</span>
+						</div>
+						<div class="res">
+							<input type="checkbox" id="1" />
+							<label for="1">bbb</label>
+							<span class="isGood">hhh</span>
+						</div>
+						<div class="res">
+							<input type="checkbox" id="2" />
+							<label for="2">bbb</label>
+							<span class="isGood">hhh</span>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="note"></div>
-				<div class="zzz"></div>
+			<div class="note"></div>
 
-				<div class="resultat">
-					<div class="result">
-						<div class="box-result">
-							<div class="box-titre">
-								<p>
-									<span> 2/12 </span>
-									c'est pas tout a fait ça...
-								</p>
-							</div>
-							<div class="box-texte">
-								<p>
-									Oula ! Heureusement que le Riddler est sous les verrous... Il
-									faut que<br />
-									vous vous repassier les films, cette fois en enlevant
-									peut-être le<br />
-									masque qui vous a bloqué la vue ! Aller, rien n'est perdu !
-								</p>
-							</div>
-							<button class="buttona">recommencer le quiz</button>
-						</div>
-					</div>
-				</div>
-				<!--
-
-					cet commentaire nous aide à comprendre l'explication dans le fichier game.js
-
+			<div class="resultat">
 				<div class="result">
 					<div class="box-result">
 						<div class="box-titre">
@@ -249,50 +132,51 @@
 							<p>
 								Oula ! Heureusement que le Riddler est sous les verrous... Il
 								faut que<br />
-								vous vous repassier les films, cette fois en enlevant peut-être
-								le<br />
+								vous vous repassier les films, cette fois en enlevant
+								peut-être le<br />
 								masque qui vous a bloqué la vue ! Aller, rien n'est perdu !
 							</p>
 						</div>
 						<button class="buttona">recommencer le quiz</button>
 					</div>
 				</div>
-				-->
+			</div>
 
-				<!-- ajout de class .fadeInSlideScroll -->
-				<button class="next fadeInSlideScroll" type="button"></button>
-			</section>
-		</main>
+			<!-- ajout de class .fadeInSlideScroll -->
+			<button class="next fadeInSlideScroll" type="button"></button>
+		</section>
+	</main>
 
-		<!-- footer -->
+	<!-- footer -->
 
-		<footer>
-			<!-- section footer -->
+	<footer>
+		<!-- section footer -->
 
-			<section class="footer">
-				<!-- ajout de class .fadeInSlideScroll -->
-				<div class="animation footGame fadeInSlideScroll">
-					<div class="g">
-						<img src="./Assets/logos/icon_WB.png" alt="icon_WB" />
-						<p>
-							Ce projet respecte l’univers cinématographique des films Batman
-							récents. Version Nolan & Snyder & Reeves
-						</p>
-					</div>
-					<div class="footer-social" id="foot">
-						<div class="sayna"></div>
-						<div class="x"></div>
-						<div class="dc"></div>
-						<div class="icon fb"></div>
-						<div class="icon ig"></div>
-						<div class="icon tw"></div>
-					</div>
+		<section class="footer">
+			<!-- ajout de class .fadeInSlideScroll -->
+			<div class="animation footGame fadeInSlideScroll">
+				<div class="g">
+					<img src="./Assets/logos/icon_WB.png" alt="icon_WB" />
+					<p>
+						Ce projet respecte l’univers cinématographique des films Batman
+						récents. Version Nolan & Snyder & Reeves
+					</p>
 				</div>
-			</section>
-		</footer>
+				<div class="footer-social" id="foot">
+					<div class="sayna"></div>
+					<div class="x"></div>
+					<div class="dc"></div>
+					<div class="icon fb"></div>
+					<div class="icon ig"></div>
+					<div class="icon tw"></div>
+				</div>
+			</div>
+		</section>
+	</footer>
 
-		<!-- CANVAS ANIMATION -->
+	<!-- CANVAS ANIMATION -->
 
-		<canvas></canvas>
-	</body>
+	<canvas></canvas>
+</body>
+
 </html>

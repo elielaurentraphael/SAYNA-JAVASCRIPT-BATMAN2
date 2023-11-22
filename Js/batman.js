@@ -1,35 +1,46 @@
 // CANVAS ANIMATION:
 
-const canvaso = document.querySelector("canvas");
-const ctx = canvaso.getContext("2d");
-const width = (canvaso.width = document.body.clientWidth);
-const height = (canvaso.height = document.documentElement.clientHeight);
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-let chauveSouris = new Image(); // Crée une image chauveSouris
-chauveSouris.addEventListener(
-	"load",
-	function () {
-		document.addEventListener("mousemove", (e) => {
-			// récupération de la position de la souris
-			let x = e.clientX;
-			let y = e.clientY;
-			// Clear le canvas avant de dessiner à nouveau
-			ctx.clearRect(0, 0, width, height);
-			//  drawImage chauveSouris dans le canvas et, pour que l'image chauveSouris suit le mouvement de la souris  on prend e.clientX et e.clientY comme coordonnées du coin supérieur gauche de l'image chauveSouris. On reduit aussi la taille de l'image chauveSouris à 30px de large et à 18px de haut.
-			ctx.drawImage(chauveSouris, x, y, 30, 18);
-		});
-	},
-	false
-);
-chauveSouris.src = "../Assets/logos/logo_bat_flèche_2.png"; // chemin de la source
+// on met l'image dans le canvas et, c'est le canvas qu'on bouge avec la souris
+canvas.style.position = "absolute";
+
+// on écoute le mouvement de la souris et, on récupère ses coordonnées
+window.addEventListener("mousemove", canvasPos);
+
+// position de la souris (e.pageX, e.pageY)
+// position du "canvas" contenant l'image "chauveSouris" (e.pageX + 2, e.pageY + 2)
+// (+2 en x et +2 en y) pour que le canvas ne masque pas la "souris"
+function canvasPos(e) {
+	canvas.style.top = e.pageY + 5 + "px";
+	canvas.style.left = e.pageX + 5 + "px";
+}
+
+// on reduit les dimensions du canvas
+canvas.style.width = "4vw";
+canvas.style.height = "2vw";
+
+// Crée une image chauveSouris avec la classe "Image"
+let chauveSouris = new Image();
+
+chauveSouris.onload = function () {
+	// on dessine (une fois pour toute) le "chauveSouris" et, on adapte ses dimensions aux dimensions du canvas
+	// on n'a pas besoin d'effacer le canvas à chaque mouvement de la souris car les coordonnées (0, 0) du "chauveSouris" sur le canvas ne changent pas (c'est le canvas qui bouge avec la souris et, le dessin du "chauveSouris" est immobile sur le canvas).
+	ctx.drawImage(chauveSouris, 0, 0, 300, 150);
+};
+
+// chemin de la source de l'image chauveSouris
+chauveSouris.src = "./Assets/logos/logo_bat_flèche_2.png";
 
 // SCROLLING PROGRESSIF COMMANDE PAR LES BOUTONS LATERAUX
 
 $(document).ready(function () {
 	$(".jsScroll").on("click", function () {
-		// Au clic sur un élément (#flecheHaut ou #flecheBas)
-		var page = $(this).attr("href"); // Page cible
-		var speed = 5500; // Durée de l'animation (en ms)
+		// Au clic sur un élément (#flecheHaut ou #flecheBas), on scrolle vers la Page cible
+		const page = $(this).attr("href");
+		// Durée de l'animation (en ms)
+		const speed = 5500;
 		$("html, body").animate({ scrollTop: $(page).offset().top }, speed); // cette ligne produit l'effet scrolling progressif vers les adresses (ancres)
 		return false;
 	});
@@ -102,16 +113,22 @@ window.addEventListener("scroll", scrollZoomImage);
 // Appel de la fonction scrollZoomImage
 scrollZoomImage();
 
-// apparition de la mini-description du personnage de la carte
+// QUAND LA SOURIS SURVOLE LA CARTE, LA MINIE-DESCRIPTION DU PERSONNAGE APPARUE
+
 const descriptions = document.querySelectorAll(".description");
 descriptions.forEach((description) => {
 	description.addEventListener("mouseenter", (e) => {
 		const id = e.target.id;
-		$(`#${id} .etiquette`).css("visibility", "visible");
+		//$("#six").css("z-index", "1");
+		$(`#${id} .etiquette`).css({ visibility: "visible", opacity: "1" });
+		$(`#${id} .avatar`).css({ visibility: "visible", opacity: "1" });
+		$(`#${id} .text`).css({ visibility: "visible", opacity: "1" });
 	});
 
 	description.addEventListener("mouseleave", (e) => {
 		const id = e.target.id;
-		$(`#${id} .etiquette`).css("visibility", "hidden");
+		$(`#${id} .etiquette`).css({ visibility: "hidden", opacity: "0" });
+		$(`#${id} .avatar`).css({ visibility: "hidden", opacity: "0" });
+		$(`#${id} .text`).css({ visibility: "hidden", opacity: "0" });
 	});
 });

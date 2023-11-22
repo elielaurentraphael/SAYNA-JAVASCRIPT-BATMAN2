@@ -2,10 +2,9 @@
 	display: inline-block;
 	position: fixed;
 	top: 19.3vw;
-	//top: 22vw;
-	//top: 0;
 	right: 12.1vw;
-	z-index: 1; /* amelioration de l'effet hover */
+	/* amelioration de l'effet hover */
+	z-index: 1;
 	div {
 		cursor: pointer;
 		margin: 1.8vw auto;
@@ -39,21 +38,24 @@
 			background-image: url("../Assets/logos/icon_facebook.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("../Assets/logos/icon_facebook_a.png");
+				filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg)
+					brightness(187%) contrast(109%);
 			}
 		}
 		&#ig {
 			background-image: url("../Assets/logos/icon_ig.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("../Assets/logos/icon_igcopie.png");
+				filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg)
+					brightness(187%) contrast(109%);
 			}
 		}
 		&#tw {
 			background-image: url("../Assets/logos/icon_tw.png");
 			background-size: 100%;
 			&:hover {
-				background-image: url("../Assets/logos/icon_tw_a.png");
+				filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg)
+					brightness(187%) contrast(109%);
 			}
 		}
 	}

@@ -53,63 +53,85 @@ section > .animation > p {
 	}
 }
 
+/* on met div au lieu de .animation pour avoir le minimum de specificity */
 section > div > .images {
-	/* on met div au lieu de .animation pour avoir le minimum de specificity */
 	display: flex;
 	justify-content: space-evenly;
 	.description {
-		//position: relative;
+		// position: relative;
 		width: 17vw;
-		font-family: "Rajdhani";
-		transition: transform 400ms;
-		-webkit-transition: transform 400ms;
-		-moz-transition: transform 400ms;
-		-ms-transition: transform 400ms;
-		-o-transition: transform 400ms;
+		font-family: "Rajdhani", sans-serif;
+		transition: transform 700ms ease-in-out;
+		-webkit-transition: transform 700ms ease-in-out;
+		-moz-transition: transform 700ms ease-in-out;
+		-ms-transition: transform 700ms ease-in-out;
+		-o-transition: transform 700ms ease-in-out;
 		img {
 			display: block;
 			width: 100%;
 		}
 		// insertion de la class etiquette pour la mini-description du personnage dans la class description
 		.etiquette {
-			visibility: hidden;
-			position: relative;
-			//position: absolute;
-			display: grid;
+			margin: 0;
+			width: 100%;
+			height: 6.3vw;
+			background: $etiquette-color;
+			position: absolute;
+			bottom: 0;
+			color: $text-color;
+			text-align: center;
+			font-size: 1.15vw;
+			font-weight: 500;
+		}
+		// avatar du personnage
+		.avatar {
+			position: absolute;
+			bottom: 2.3vw;
+			left: 1.7vw;
+			width: 3.5vw;
+			border-radius: 4vw;
+			z-index: 1;
+		}
+		// info du personnage
+		.text {
+			background: $background-button;
+			width: 12vw;
+			height: 3.675vw;
+			position: absolute;
+			bottom: 1.4vw;
+			right: 1.8375vw;
+			font-size: 0.6vw;
+			letter-spacing: 0.01vw;
+			line-height: 0.6vw;
+			font-weight: bold;
+			color: $text-color;
+			display: flex;
+			justify-content: center;
 			align-items: center;
-			height: 5.7vw;
-			top: -5.8vw;
-			//bottom: 0;
-			background-color: rgba(255, 255, 255, 0.1);
-			// avatar du personnage
-			.person {
-				position: absolute;
-				top: 0.4vw;
-				left: 1.5vw;
-				width: 3.5vw;
-				border-radius: 4vw;
-				-webkit-border-radius: 4vw;
-				-moz-border-radius: 4vw;
-				-ms-border-radius: 4vw;
-				-o-border-radius: 4vw;
-			}
-			// cet élément est déplacé de la class description vers la class etiquette (ici)
-			p {
-				background: $background-button;
-				color: $text-color;
-				text-align: center;
-				font-size: 0.7vw;
-				font-weight: 900;
-				padding: 0.8vw 0;
-				margin-left: 2.5vw;
-				margin-right: 1.7vw;
-				border-radius: 3.1vw;
-				-webkit-border-radius: 3.1vw;
-				-moz-border-radius: 3.1vw;
-				-ms-border-radius: 3.1vw;
-				-o-border-radius: 3.1vw;
+			text-align: center;
+			border-radius: 1.8375vw;
+			-webkit-border-radius: 1.8375vw;
+			-moz-border-radius: 1.8375vw;
+			-ms-border-radius: 1.8375vw;
+			-o-border-radius: 1.8375vw;
+			span {
+				font-size: 0.4vw;
+				color: $yellow-batman;
 			}
 		}
+
+		.text,
+		.avatar,
+		.etiquette {
+			visibility: hidden;
+			opacity: 0;
+			transition: 700ms all ease-in-out;
+			-webkit-transition: 700ms all ease-in-out;
+			-moz-transition: 700ms all ease-in-out;
+			-ms-transition: 700ms all ease-in-out;
+			-o-transition: 700ms all ease-in-out;
+		}
+
 		// scale(1.2) au lieu de scale(1.1) - suivant la proportion vue dans la maquette
 		&:hover {
 			transform: scale(1.2);
@@ -125,26 +147,31 @@ main {
 	background-color: $background-color;
 
 	/* section batman au cinéma */
+	.batmanAuCinema {
+		padding-bottom: 2.5vw;
+	}
 
 	/* section némésis */
-	section {
-		&.nemesis {
-			position: relative;
-			h1 {
-				padding-top: 6.7vw;
-			}
-			.bathome13 {
-				width: 8vw;
-				position: absolute;
-				top: 2.5vw;
-				left: 9.5vw;
-			}
-			.bathome12 {
-				width: 22.5vw;
-				position: absolute;
-				top: 49.7vw;
-				right: -5.7vw;
-			}
+	.nemesis {
+		position: relative;
+		h1 {
+			padding-top: 6.7vw;
+		}
+		.bathome13 {
+			width: 8vw;
+			position: absolute;
+			top: 2.5vw;
+			left: 9.5vw;
+		}
+		.animation .images :nth-child(3) {
+			z-index: 1;
+		}
+		.bathome12 {
+			width: 22.5vw;
+			position: absolute;
+			top: 19.3vw;
+			right: -5.7vw;
+			// z-index: -1;
 		}
 	}
 
@@ -171,10 +198,10 @@ main {
 	}
 
 	/* class justiceImage */
-	img.justiceImage {
+	.justiceImage img {
 		width: 100%;
 		position: relative;
-		left: -25%;
+		// left: -25%;
 	}
 
 	/* section multimédia */
@@ -210,7 +237,7 @@ main {
 					}
 					.p2 {
 						font-size: 1vw;
-						font-family: "Rajdhani";
+						font-family: "Rajdhani", sans-serif;
 						margin: 0;
 					}
 					.p3 {
@@ -269,6 +296,7 @@ main {
 					width: 100%;
 					background-color: transparent;
 					border: none;
+					outline: none;
 					border-bottom: 0.1vw solid gray;
 					margin-top: 1.5vw;
 					margin-bottom: 2.6vw;
@@ -316,7 +344,8 @@ main {
 					background-color: transparent;
 					border: none;
 					border-bottom: 0.1vw solid gray;
-					font-family: "Space Grotesk";
+					outline: none;
+					font-family: "Space Grotesk", sans-serif;
 					font-size: 0.85vw;
 					letter-spacing: 0.02vw;
 					word-spacing: 0.04vw;
@@ -335,7 +364,7 @@ main {
 						border: none;
 						border-bottom: 0.1vw solid $disabled-color;
 						margin-top: 1.5vw;
-						font-family: "Space Grotesk";
+						font-family: "Space Grotesk", sans-serif;
 						font-size: 0.85vw;
 						letter-spacing: 0.02vw;
 						word-spacing: 0.04vw;
@@ -349,7 +378,7 @@ main {
 						border: none;
 						padding: 0.5vw 1.5vw;
 						margin: 1.5vw 0.85vw;
-						font-family: "Space Grotesk";
+						font-family: "Space Grotesk", sans-serif;
 						font-size: 0.65vw;
 						letter-spacing: 0.01vw;
 						color: $text-color;
@@ -445,13 +474,4 @@ footer {
 			}
 		}
 	}
-}
-
-// canvas
-canvas {
-	position: fixed;
-	top: 0;
-	//left: 0;
-	pointer-events: none;
-	//background-color: #000;
 }

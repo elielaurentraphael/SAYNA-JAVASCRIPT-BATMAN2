@@ -2,18 +2,28 @@
 
 const numer = document.querySelector(".numero"); // numéro de la question - format (string): A/A ou A/AA
 const questio = document.querySelector(".question"); // question
-const labelun = document.querySelector(".res:first-child label"); // réponse possible  parmi les trois proposés
-const labeldeux = document.querySelector(".res:nth-child(2) label"); // réponse possible  parmi les trois proposés
-const labeltrois = document.querySelector(".res:last-child label"); // réponse possible  parmi les trois proposés
+// réponse possible  parmi les trois proposés
+const labelun = document.querySelector(".res:first-child label");
+// réponse possible  parmi les trois proposés
+const labeldeux = document.querySelector(".res:nth-child(2) label");
+// réponse possible  parmi les trois proposés
+const labeltrois = document.querySelector(".res:last-child label");
 
-const resInputs = document.querySelectorAll(".res input"); // on pointe les cases à cocher
-const span = document.querySelector(".res:last-child span"); // on pointe l'indice de la vraie réponse
-const isGoods = document.querySelectorAll(".isGood"); // on sélectionne les indices de vérité
-const note = document.querySelector(".note"); // on cible l'affichage de la note
-note.textContent = 0; // on initialise la note à 0 (zéro)
+// on pointe les cases à cocher
+const resInputs = document.querySelectorAll(".res input");
+// on pointe l'indice de la vraie réponse
+const span = document.querySelector(".res:last-child span");
+// on sélectionne les indices de vérité
+const isGoods = document.querySelectorAll(".isGood");
+// on cible l'affichage de la note
+const note = document.querySelector(".note");
+// on initialise la note à 0 (zéro)
+note.textContent = 0;
 
-let bouton = document.querySelector(".next"); // bouton pour démarrer le quiz ou pour voir la question suivante
-bouton.textContent = "démarrer le quiz"; // étiquette du bouton au démarrage (l'autre étiquette est: "question suivante")
+// bouton pour démarrer le quiz ou pour voir la question suivante
+let bouton = document.querySelector(".next");
+// étiquette du bouton au démarrage (l'autre étiquette est: "question suivante")
+bouton.textContent = "démarrer le quiz";
 
 // Extraction du nombre des questions (fait balader la souris au dessous du logo batman pour le voir)
 
@@ -38,20 +48,30 @@ function jeux(x) {
 		success: function (questions) {
 			let u = questions.length;
 			let y = parseInt(x);
-			$(".numero").text(y + 1 + "/" + u); // affichage numéro de la question
+			// affichage numéro de la question
+			$(".numero").text(y + 1 + "/" + u);
 			imageQuestion(y + 1);
-			$(".question").text(questions[x]["question"]); // affichage de la question
-			$(".res:first-child label").text(questions[x]["response"][0]["text"]); // réponse probable parmi les trois proposées
-			$(".res:nth-child(2) label").text(questions[x]["response"][1]["text"]); // réponse probable parmi les trois proposées
-			$(".res:last-child label").text(questions[x]["response"][2]["text"]); // réponse probable parmi les trois proposées
-			$(".res:first-child span").text(questions[x]["response"][0]["isGood"]); // réponse vraie ou fausse
-			$(".res:nth-child(2) span").text(questions[x]["response"][1]["isGood"]); // réponse vraie ou fausse
-			$(".res:last-child span").text(questions[x]["response"][2]["isGood"]); // réponse vraie ou fausse
-			$(".next").attr("disabled", "disabled"); // le bouton est de nouveau "enabled" après le choix de réponse
+			// affichage de la question
+			$(".question").text(questions[x]["question"]);
+			// réponse probable parmi les trois proposées
+			$(".res:first-child label").text(questions[x]["response"][0]["text"]);
+			// réponse probable parmi les trois proposées
+			$(".res:nth-child(2) label").text(questions[x]["response"][1]["text"]);
+			// réponse probable parmi les trois proposées
+			$(".res:last-child label").text(questions[x]["response"][2]["text"]);
+			// réponse vraie ou fausse
+			$(".res:first-child span").text(questions[x]["response"][0]["isGood"]);
+			// réponse vraie ou fausse
+			$(".res:nth-child(2) span").text(questions[x]["response"][1]["isGood"]);
+			// réponse vraie ou fausse
+			$(".res:last-child span").text(questions[x]["response"][2]["isGood"]);
+			// le bouton est de nouveau "enabled" après le choix de réponse
+			$(".next").attr("disabled", "disabled");
 		},
+		// signalisation de la défaillance reseau
 		error: function () {
 			$(".numero").text("Défaut de connexion !");
-			$(".question").text("Défaut de connexion !"); // signalisation de la défaillance reseau dans la console
+			$(".question").text("Défaut de connexion !");
 			$(".res:first-child label").text("Défaut de connexion !");
 			$(".res:nth-child(2) label").text("Défaut de connexion !");
 			$(".res:last-child label").text("Défaut de connexion !");
@@ -89,8 +109,9 @@ function imageQuestion(m) {
 // fonction de désactivation des cases à cocher après le choix de la réponse
 
 function disabled() {
+	// on désactive les cases à cocher
 	$(".res:first-child input").prop("disabled", true);
-	$(".res:nth-child(2) input").prop("disabled", true); // on désactive les cases à cocher
+	$(".res:nth-child(2) input").prop("disabled", true);
 	$(".res:last-child input").prop("disabled", true);
 	questionSuivante();
 }
@@ -104,16 +125,18 @@ function questionSuivante() {
 // fonction d'activation des cases à cocher après l'affichage de la question
 
 function enabled() {
+	// on active les cases à cocher
 	$(".res:first-child input").prop("disabled", false);
-	$(".res:nth-child(2) input").prop("disabled", false); // on active les cases à cocher
+	$(".res:nth-child(2) input").prop("disabled", false);
 	$(".res:last-child input").prop("disabled", false);
 }
 
 // fonction d'éffacement des cochages éventuels des cases à cocher avant l'affichage de la question suivante
 
 function unchecked() {
+	// on vide les cases à cocher
 	$(".res:first-child input").prop("checked", false);
-	$(".res:nth-child(2) input").prop("checked", false); // on vide les cases à cocher
+	$(".res:nth-child(2) input").prop("checked", false);
 	$(".res:last-child input").prop("checked", false);
 }
 
@@ -136,30 +159,38 @@ function numera() {
 bouton.addEventListener("click", (e) => {
 	e.stopImmediatePropagation();
 	if (bouton.textContent === "démarrer le quiz") {
-		$(".startQuiz, .flecheDown.down").fadeOut(); // faire disparaitre l'image de batman et la flèche
-		jeux(0); // chargement de la première question et la proposition des trois réponses
-		bouton.textContent = "question suivante"; // l'étiquette du bouton change "démarrer le quiz" devient "question suivante"
-		$(".quiz").fadeIn(); // faire apparaitre la console du quiz
-		choose(); // choisir une réponse parmi les trois proposées en cochant une case
+		// faire disparaitre l'image de batman et la flèche
+		$(".startQuiz, .flecheDown.down").fadeOut();
+		// chargement de la première question et la proposition des trois réponses
+		jeux(0);
+		// l'étiquette du bouton change "démarrer le quiz" devient "question suivante"
+		bouton.textContent = "question suivante";
+		// faire apparaitre la console du quiz
+		$(".quiz").fadeIn();
+		// choisir une réponse parmi les trois proposées en cochant une case
+		choose();
 	} else {
 		let letter;
 		letter = numera();
+		// si le numéro de la question = nombre de question: c'est la fin du quiz
 		if (letter == $(".nombreQuestion").text()) {
-			// si le numéro de la question = nombre de question: c'est la fin du quiz
-
-			$(".quiz").fadeOut(); // après le choix de la réponse de la dernière question, l'action sur le bouton "question suivante" fait disparaitre la console du quiz et, ->
+			// après le choix de la réponse de la dernière question, l'action sur le bouton "question suivante" fait disparaitre la console du quiz et, ->
+			$(".quiz").fadeOut();
 			$(".next").fadeOut();
-			//$(".result").css("display", "block"); // -> affiche le résultat avec la possibilité de refaire le quiz
+			// -> affiche le résultat avec la possibilité de refaire le quiz
 			resultat();
 		} else {
 			// numéro de la question < nombre de questions, on continue le quiz
 
-			enabled(); // on active les cases à cocher
-			unchecked(); // on éfface les cochages éventuels
+			// on active les cases à cocher
+			enabled();
+			// on éfface les cochages éventuels
+			unchecked();
 
-			jeux(letter); // on affiche la question suivante
-
-			choose(); // choix d'une réponse
+			// on affiche la question suivante
+			jeux(letter);
+			// choix d'une réponse
+			choose();
 		}
 	}
 });
@@ -168,13 +199,13 @@ bouton.addEventListener("click", (e) => {
 
 function choose() {
 	let z = parseInt(note.textContent);
+	// pour chaque case à cocher
 	resInputs.forEach((resInput) => {
-		// pour chaque case à cocher
+		// on écoute l'événement "change"
 		resInput.addEventListener("change", (e) => {
-			// on écoute l'événement "change"
+			// chaque bonne réponse vaut 1 point, mauvaise réponse vaut 0
 			let j = e.target.id;
 			if (isGoods[j].textContent === "true") {
-				// chaque bonne réponse vaut 1 point, mauvaise réponse vaut 0
 				z++;
 				note.textContent = z;
 				disabled();

@@ -1,14 +1,15 @@
 body {
 	width: 80vw;
 	margin: 0 auto;
-	font-family: "Space Grotesk";
+	font-family: "Space Grotesk", sans-serif;
 	color: $text-color;
+	overflow-x: hidden;
 }
 
 h1,
 nav,
 button {
-	font-family: "Rajdhani";
+	font-family: "Rajdhani", sans-serif;
 }
 
 .header,

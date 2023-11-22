@@ -14,14 +14,15 @@
 body {
   width: 80vw;
   margin: 0 auto;
-  font-family: "Space Grotesk";
+  font-family: "Space Grotesk", sans-serif;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 h1,
 nav,
 button {
-  font-family: "Rajdhani";
+  font-family: "Rajdhani", sans-serif;
 }
 
 .header,
@@ -113,58 +114,80 @@ section > .animation > p span {
   letter-spacing: 0.055vw;
 }
 
+/* on met div au lieu de .animation pour avoir le minimum de specificity */
 section > div > .images {
-  /* on met div au lieu de .animation pour avoir le minimum de specificity */
   display: flex;
   justify-content: space-evenly;
 }
 section > div > .images .description {
   width: 17vw;
-  font-family: "Rajdhani";
-  transition: transform 400ms;
-  -webkit-transition: transform 400ms;
-  -moz-transition: transform 400ms;
-  -ms-transition: transform 400ms;
-  -o-transition: transform 400ms;
+  font-family: "Rajdhani", sans-serif;
+  transition: transform 700ms ease-in-out;
+  -webkit-transition: transform 700ms ease-in-out;
+  -moz-transition: transform 700ms ease-in-out;
+  -ms-transition: transform 700ms ease-in-out;
+  -o-transition: transform 700ms ease-in-out;
 }
 section > div > .images .description img {
   display: block;
   width: 100%;
 }
 section > div > .images .description .etiquette {
-  visibility: hidden;
-  position: relative;
-  display: grid;
-  align-items: center;
-  height: 5.7vw;
-  top: -5.8vw;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-section > div > .images .description .etiquette .person {
+  margin: 0;
+  width: 100%;
+  height: 6.3vw;
+  background: rgba(255, 255, 255, 0.1019607843);
   position: absolute;
-  top: 0.4vw;
-  left: 1.5vw;
-  width: 3.5vw;
-  border-radius: 4vw;
-  -webkit-border-radius: 4vw;
-  -moz-border-radius: 4vw;
-  -ms-border-radius: 4vw;
-  -o-border-radius: 4vw;
-}
-section > div > .images .description .etiquette p {
-  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
+  bottom: 0;
   color: #ffffff;
   text-align: center;
-  font-size: 0.7vw;
-  font-weight: 900;
-  padding: 0.8vw 0;
-  margin-left: 2.5vw;
-  margin-right: 1.7vw;
-  border-radius: 3.1vw;
-  -webkit-border-radius: 3.1vw;
-  -moz-border-radius: 3.1vw;
-  -ms-border-radius: 3.1vw;
-  -o-border-radius: 3.1vw;
+  font-size: 1.15vw;
+  font-weight: 500;
+}
+section > div > .images .description .avatar {
+  position: absolute;
+  bottom: 2.3vw;
+  left: 1.7vw;
+  width: 3.5vw;
+  border-radius: 4vw;
+  z-index: 1;
+}
+section > div > .images .description .text {
+  background: linear-gradient(315deg, rgba(137, 0, 8, 0.6235294118), rgba(237, 222, 191, 0.3725490196));
+  width: 12vw;
+  height: 3.675vw;
+  position: absolute;
+  bottom: 1.4vw;
+  right: 1.8375vw;
+  font-size: 0.6vw;
+  letter-spacing: 0.01vw;
+  line-height: 0.6vw;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1.8375vw;
+  -webkit-border-radius: 1.8375vw;
+  -moz-border-radius: 1.8375vw;
+  -ms-border-radius: 1.8375vw;
+  -o-border-radius: 1.8375vw;
+}
+section > div > .images .description .text span {
+  font-size: 0.4vw;
+  color: #f8f184;
+}
+section > div > .images .description .text,
+section > div > .images .description .avatar,
+section > div > .images .description .etiquette {
+  visibility: hidden;
+  opacity: 0;
+  transition: 700ms all ease-in-out;
+  -webkit-transition: 700ms all ease-in-out;
+  -moz-transition: 700ms all ease-in-out;
+  -ms-transition: 700ms all ease-in-out;
+  -o-transition: 700ms all ease-in-out;
 }
 section > div > .images .description:hover {
   transform: scale(1.2);
@@ -184,22 +207,28 @@ main {
   /* section multimédia */
   /* class contact */
 }
-main section.nemesis {
+main .batmanAuCinema {
+  padding-bottom: 2.5vw;
+}
+main .nemesis {
   position: relative;
 }
-main section.nemesis h1 {
+main .nemesis h1 {
   padding-top: 6.7vw;
 }
-main section.nemesis .bathome13 {
+main .nemesis .bathome13 {
   width: 8vw;
   position: absolute;
   top: 2.5vw;
   left: 9.5vw;
 }
-main section.nemesis .bathome12 {
+main .nemesis .animation .images :nth-child(3) {
+  z-index: 1;
+}
+main .nemesis .bathome12 {
   width: 22.5vw;
   position: absolute;
-  top: 49.7vw;
+  top: 19.3vw;
   right: -5.7vw;
 }
 main section .justice {
@@ -218,10 +247,9 @@ main section .justice p {
   margin: 0;
   text-align: justify;
 }
-main img.justiceImage {
+main .justiceImage img {
   width: 100%;
   position: relative;
-  left: -25%;
 }
 main .multimedia .media {
   display: flex;
@@ -255,7 +283,7 @@ main .multimedia .media .card .card-text .p1 {
 }
 main .multimedia .media .card .card-text .p2 {
   font-size: 1vw;
-  font-family: "Rajdhani";
+  font-family: "Rajdhani", sans-serif;
   margin: 0;
 }
 main .multimedia .media .card .card-text .p3 {
@@ -307,6 +335,7 @@ main .contact form .email input {
   width: 100%;
   background-color: transparent;
   border: none;
+  outline: none;
   border-bottom: 0.1vw solid gray;
   margin-top: 1.5vw;
   margin-bottom: 2.6vw;
@@ -350,7 +379,8 @@ main .contact form .frequence select {
   background-color: transparent;
   border: none;
   border-bottom: 0.1vw solid gray;
-  font-family: "Space Grotesk";
+  outline: none;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 0.85vw;
   letter-spacing: 0.02vw;
   word-spacing: 0.04vw;
@@ -364,21 +394,21 @@ main .contact form .input-type-button .input-disabled input {
   width: 100%;
   background-color: transparent;
   border: none;
-  border-bottom: 0.1vw solid #ffffff;
+  border-bottom: 0.1vw solid #b3a8a8;
   margin-top: 1.5vw;
-  font-family: "Space Grotesk";
+  font-family: "Space Grotesk", sans-serif;
   font-size: 0.85vw;
   letter-spacing: 0.02vw;
   word-spacing: 0.04vw;
   font-weight: lighter;
-  color: #ffffff;
+  color: #b3a8a8;
 }
 main .contact form .input-type-button .button input {
   background-color: transparent;
   border: none;
   padding: 0.5vw 1.5vw;
   margin: 1.5vw 0.85vw;
-  font-family: "Space Grotesk";
+  font-family: "Space Grotesk", sans-serif;
   font-size: 0.65vw;
   letter-spacing: 0.01vw;
   color: #ffffff;
@@ -455,12 +485,6 @@ footer .footer .a .f img {
   width: 5.5vw;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  pointer-events: none;
-}
-
 /* VERSION DESKTOP  &  MOBILE */
 /* --header-- */
 .backgroundGame {
@@ -483,7 +507,7 @@ canvas {
   opacity: 1;
 }
 .backgroundGame .heightHeaderGame .game {
-  font-family: "Rajdhani";
+  font-family: "Rajdhani", sans-serif;
   font-size: 2.65vw;
   font-weight: bold;
   letter-spacing: 0.2vw;
@@ -797,11 +821,7 @@ main section .quiz .wrap .response div:nth-child(3) {
 main section .note {
   font-size: 6vw;
   font-weight: bold;
-  opacity: 0.03;
-}
-main section .zzz {
-  font-size: 6vw;
-  font-weight: bold;
+  opacity: 0.07;
 }
 main section .resultat {
   display: none;
@@ -868,7 +888,7 @@ footer .footer .footGame .g {
 
 header {
   background-size: 100%;
-  background-color: #980008;
+  background-color: #300709;
 }
 header .header {
   margin: 0 auto;
@@ -885,11 +905,6 @@ header .header .heading {
 }
 header .header .button button {
   margin: 2.5vw 1vw;
-}
-header .scroll {
-  position: fixed;
-  top: 10vw;
-  left: 10vw;
 }
 
 nav {
@@ -931,7 +946,8 @@ nav .link a:hover {
   position: fixed;
   top: 19.3vw;
   right: 12.1vw;
-  z-index: 1; /* amelioration de l'effet hover */
+  /* amelioration de l'effet hover */
+  z-index: 1;
 }
 .social-lateral div {
   cursor: pointer;
@@ -964,21 +980,21 @@ nav .link a:hover {
   background-size: 100%;
 }
 .social-lateral .icon#fb:hover {
-  background-image: url("../Assets/logos/icon_facebook_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .social-lateral .icon#ig {
   background-image: url("../Assets/logos/icon_ig.png");
   background-size: 100%;
 }
 .social-lateral .icon#ig:hover {
-  background-image: url("../Assets/logos/icon_igcopie.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .social-lateral .icon#tw {
   background-image: url("../Assets/logos/icon_tw.png");
   background-size: 100%;
 }
 .social-lateral .icon#tw:hover {
-  background-image: url("../Assets/logos/icon_tw_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 
 .g {
@@ -991,6 +1007,9 @@ nav .link a:hover {
 .g img {
   width: 1.5vw;
   display: block;
+}
+.g img:hover {
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .g p {
   font-size: 0.6vw;
@@ -1011,7 +1030,7 @@ nav .link a:hover {
   background-size: 100%;
 }
 .footer-social .sayna:hover {
-  background-image: url("../Assets/logos/logo_sayna_yellow.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .footer-social .x {
   width: 1vw;
@@ -1021,7 +1040,7 @@ nav .link a:hover {
   background-size: 100%;
 }
 .footer-social .x:hover {
-  background-image: url("../Assets/logos/icon_x_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .footer-social .dc {
   width: 2.8vw;
@@ -1031,7 +1050,7 @@ nav .link a:hover {
   background-size: 100%;
 }
 .footer-social .dc:hover {
-  background-image: url("../Assets/logos/icon_DC_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .footer-social .icon {
   width: 1.3vw;
@@ -1043,21 +1062,21 @@ nav .link a:hover {
   background-size: 100%;
 }
 .footer-social .icon.fb:hover {
-  background-image: url("../Assets/logos/icon_facebook_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .footer-social .icon.ig {
   background-image: url("../Assets/logos/icon_ig.png");
   background-size: 100%;
 }
 .footer-social .icon.ig:hover {
-  background-image: url("../Assets/logos/icon_igcopie.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 .footer-social .icon.tw {
   background-image: url("../Assets/logos/icon_tw.png");
   background-size: 100%;
 }
 .footer-social .icon.tw:hover {
-  background-image: url("../Assets/logos/icon_tw_a.png");
+  filter: invert(6%) sepia(85%) saturate(4000%) hue-rotate(6deg) brightness(187%) contrast(109%);
 }
 
 /*# sourceMappingURL=styles.css.map */
