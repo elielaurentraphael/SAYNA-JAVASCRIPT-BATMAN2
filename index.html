@@ -423,7 +423,7 @@
 					<!-- ajout de class .fadeInSlideScroll -->
 					<div class="frequence fadeInSlideScroll">
 						<label for="frequency"></label>
-						<select name="frequency" id="frequency" value="" required>
+						<select name="frequency" id="frequency" required>
 							<!-- champ obligatoir -->
 							<option>
 								Choisissez la fréquence à laquelle vous souhaitez recevoir votre
@@ -449,9 +449,19 @@
 							/>
 						</div>
 						<div class="button">
-							<input class="gradient" type="button" value="Des films" />
-							<input class="gradient" type="button" value="Des comics" />
-							<input class="gradient" type="button" value="De tout" />
+							<input
+								class="gradient"
+								id="films"
+								type="button"
+								value="Des films"
+							/>
+							<input
+								class="gradient"
+								id="comics"
+								type="button"
+								value="Des comics"
+							/>
+							<input class="gradient" id="tout" type="button" value="De tout" />
 						</div>
 					</div>
 
@@ -472,7 +482,7 @@
 					<!-- ajout de class .fadeInSlideScroll -->
 					<div class="confirmer fadeInSlideScroll">
 						<div class="button">
-							<button type="submit">CONFIRMER</button>
+							<button type="submit" id="confirmer">CONFIRMER</button>
 						</div>
 					</div>
 				</form>
