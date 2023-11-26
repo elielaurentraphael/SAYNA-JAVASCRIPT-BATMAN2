@@ -164,7 +164,7 @@ function popupboxa(messageText) {
 	popupbox.style.fontSize = "1.5vw";
 }
 
-// effacement du popupbox et blocage du bouton submit
+// (cas du "MESSAGE RECU !") effacement du popupbox et blocage du formulaire avec les rensignements validés
 function clearPopupbox() {
 	setTimeout(() => {
 		contact.style.padding = "0";
@@ -172,5 +172,10 @@ function clearPopupbox() {
 		title.style.display = "block";
 		form.style.display = "block";
 		$("#confirmer").prop("disabled", true);
+		$(".email input").prop("disabled", true);
+		$(".pa input").prop("disabled", true);
+		$(".frequence select").prop("disabled", true);
+		$("#films, #comics, #tout").prop("disabled", true);
+		$("#message").prop("disabled", true);
 	}, 6000);
 }
